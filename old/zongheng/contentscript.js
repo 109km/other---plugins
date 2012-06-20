@@ -13,7 +13,7 @@
 
                 params = wanDouJiaExt.request_url(old_href);
                 new_href = old_href + "#name="
-                    + encodeURIComponent(params['name']) +
+                    + params['name'] +
                     "&content-type=" + encodeURIComponent("text/plain")
                     + "&image=" + encodeURIComponent(pic_url);
 

@@ -2,10 +2,14 @@ $(window).load(function(){
     var wanDouJiaExt = {
         init: function(){
             wanDouJiaExt.modifyDetailPage();
-            wanDouJiaExt.autoChangeDownload();
+            //wanDouJiaExt.autoChangeDownload();
+            wanDouJiaExt.modifySpecialPage();
             wanDouJiaExt.checkPage();
         },
         modifyDetailPage:function(){
+
+            $('.mp_playmedia').hide();
+
             if( document.getElementById('if_index') == null){
                 return false;
             }
@@ -13,7 +17,10 @@ $(window).load(function(){
             var iframe = document.getElementById('if_index').contentDocument;
 
             // modify css
-            $("#360iframe").height(1100);
+            $('.listen,.mp3,.pt,.new_song_tit,.btn_play,.new_songer',iframe).hide();
+            $('.new_songer',iframe).last().next().hide();
+            $("#360iframe").height(1000);
+
             $("#content",iframe).css({
                 "width":"760px",
                 "overflow":"hidden"
@@ -92,7 +99,6 @@ $(window).load(function(){
                 var self = $(this),
                     attr_onclick ,
                     params,
-                    listen_btn,
                     song_tlt,
                     param_str,
                     new_href,
@@ -110,35 +116,100 @@ $(window).load(function(){
                 params = param_str.split(',');
                 rid = params[0].slice(2,params[0].length-1);
                 esid = params[1].slice(1,params[1].length-1);
-                name = params[2].slice(1,params[2].length-2);
-
+                name = params[2].slice(1,params[2].length-3);
+                song_tlt = self.parent().parent().find('p a').first();
                 // get params via ajax
                 $.getJSON("/ai.e?rid="+rid+"&amp;esid="+esid,
                     function(g){
                         $.each(g,function(n,p){
                             new_href = decodeURIComponent(wanDouJiaExt.request_url(p.url)['src']) +
                                 "#name=" + name + "&content-type=" + encodeURIComponent("audio/mp3");
-                            self.attr("rel","download").attr("href",new_href).removeAttr('onclick');
+                            
+                            self.removeAttr('onclick').attr("rel","download").attr("href",new_href);
+                            song_tlt.removeAttr('onclick').attr("rel","download").attr("href",new_href);
                         });
                     }
                 );
 
-                listen_btn = self.parent().find('.listen');
-                song_tlt = self.parent().parent().find('p a');
-
-                // trigger btns
-                listen_btn.click(function(){
-                    $('.mp_playmedia .play_down a').attr("rel","download").attr("href",new_href).removeAttr('onclick');
-                });
-                song_tlt.click(function(){
-                    $('.mp_playmedia .play_down a').attr("rel","download").attr("href",new_href).removeAttr('onclick');
-                });
 
             });
 
             // trigger play btn
             $('.mp_play_box','.mp_playmedia').click(function(){
                 wanDouJiaExt.autoChangeDownload();
+            });
+
+        },
+        modifySpecialPage:function(){
+            if( document.getElementById('if_index') == null){
+                return false;
+            }
+
+            var parent_iframe = document.getElementById('if_index').contentDocument;
+
+            if( parent_iframe.getElementById('album_result_detail') == null){
+                return false;
+            }
+            var child_iframe = parent_iframe.getElementById('album_result_detail').contentDocument;
+            $('#360iframe').css('height','auto');
+            $('#content',parent_iframe).css("overflow","visible");
+            $('.scrool_box',parent_iframe).width(761);
+            $('.scrool_box ul',parent_iframe).width(711);
+            $('.scrool_box ul li',parent_iframe).css("margin-left","10px");
+            $('.content_box',child_iframe).css({
+                "width":"715px",
+                "padding-left":"0px",
+                "margin":"0 auto",
+                "border-bottom":"1px solid #ccc"
+            });
+            $('.bt_bg4',child_iframe).hide();
+            $('.songer_Introduction_txt',child_iframe).width(530);
+
+            $("#main",child_iframe).width(735);
+            
+            $('.listen,.mp3,.pt,.new_song_tit,.btn_play,.new_songer',child_iframe).hide();
+
+            var items = $('.down',child_iframe);
+            if(items.length <= 0){
+                return false;
+            }
+            items.each(function(){
+                var self = $(this),
+                    attr_onclick ,
+                    params,
+                    song_tlt,
+                    param_str,
+                    new_href,
+                    rid,
+                    esid,
+                    name;
+
+                if (self == null || $(this).attr('onclick') == null ){
+                    return false;
+                }
+
+                // change the onclick code as a string
+                attr_onclick = $(this).attr('onclick').toString();
+                param_str = attr_onclick.slice(attr_onclick.indexOf("('"),attr_onclick.length-2);
+                params = param_str.split(',');
+                rid = params[0].slice(2,params[0].length-1);
+                esid = params[1].slice(1,params[1].length-1);
+                name = params[2].slice(1,params[2].length-3);
+                song_tlt = self.parent().parent().find('p a').first();
+                // get params via ajax
+                $.getJSON("/ai.e?rid="+rid+"&amp;esid="+esid,
+                    function(g){
+                        $.each(g,function(n,p){
+                            new_href = decodeURIComponent(wanDouJiaExt.request_url(p.url)['src']) +
+                                "#name=" + name + "&content-type=" + encodeURIComponent("audio/mp3");
+
+                            self.removeAttr('onclick').attr("rel","download").attr("href",new_href);
+                            song_tlt.removeAttr('onclick').attr("rel","download").attr("href",new_href);
+                        });
+                    }
+                );
+
+
             });
 
         },
@@ -219,6 +290,10 @@ $(window).load(function(){
                 }
                 if($(".content_box",iframe).length > 0 && $("#content",iframe).width() !=737){
                     wanDouJiaExt.modifyDetailPage();
+                }
+
+                if( iframe.getElementById('album_result_detail') != null){
+                    wanDouJiaExt.modifySpecialPage();
                 }
 
             },1000);

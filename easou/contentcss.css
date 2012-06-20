@@ -25,3 +25,7 @@ body .mp_playmedia .pic_txt{
     overflow: hidden!important;
     width: 120px!important;
 }
+body #content{
+    width: 760px;
+    overflow: hidden;
+}

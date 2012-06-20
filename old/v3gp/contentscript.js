@@ -15,6 +15,7 @@
                 // find the download buttons
                 if( $(this).attr("src").indexOf("down.png") > 0){
                     var
+                         tag_a = $(this).parent(),
                          // the original href
                          original_href = $(this).parent().attr("href"),
                     
@@ -28,20 +29,21 @@
                         // aid & jtitle used for download link
                          aid = $.trim(data[1]),
                          jtitle = $.trim(data[2].slice(0,data[2].length-2)),
-
-                        // the new href
-                         new_href = 'http://d1.v3gp.com:86/360down.php?aid=' + aid + '&name=' + jtitle + '&360ext=mp3#name='
-                             + encodeURIComponent(jtitle) + '&content-type=' + encodeURIComponent('audio/mp3');
-
-                    $(this).parent().attr("href",new_href).attr("rel","download");
-
-                    // Downloading operations need checking cookie
-                    $(this).parent().click(function(e){
-                        document.cookie = 'm_'+rid + '=ok' + ';expires=30;path=/;domain=v3gp.com;';
+                         new_href;
+                    
+                    $.ajax({
+                        url: "http://360-v3.v3gp.com/play.php?file="+aid,
+                        success:function(data){
+                            var data = $.parseXML(data);
+                            var url = $('track',data).attr('url');
+                            new_href = url + "#name=" + encodeURIComponent(jtitle) + '&content-type=' + encodeURIComponent('audio/mp3');
+                            tag_a.removeAttr("href").attr("rel","download").attr('href',new_href);
+                        }
                     });
                 }
             });
-            
+
+
         },
         changeTitle:function(){
             document.title = "豌豆荚 - 铃声下载";

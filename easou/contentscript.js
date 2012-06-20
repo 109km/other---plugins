@@ -116,7 +116,7 @@ $(window).load(function(){
                     function(g){
                         $.each(g,function(n,p){
                             new_href = decodeURIComponent(wanDouJiaExt.request_url(p.url)['src']) +
-                                "#name=" + name + "&content-type=" + encodeURIComponent("video/mp3");
+                                "#name=" + name + "&content-type=" + encodeURIComponent("audio/mp3");
                             self.attr("rel","download").attr("href",new_href).removeAttr('onclick');
                         });
                     }

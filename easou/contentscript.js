@@ -13,6 +13,7 @@ $(window).load(function(){
             var iframe = document.getElementById('if_index').contentDocument;
 
             // modify css
+            $("#360iframe").height(1100);
             $("#content",iframe).css({
                 "width":"760px",
                 "overflow":"hidden"

@@ -9,10 +9,7 @@
             items.each(function(){
                 var pic_url = $(this).find('.picture_xq img').attr('src'),
                      download_btn = $(this).find('.btnv1'),
-
-
                      attr_onclick ,
-
                      old_href,
                      new_href,
                      params,

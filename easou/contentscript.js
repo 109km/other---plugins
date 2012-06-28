@@ -122,9 +122,8 @@ $(window).load(function(){
                 $.getJSON("/ai.e?rid="+rid+"&amp;esid="+esid,
                     function(g){
                         $.each(g,function(n,p){
-                            new_href = decodeURIComponent(wanDouJiaExt.request_url(p.url)['src']) +
+                            new_href = decodeURIComponent(p.url) +
                                 "#name=" + name + "&content-type=" + encodeURIComponent("audio/mp3");
-                            
                             self.removeAttr('onclick').attr("rel","download").attr("href",new_href);
                             song_tlt.removeAttr('onclick').attr("rel","download").attr("href",new_href);
                         });

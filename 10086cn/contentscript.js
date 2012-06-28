@@ -8,9 +8,8 @@
         },
         modifyHomePage:function(){
             var item = $('.con_left_top','.con').first();
-
             if( item.length > 0 ){
-                item.find('#imgBookFileUrl').click(function(){
+                $('#imgBookFileUrl').live('click',function(e){
                     var pic_url = item.find('#imgLink img').attr('src'),
                          old_href = $(this).attr('href'),
                          params,new_href;

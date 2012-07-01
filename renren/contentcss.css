@@ -1,0 +1,42 @@
+#miqiang #publishbar{
+    display: none!important;
+}
+body#miqiang{
+    width:760px!important;
+    margin: 0 auto!important;
+}
+body #header #siteTopic{
+    display: none!important;
+}
+body #header #sitesummary{
+    width:auto!important;
+}
+body #postList .post{
+    float: left!important;
+}
+body #content{
+    width: 760px!important;
+}
+body .column{
+    width: 185px!important;
+    margin-right: 3px!important;
+}
+body #postList .article-box{
+    width: 180px!important;
+}
+body #postList .post-panel{
+    padding:5px!important;
+    width: 170px!important;
+}
+body #postList .post-panel img{
+    width: 170px!important;
+}
+body #main{
+    padding-top:50px!important;
+}
+body .help-enter{
+    display: none!important;
+}
+body #aside{
+    display: none!important;
+}

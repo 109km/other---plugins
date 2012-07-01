@@ -1,0 +1,48 @@
+body .content360{
+    width:760px!important;
+    overflow: hidden!important;
+}
+body .focus .pics{
+    width:640px!important;
+}
+body .focus ul{
+    width: 119px!important;
+}
+body .focus ul li{
+    width:119px!important;
+}
+body .addgg{
+    display: none!important;
+}
+body .top ul.navfeng li{
+    width:106px!important;
+}
+body .focus ul li span{
+    width: 119px!important;
+}
+body .focus ul li span a{
+    width:108px!important;
+}
+body .focus ul li span.current a{
+    width: 98px!important;
+    padding-left:0px!important;
+}
+body .focus ul li span.current a{
+    padding-left:28px!important;
+}
+body .tb_ ul{
+    padding-left:10px!important;
+}
+body .ctt{
+    padding:0px!important;
+}
+body .ctt .dis .cont{
+    width: 700px!important;
+    margin:0px 5px 0 0!important;
+}
+body .cont .box{
+    width: 118px!important;
+}
+body .jslist li{
+    margin:0 10px 10px 16px!important;
+}

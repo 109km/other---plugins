@@ -14,6 +14,9 @@ body .container .col{
 body #header{
     min-width: 760px!important;
 }
+body #infobb{
+    display: none!important;
+}
 body .container,body #header .container{
     width: 760px!important;
     margin: 0 auto!important;

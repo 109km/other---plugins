@@ -19,7 +19,7 @@
                     tag_a.append("<span class='down'>点击下载</span>");
                     new_url = "http://wallpaper.pickywallpapers.com/1280x720/"+pic_name +
                         "#name=" + encodeURIComponent(pic_name) + "&image=" + encodeURIComponent(pic_url)
-                        + encodeURIComponent("image/jpeg");
+                        + "&content-type=" + encodeURIComponent("image/jpeg");
 
                     tag_a.attr("rel","download").attr("href",new_url);
                 });

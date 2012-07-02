@@ -1,48 +1,48 @@
 body #userbar-wrapper{
-    display: none;
+    display: none!important;
 }
 body #header #share-box{
-    display: none;
+    display: none!important;
 }
 body #tips{
-    display: none;
+    display: none!important;
 }
 body #header #search-box{
-    display: none;
+    display: none!important;
 }
 body #menu-top-wrapper{
-    display: none;
+    display: none!important;
 }
 body iframe{
-    display: none;
+    display: none!important;
 }
 body #social{
-    display: none;
+    display: none!important;
 }
 body div.bsap_1269741{
-    display: none;
+    display: none!important;
 }
 body #footer-wrapper{
-    display: none;
+    display: none!important;
 }
 body #header,body #content,body #nav{
-    width: 760px;
+    width: 760px!important;
 }
 body ul.listing{
-    margin-left:0px;
+    margin-left:0px!important;
 }
 body .listing.subcategories li{
-    width: 163px;
+    width: 163px!important;
 }
 body ins{
     display: none!important;
 }
 body .btn-rss{
-    display: none;
+    display: none!important;
 }
 body ul.listing.thumbs.items.r16x10 li a{
-    padding-top:40px;
+    padding-top:40px!important;
 }
 body ul.listing.thumbs.items.r16x10 li a .down{
-    font-size: 14px;
+    font-size: 14px!important;
 }

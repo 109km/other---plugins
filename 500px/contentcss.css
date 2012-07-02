@@ -11,7 +11,7 @@ body div.photo img{
 body .container .col{
     margin:0 3px 20px 0!important;
 }
-,body #header{
+body #header{
     min-width: 760px!important;
 }
 body .container,body #header .container{

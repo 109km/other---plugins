@@ -1,0 +1,48 @@
+body #userbar-wrapper{
+    display: none;
+}
+body #header #share-box{
+    display: none;
+}
+body #tips{
+    display: none;
+}
+body #header #search-box{
+    display: none;
+}
+body #menu-top-wrapper{
+    display: none;
+}
+body iframe{
+    display: none;
+}
+body #social{
+    display: none;
+}
+body div.bsap_1269741{
+    display: none;
+}
+body #footer-wrapper{
+    display: none;
+}
+body #header,body #content,body #nav{
+    width: 760px;
+}
+body ul.listing{
+    margin-left:0px;
+}
+body .listing.subcategories li{
+    width: 163px;
+}
+body ins{
+    display: none!important;
+}
+body .btn-rss{
+    display: none;
+}
+body ul.listing.thumbs.items.r16x10 li a{
+    padding-top:40px;
+}
+body ul.listing.thumbs.items.r16x10 li a .down{
+    font-size: 14px;
+}

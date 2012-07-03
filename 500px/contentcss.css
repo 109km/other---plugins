@@ -58,12 +58,12 @@ body #footercontainer{
     display: none!important;
 }
 body .fancybox-outer{
-    position: relative;
+    position: relative!important;
 }
 body .fancybox-outer .btn_down{
-    position: absolute;
-    top:20px;
-    left:20px;
+    position: absolute!important;
+    top:20px!important;
+    left:20px!important;
     text-align: center!important;
     display: block!important;
     background: #fff!important;

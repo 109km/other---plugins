@@ -57,3 +57,21 @@ body #header .right{
 body #footercontainer{
     display: none!important;
 }
+body .fancybox-outer{
+    position: relative;
+}
+body .fancybox-outer .btn_down{
+    position: absolute;
+    top:20px;
+    left:20px;
+    text-align: center!important;
+    display: block!important;
+    background: #fff!important;
+    color:#000!important;
+    width: 150px!important;
+    height: 30px!important;
+    line-height: 30px!important;
+    border-radius: 5px!important;
+    opacity: 0.8!important;
+    font-size: 18px!important;
+}

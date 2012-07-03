@@ -35,9 +35,19 @@
                     "&image=" + encodeURIComponent(pic_url);
 
                 photo.parent().attr("href",down_url).attr("rel","download");
-                rate.html('<a href="'+down_url+'" rel="download">点击下载</a>');
+                rate.html('<a href="'+down_url+'">点击查看</a>');
 
-                title.attr("href",down_url);
+                title.removeAttr("href");
+                
+                self.find(".photo a").fancybox({
+                    fixed:true,closeBtn:true,title:name,maxWidth:600,nextClick:false,mouseWheel:false,arrows:false,
+                    afterLoad:function(){
+                        setTimeout(function(){
+                            $(".fancybox-inner").append("<a href='"+down_url+"' rel='download' class='btn_down'>点击图片可下载</a>");
+                            $(".fancybox-inner img").wrap("<a href='"+down_url+"' rel='download'></a>");
+                        },200);
+                    }
+                });
 
             });
         },

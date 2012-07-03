@@ -14,16 +14,25 @@
                         var img = self.find("img"),
                              src = img.attr("src"),
                              name = img.attr("title"),
-                             referer;
+                             referer,new_pic;
+
                         referer = "#name=" + encodeURIComponent(name) + "&content-type=" + encodeURIComponent("image/jpeg")
                             + "&image=" + encodeURIComponent(src);
-                        img.wrap("<a href='"+src + referer +"' rel='download'>");
+                        
+                        new_pic = src + referer;
+
+                        img.wrap("<a href='"+new_pic +"' rel='download'></a>");
+                        self.append("<h3><a href='"+new_pic+"' rel='download'>点击图片可下载</a></h3>");
                     }else{
                         self.hide();
                     }
+                    var title = '<h2>' + name + '</h2>';
+                    self.fancybox({fixed:true,closeBtn:true,title:title,maxWidth:600});
 
                 };
             // init
+
+
             if( items.length > 0 ){
                 items.each(function(){
                     change_item(this);

@@ -6,13 +6,9 @@
 	    {
 			"matches":["http://500px.com/*"],
 			"run_at": "document_end",
-            "css": ["contentcss.css"],
-			"js": ["jquery-1.5.1.min.js", "contentscript.js"],
+            "css": ["contentcss.css","jquery.fancybox.css"],
+			"js": ["jquery-1.5.1.min.js","jquery.mousewheel-3.0.6.pack.js","jquery.fancybox.pack.js", "contentscript.js"],
             "all_frames":false
 	    }
-    ],
-    "icons":{
-        "16":"icon16.png",
-        "72":"icon72.png"
-    }
+    ]
 }

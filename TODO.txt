@@ -5,3 +5,9 @@ http://www.pickywallpapers.com/(done)
 http://video.sina.com.cn/hotshare/ (waiting)
 http://trailers.apple.com/(waiting)
 http://www.mocartoon.com/comic/2521.htm (waiting)
+
+
+1、500PX，目前做的鼠标horver时的“点击下载”很不错，只需将点击图片时，弹出一个预览图+点击下载+右上角有关闭 即可
+2、500PX图片上的第一行标题点击后的结果是没有处理过的，这个可以置为不可点
+3、AIRZOOO，同“1”，500PX的处理一样
+4、AIRZOOO，首页顶部有个蓝色分割线，这个线可以保留，把线上的部分干掉吧

@@ -75,3 +75,7 @@ body .fancybox-outer .btn_down{
     opacity: 0.8!important;
     font-size: 18px!important;
 }
+body .details .title_link:hover{
+    color:#fff!important;
+    cursor: text!important;
+}

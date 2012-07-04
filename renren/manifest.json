@@ -1,6 +1,6 @@
 {
 	"name": "Airzooo--豌豆荚",
-	"version": "1.0.0.2",
+	"version": "1.0.0.3",
 	"description": "Airzooo--豌豆荚",
 	"content_scripts": [
 	    {

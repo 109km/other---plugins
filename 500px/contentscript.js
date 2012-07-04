@@ -22,6 +22,7 @@
                 var self = $(this),
                      title = self.find('.title a'),
                      photo = self.find('.photo img'),
+                     photo_link = photo.parent(),
                      rate = self.find(".rating"),
                      name = title.text(),
                      pic_url,down_url;
@@ -33,13 +34,14 @@
                 down_url = down_url + "#name=" + encodeURIComponent(name) +
                     "&content-type=" + encodeURIComponent("image/jpeg") +
                     "&image=" + encodeURIComponent(pic_url);
-
-                photo.parent().attr("href",down_url).attr("rel","download");
-                rate.html('<a href="'+down_url+'">点击查看</a>');
-
-                title.removeAttr("href");
                 
-                self.find(".photo a").fancybox({
+                photo_link.addClass("fancy_box");
+                photo.parent().attr("href",down_url).attr("rel","download");
+                rate.html('<a href="'+down_url+'" rel="download">点击下载</a>');
+
+                title.replaceWith("<span class='title_link'>"+name+"</span>");
+                
+                self.find(".fancy_box").fancybox({
                     fixed:true,closeBtn:true,title:name,maxWidth:600,nextClick:false,mouseWheel:false,arrows:false,
                     afterLoad:function(){
                         setTimeout(function(){

@@ -22,12 +22,29 @@
                         new_pic = src + referer;
 
                         img.wrap("<a href='"+new_pic +"' rel='download'></a>");
-                        self.append("<h3><a href='"+new_pic+"' rel='download'>点击图片可下载</a></h3>");
+                        self.append("<p><a href='"+new_pic+"' rel='download' class='download_pic'>点击下载</a></p>");
+
+                        self.hover(function(){
+                            self.addClass("hover");
+                        },function(){
+                            self.removeClass("hover");
+                        });
+                        
+                        var title = '<h2>' + name + '</h2>';
+                        self.find(".photo a").fancybox({
+                            fixed:true,closeBtn:true,title:title,maxWidth:500,scrolling:"no",nextClick:false,mouseWheel:false,arrows:false,
+                            afterLoad:function(){
+                                setTimeout(function(){
+                                    $(".fancybox-inner").append("<h3><a href='"+new_pic+"' rel='download' class='download'>点击图片可下载</a></h3>");
+                                    $(".fancybox-inner img").wrap("<a href='"+new_pic+"' rel='download'></a>");
+                                },200);
+                            }
+                        });
+                        
                     }else{
                         self.hide();
                     }
-                    var title = '<h2>' + name + '</h2>';
-                    self.fancybox({fixed:true,closeBtn:true,title:title,maxWidth:600});
+
 
                 };
             // init

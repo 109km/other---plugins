@@ -6,6 +6,4 @@ http://video.sina.com.cn/hotshare/ (waiting)
 http://trailers.apple.com/(waiting)
 http://www.mocartoon.com/comic/2521.htm (waiting)
 
-
-1、“点击下载”以及背景的白边  可否做成跟500PX一样，鼠标horver时再出现？现在满屏的“点击下载”不是太好
-2、细节问题：打开预览时的“点击图片可下载”这个字体有加粗吧，至少和500PX的不一样，改成一样的吧。。
+http://www.mafengwo.cn/gonglve/

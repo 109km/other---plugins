@@ -1,0 +1,12 @@
+{
+   "background_page": "background.html",
+   "content_scripts": [ {
+      "js": [ "contentscript.js" ],
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_idle"
+   } ],
+   "description": "RealPlayer HTML5Video Downloader Extension",
+   "name": "RealPlayer HTML5Video Downloader Extension",
+   "permissions": [ "tabs", "http://*/*", "https://*/*" ],
+   "version": "1.5"
+}

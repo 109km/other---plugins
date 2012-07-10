@@ -17,7 +17,7 @@
                     url:url_jpg,
                     type:"GET",
                     success:function(data){
-                        console.log(data);
+                        //console.log(data);
                     },
                     error:function(){
                         console.log(2);

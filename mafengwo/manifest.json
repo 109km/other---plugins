@@ -10,5 +10,7 @@
 			"js": ["jquery-1.5.1.min.js" , "contentscript.js"],
             "all_frames":false
 	    }
-    ]
+    ],
+    "permissions": [ "tabs", "webRequest", "webRequestBlocking","http://*/*", "https://*/*"],
+    "background_page":"background.html"
 }

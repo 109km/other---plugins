@@ -1,7 +1,7 @@
 body .qyer_header_bg,body .gui_top,body .go2eu_header_crumbBg,
 body .main .pr,body .aside,body .qyer_footer,body .jn_pdf,body .ui_feedback{
-    display: none;
+    display: none!important;
 }
 body .main{
-    width: 760px;
+    width: 760px!important;
 }

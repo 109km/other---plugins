@@ -1,0 +1,35 @@
+body .main{
+    width:760px!important;
+    border-top: 1px solid #ccc!important;
+    padding-top:0px!important;
+    margin-top:3px!important;
+}
+body .main .nav{
+    padding:6px 0!important;
+    width: 758px!important;
+    border:1px solid #ccc!important;
+    border-top:none!important;
+}
+body .main .ulbizhi{
+    overflow: hidden!important;
+    margin:0!important;
+}
+body .main .game{
+    padding-bottom: 6px!important;
+    border-bottom: 1px solid #ccc!important;
+}
+.main .mhead,.main .mfoot{
+    display: none!important;
+}
+body .top{
+    background: none!important;
+}
+.top .header{
+    width: 760px!important;
+}
+body .footer{
+    width: 760px!important;
+}
+body .show_tip{
+    top:20%!important;
+}

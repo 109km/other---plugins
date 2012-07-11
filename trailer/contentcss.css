@@ -1,0 +1,26 @@
+body #globalheader,body #productheader ul,body .grid2col .column.last,
+body .moretrailers,body #email,body #rentrak,body #globalfooter,body #main.main,
+body #promofooter{
+    display: none!important;
+}
+body #container{
+    width: 760px!important;
+    overflow: hidden!important;
+}
+body #main #promos #promofader1{
+    width: 440px!important;
+    height: 228px!important;
+    overflow: hidden!important;
+}
+body #main #promos #promofader2{
+    left:450px!important;
+}
+body #quickfind{
+    right: 30px!important;
+}
+body #trailers-dropdown .column.last{
+    display: block!important;
+}
+body #productheader,body #hero{
+    width: 760px!important;
+}

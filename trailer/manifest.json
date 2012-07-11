@@ -1,10 +1,10 @@
 {
-	"name": "穷游锦囊",
+	"name": "iTunes Movie",
 	"version": "1.0.0.1",
-	"description": "穷游锦囊",
+	"description": "iTunes Movie",
 	"content_scripts": [
 	    {
-			"matches":["http://guide.qyer.com/*","http://login.qyer.com/*"],
+			"matches":["http://trailers.apple.com/*"],
 			"run_at": "document_end",
             "css": ["contentcss.css"],
 			"js": ["jquery-1.5.1.min.js", "contentscript.js"],
@@ -13,17 +13,11 @@
     ],
     "app":{
         "launch":{
-            "web_url":"http://login.qyer.com/login.php/"
+            "web_url":"http://trailers.apple.com/"
         },
         "icons":{
             "16":"icon16.png",
             "72":"icon72.png"
-        },
-        "navigation":[
-            {
-                "label": "首页",
-                "web_url": "http://guide.qyer.com/"
-            }
-        ]
+        }
     }
 }

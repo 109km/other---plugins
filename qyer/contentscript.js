@@ -7,10 +7,15 @@
         },
         autoLogin:function(){
             if( $("#loginform").length >0 ){
+                $("body").hide();
                 $("#account").val("wandoujia_qyer");
                 $(".infoform_txt[type='password']").val("wandoujia163");
                 $(".infoform_btn input").val("aHR0cDovL2d1aWRlLnF5ZXIuY29tLw==");
+                
                 $("#loginbtn").trigger("click");
+            }
+            if( location.href.indexOf("guide") < 0){
+                location.href = "http://guide.qyer.com/";
             }
         },
         modifyHomePage:function(){
@@ -27,6 +32,10 @@
                             encodeURIComponent(name) +"&image=" + encodeURIComponent(pic_url) +
                             "&content-type=" + encodeURIComponent("application/pdf"),
                         down_btn;
+
+                    self.find(".gui_jnlist_item_pic a").attr("href",down_url);
+                    title.attr("href",down_url);
+                    
                     if( self.find(".user_down").length == 0){
                         down_btn = '<p class="user_down"><a href="'+down_url+'" rel="download">点击下载</a></p>';
                         self.append(down_btn);

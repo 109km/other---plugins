@@ -5,28 +5,32 @@
             //wanDouJiaExt.removeTarget();
         },
         modifyHomePage:function(){
-            setTimeout(function(){
-                $("#trailers-dropdown .dropdown-handle").click(function(){
-                    var parent = $(this).closest(".column");
-                    
-                    parent.find(".dropdown-list li").last().hide();
-                    
-                    var items = parent.find(".dropdown-list .hd .target-quicktimeplayer");
-                    items.each(function(){
-                        var self = $(this),
-                            old_href = self.attr("href"),
-                            title = document.title.slice( 0,document.title.indexOf("-")-1),
-                            pic_url = parent.find(".OverlayPanel img").attr("src"),
-                            new_href;
+            var check = setInterval(function(){
+                console.log(2);
+                if( $("#trailers .dropdown-handle").length > 0 ){
+                    $("#trailers .dropdown-handle").each(function(){
+                        var parent = $(this).closest(".column");
 
-                        new_href = old_href + "#name=" + encodeURIComponent(title) + "&image=" + encodeURIComponent(pic_url) +
-                            "&content-type=" + encodeURIComponent("video/mov");
-                        
-                        self.attr("href",new_href).attr("rel","download");
+                        parent.find(".dropdown-list li").last().hide();
 
+                        var items = parent.find(".dropdown-list .hd .target-quicktimeplayer");
+                        items.each(function(){
+                            var self = $(this),
+                                old_href = self.attr("href"),
+                                title = document.title.slice( 0,document.title.indexOf("-")-1),
+                                pic_url = parent.find(".OverlayPanel img").attr("src"),
+                                new_href;
+
+                            new_href = old_href + "#name=" + encodeURIComponent(title) + "&image=" + encodeURIComponent(pic_url) +
+                                "&content-type=" + encodeURIComponent("video/mov");
+
+                            self.attr("href",new_href).attr("rel","download").removeAttr("onclick");
+
+                        });
                     });
-                });
-            },3000);
+                    clearInterval(check);
+                }
+            },1500);
 
         },
         // get params from a url

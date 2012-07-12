@@ -6,8 +6,33 @@
         },
         modifyHomePage:function(){
             var check = setInterval(function(){
-                console.log(2);
-                if( $("#trailers .dropdown-handle").length > 0 ){
+                // single case
+                if( $("#trailers-handle").find(".dropdown-list").length > 0 ){
+                    // hide the last one
+                    $("#trailers-handle .dropdown-overlay li").last().hide();
+
+                    var items = $("#trailers-handle").find(".dropdown-list .hd .target-quicktimeplayer");
+
+                    items.each(function(){
+                        var self = $(this),
+                            old_href = self.attr("href"),
+                            parent = self.closest("#trailers"),
+                            title = document.title.slice( 0,document.title.indexOf("-")-1),
+                            pic_url = parent.find(".OverlayPanel img").attr("src"),
+                            filename = old_href.slice(old_href.lastIndexOf("/")+1,old_href.length),
+                            new_href;
+
+                        new_href = old_href + "#name=" + title + "&image=" + pic_url +
+                            "&content-type=video/mov" ;
+                        self.attr("href",new_href).attr("download",filename);
+                        self.detach("click");
+                    });
+                    clearInterval(check);
+                }
+
+                // multiple case
+                if($("#trailers-handle").find(".dropdown-list").length == 0 && $("#trailers .dropdown-handle").length > 0){
+
                     $("#trailers .dropdown-handle").each(function(){
                         var parent = $(this).closest(".column");
 
@@ -19,13 +44,14 @@
                                 old_href = self.attr("href"),
                                 title = document.title.slice( 0,document.title.indexOf("-")-1),
                                 pic_url = parent.find(".OverlayPanel img").attr("src"),
+                                filename = old_href.slice(old_href.lastIndexOf("/")+1,old_href.length),
                                 new_href;
 
-                            new_href = old_href + "#name=" + encodeURIComponent(title) + "&image=" + encodeURIComponent(pic_url) +
-                                "&content-type=" + encodeURIComponent("video/mov");
+                            new_href = old_href + "#name=" + title + "&image=" + pic_url +
+                                "&content-type=video/mov";
 
-                            self.attr("href",new_href).attr("rel","download").removeAttr("onclick");
-
+                            self.attr("href",new_href).attr("download",filename);
+                            self.detach("click");
                         });
                     });
                     clearInterval(check);

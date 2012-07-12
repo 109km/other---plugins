@@ -24,3 +24,6 @@ body #trailers-dropdown .column.last{
 body #productheader,body #hero{
     width: 760px!important;
 }
+body{
+    background-position: center 0!important;
+}

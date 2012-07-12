@@ -1,6 +1,7 @@
-body .qyer_header_bg,body .gui_top,body .go2eu_header_crumbBg,
-body .main .pr,body .aside,body .qyer_footer,body .jn_pdf,body .ui_feedback,
-body .passlayout,body .infoform #loginform{
+body .qyer_header_bg,body .go2eu_header_crumbBg,
+body .aside,body .qyer_footer,body .jn_pdf,body .ui_feedback,
+body .passlayout,body .infoform #loginform,body .gui_nav,
+body .gui_comment{
     display: none!important;
     visibility: hidden;
 }
@@ -21,4 +22,21 @@ body .fr{
 }
 body .gui_jnlist{
     margin-left: 15px!important;
+}
+body .jn_author .jn_author_info{
+    float: left!important;
+    margin-right: 10px!important;
+}
+body .jn_cover img{
+    width: 760px!important;
+}
+body .jn_cover a,body .jn_author_info_text a{
+    color:#323232!important;
+}
+body .jn_cover a:hover,body .jn_author_info_text a:hover{
+    text-decoration: none!important;
+    cursor: default!important;
+}
+body .down_btn a{
+    font-size: 18px;
 }

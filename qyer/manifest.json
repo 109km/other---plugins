@@ -7,23 +7,27 @@
 			"matches":["http://guide.qyer.com/*","http://login.qyer.com/*"],
 			"run_at": "document_end",
             "css": ["contentcss.css"],
-			"js": ["jquery-1.5.1.min.js", "contentscript.js"],
+			"js": ["jquery-1.5.1.min.js","slides.jquery.js", "contentscript.js"],
             "all_frames":false
 	    }
     ],
+    "background": {
+        "scripts": ["bg.js"]
+    },
+    "permissions": ["tabs", "webRequest", "webRequestBlocking","http://*.qyer.com/*"],
     "app":{
         "launch":{
-            "web_url":"http://login.qyer.com/login.php/"
+            "web_url":"http://login.qyer.com/"
         },
+        "navigation": [
+            {
+                "label": "穷游锦囊",
+                "web_url": "http://guide.qyer.com/"
+            }
+        ],
         "icons":{
             "16":"icon16.png",
             "72":"icon72.png"
-        },
-        "navigation":[
-            {
-                "label": "首页",
-                "web_url": "http://guide.qyer.com/"
-            }
-        ]
+        }
     }
 }

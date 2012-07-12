@@ -3,6 +3,7 @@
         init: function(){
             wanDouJiaExt.autoLogin();
             wanDouJiaExt.modifyHomePage();
+            wanDouJiaExt.modifyDetailPage();
             wanDouJiaExt.removeTarget();
         },
         autoLogin:function(){
@@ -22,6 +23,16 @@
             }
         },
         modifyHomePage:function(){
+            // fix slider
+            var pics = $("#gui_focus .slides_container div");
+            pics.first().remove();
+            $("#gui_focus").slides({
+                play: 3000,
+                pause: 2500,
+                hoverPause: true
+            });
+
+
             var insert = function(){
                 var items = $(".gui_jnlist_item");
                 
@@ -43,29 +54,25 @@
 
                     self.find(".gui_jnlist_item_pic a").attr("href",down_url);
                     title.attr("href",down_url);
-                    
-                    if( self.find(".user_down").length == 0){
-                        down_btn = '<p class="user_down"><a href="'+down_url+'" rel="download">点击下载</a></p>';
-                        self.append(down_btn);
-                    }
                 });
             };
-            setTimeout(function(){
-                insert();
-            },2000);
-            
-            $(".ui_page_item").click(function(){
-                setTimeout(function(){
-                    insert();
-                },3000);
-            });
 
-            $(".ui_sort_item").click(function(){
-                setTimeout(function(){
-                    insert();
-                },3000);
-            });
 
+        },
+        modifyDetailPage:function(){
+            $(".jn_cover a,.jn_author_info_text a").removeAttr("href");
+
+            var href = location.href,
+                id = href.slice(href.indexOf("id_")+3,href.length),
+                name = $(".gui_banner_title_cn").text(),
+                down_url = "http://guide.qyer.com/index_action_downguide_id_"+id+"_isdown_1" + "#name=" +
+                    name + "&content-type=application/pdf",
+                file_name = name + ".pdf",
+                down_btn ;
+
+            down_btn = $('<p class="down_btn" dowload="'+file_name+'"><a href="'+down_url+'">点此下载</a></p>');
+
+            $(".jn_intro").before(down_btn);
         },
         // get params from a url
         request_url:function (url){
@@ -84,7 +91,7 @@
         removeTarget:function(){
             setTimeout(function(){
                 $('a','body').removeAttr('target');
-            },3000);
+            },1000);
         }
     };
     wanDouJiaExt.init();

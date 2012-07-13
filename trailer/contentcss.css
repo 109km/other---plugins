@@ -27,3 +27,7 @@ body #productheader,body #hero{
 body{
     background-position: center 0!important;
 }
+body .first .dropdown-overlay h4{
+    color:#fff!important;
+    margin:0!important;
+}

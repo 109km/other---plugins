@@ -2,7 +2,6 @@
     var wanDouJiaExt = {
         init: function(){
             wanDouJiaExt.modifyHomePage();
-            //wanDouJiaExt.removeTarget();
         },
         modifyHomePage:function(){
             var check = setInterval(function(){
@@ -10,6 +9,7 @@
                 if( $("#trailers-handle").find(".dropdown-list").length > 0 ){
                     // hide the last one
                     $("#trailers-handle .dropdown-overlay li").last().hide();
+                    $("#trailers-dropdown").show();
 
                     var items = $("#trailers-handle").find(".dropdown-list .hd .target-quicktimeplayer");
 
@@ -26,16 +26,39 @@
                             "&content-type=video/mov" ;
                         self.attr("href",new_href).attr("download",filename);
                     });
+
+                    // 展示下载列表
+                    var down_list = $("#trailers-handle .dropdown-list").html(),
+                        prev = $("#trailers-dropdown .first");
+
+                    prev.html(down_list);
+                    $("#trailers-handle .button").hide();
+                    prev.find(".dropdown-overlay").show();
+                    prev.find(".dropdown-overlay .hd span").hide();
+
+                    var down_items = prev.find(".dropdown-overlay li"),
+                        counter;
+                    for(var a = 0 ; a<down_items.length; a++){
+                        if($(down_items[a]).hasClass("hr")){
+                            counter = a;
+                        }
+                    }
+
+                    for( var i = 0 ; i<counter; i++){
+                        $(down_items[i]).hide();
+                    }
+
+
+
                     clearInterval(check);
                 }
 
                 // multiple case
-                if($("#trailers-handle").find(".dropdown-list").length == 0 && $("#trailers .dropdown-handle").length > 0){
-
-                    $("#trailers .dropdown-handle").each(function(){
+                if($("#trailers-handle").find(".dropdown-list").length == 0 && $("#trailers .column .dropdown-handle").length > 0){
+                    $("#trailers .column .dropdown-handle").each(function(){
                         var parent = $(this).closest(".column");
-
-                        parent.find(".dropdown-list li").last().hide();
+                        parent.find(".dropdown-list li").last().remove();
+                        parent.find(".button").hide();
 
                         var items = parent.find(".dropdown-list .hd .target-quicktimeplayer");
                         items.each(function(){
@@ -51,7 +74,30 @@
 
                             self.attr("href",new_href).attr("download",filename);
                         });
+
+
+                        // 展示下载列表
+                        var down_list = parent.find(".dropdown-list").html(),
+                            prev = parent.prev();
+
+                        prev.html(down_list);
+
+                        prev.find(".dropdown-overlay").show();
+                        prev.find(".dropdown-overlay .hd span").hide();
+                        var down_items = prev.find(".dropdown-overlay li"),
+                            counter;
+                        for(var a = 0 ; a<down_items.length; a++){
+                            if($(down_items[a]).hasClass("hr")){
+                                counter = a;
+                            }
+                        }
+
+                        for( var i = 0 ; i<counter; i++){
+                            $(down_items[i]).hide();
+                        }
+
                     });
+
                     clearInterval(check);
                 }
             },1500);

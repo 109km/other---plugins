@@ -1,7 +1,7 @@
 body .qyer_header_bg,body .go2eu_header_crumbBg,
 body .aside,body .qyer_footer,body .jn_pdf,body .ui_feedback,
 body .passlayout,body .infoform #loginform,body .gui_nav,
-body .gui_comment{
+body .gui_comment,body #gui_focus,body .gui_qyjnhd{
     display: none!important;
     visibility: hidden;
 }

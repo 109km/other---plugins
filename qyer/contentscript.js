@@ -2,11 +2,18 @@
     var wanDouJiaExt = {
         init: function(){
             wanDouJiaExt.autoLogin();
-            wanDouJiaExt.modifyHomePage();
             wanDouJiaExt.modifyDetailPage();
             wanDouJiaExt.removeTarget();
         },
         autoLogin:function(){
+
+            // 从guide跳到login
+            if( $("#asynclogininfo .qyer_head_login_entry").length > 0 && $("#asynclogininfo .qyer_head_login_entry a").length == 3 && location.href.indexOf("guide") >= 0 ){
+                $("body").hide();
+                location.href = "http://login.qyer.com/login.php";
+            }
+
+            // 执行登录
             if( $("#loginform").length > 0 ){
                 $("body").hide();
                 $("#account").val("wandoujia_qyer");
@@ -14,49 +21,6 @@
                 $(".infoform_btn input").val("aHR0cDovL2d1aWRlLnF5ZXIuY29tLw==");
                 $("#loginbtn").trigger("click");
             }
-
-            if( location.href.indexOf("guide") < 0 && location.href.indexOf("login") < 0 && $("#loginform").length == 0){
-                $("body").hide();
-                setTimeout(function(){
-                    location.href = "http://guide.qyer.com/";
-                },3000);
-            }
-        },
-        modifyHomePage:function(){
-            // fix slider
-            var pics = $("#gui_focus .slides_container div");
-            pics.first().remove();
-            $("#gui_focus").slides({
-                play: 3000,
-                pause: 2500,
-                hoverPause: true
-            });
-
-
-            var insert = function(){
-                var items = $(".gui_jnlist_item");
-                
-                if(items.length == 0){
-                    return false;
-                }
-
-                items.each(function(){
-                    var self = $(this),
-                        title = self.find(".gui_jnlist_item_tit a"),
-                        href = title.attr("href"),
-                        id = href.slice(href.indexOf("id_")+3,href.length),
-                        pic_url = self.find(".gui_jnlist_item_pic img").attr("src"),
-                        name = title.text(),
-                        down_url = "http://guide.qyer.com/index_action_downguide_id_"+id+"_isdown_1" + "#name=" +
-                            encodeURIComponent(name) +"&image=" + encodeURIComponent(pic_url) +
-                            "&content-type=" + encodeURIComponent("application/pdf"),
-                        down_btn;
-
-                    self.find(".gui_jnlist_item_pic a").attr("href",down_url);
-                    title.attr("href",down_url);
-                });
-            };
-
 
         },
         modifyDetailPage:function(){

@@ -25,7 +25,6 @@
                         new_href = old_href + "#name=" + title + "&image=" + pic_url +
                             "&content-type=video/mov" ;
                         self.attr("href",new_href).attr("download",filename);
-                        self.detach("click");
                     });
                     clearInterval(check);
                 }
@@ -51,7 +50,6 @@
                                 "&content-type=video/mov";
 
                             self.attr("href",new_href).attr("download",filename);
-                            self.detach("click");
                         });
                     });
                     clearInterval(check);

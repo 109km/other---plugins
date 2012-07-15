@@ -1,4 +1,3 @@
-Fancy plugin
-1.ÓÃ¸ñÊ½¶ÔÉ¸Ñ¡ÓÃ»§ä¯ÀÀµÄÍøÒ³ÖÐÄÚÈÝ½øÐÐÉ¸Ñ¡¡£
-2.½«É¸Ñ¡³É¹¦µÄÄÚÈÝÖÆ³ÉÁÐ±í£¬º¬ÓÐÊÓÆµÃû³Æ¼°ÏÂÔØÁ´½Ó¡£
-3.¶Ô´ËÁÐ±í½øÐÐlocalStorage±£´æ£¬ÏÂ´Î½øÈëÍã¶¹¼ÔÊ±¶ÁÈ¡ÕâÀïÄÚÈÝ¡£
+1.æµ·è´¼çŽ‹è§†é¢‘åˆé›† http://dmxz.zerodm.cn/xiazai/2.html
+2.æµ·è´¼çŽ‹APPåˆé›† http://as.baidu.com/
+3.æµ·è´¼çŽ‹å£çº¸åˆé›† http://www.zhuoku.com/zhuomianbizhi/game-manwall/20070410132204.htm

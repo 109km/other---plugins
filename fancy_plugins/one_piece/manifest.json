@@ -4,7 +4,7 @@
 	"description": "穷游锦囊",
 	"content_scripts": [
 	    {
-			"matches":["http://*/*"],
+			"matches":["http://dmxz.zerodm.cn/*","http://as.baidu.com/*","http://www.zhuoku.com/*"],
 			"run_at": "document_end",
             "css": ["contentcss.css"],
 			"js": ["jquery-1.5.1.min.js" , "contentscript.js"],

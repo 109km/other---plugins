@@ -27,7 +27,38 @@ body #productheader,body #hero{
 body{
     background-position: center 0!important;
 }
+body .column.first .dropdown-overlay{
+    display: block!important;
+}
+body .column.last .dropdown-overlay{
+    display: none!important;
+}
 body .first .dropdown-overlay h4{
     color:#fff!important;
     margin:0!important;
+}
+body .first .dropdown-overlay .hd{
+    font-size: 14px!important;
+}
+body #trailers #trailers-dropdown{
+    display: block!important;
+    opacity: 1!important;
+}
+body #trailers #trailers-dropdown li.trailer .column.first{
+    width: 110px!important;
+}
+body #trailers #trailers-dropdown li.trailer .column.last{
+    width: 130px!important;
+}
+body #trailers-dropdown ul.trailers-dropdown{
+    display: block!important;
+}
+body .trailers-handle-arrow{
+    display: none!important;
+}
+#index #productheader{
+    margin-top:20px!important;
+}
+body #trailers .OverlayPanel span{
+    display: none!important;
 }

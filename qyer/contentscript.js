@@ -24,7 +24,7 @@
 
         },
         modifyDetailPage:function(){
-            $(".jn_cover a,.jn_author_info_text a").removeAttr("href");
+            $(".jn_cover a,.jn_author_info a").removeAttr("href");
 
             var href = location.href,
                 id = href.slice(href.indexOf("id_")+3,href.length),
@@ -34,9 +34,9 @@
                 file_name = name + ".pdf",
                 down_btn ;
 
-            down_btn = $('<p class="down_btn" dowload="'+file_name+'"><a href="'+down_url+'">点此下载</a></p>');
+            down_btn = $('<p class="down_btn"><a href="'+down_url+'" download="'+file_name+'">点此下载</a></p>');
 
-            $(".jn_intro").before(down_btn);
+            $(".gui_banner_title").append(down_btn);
         },
         // get params from a url
         request_url:function (url){

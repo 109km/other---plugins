@@ -10,7 +10,7 @@
                     // hide the last one
                     $("#trailers-handle .dropdown-overlay li").last().hide();
                     $("#trailers-dropdown").show();
-
+                    $("#trailers .OverlayPanel").removeAttr("href");
                     var items = $("#trailers-handle").find(".dropdown-list .hd .target-quicktimeplayer");
 
                     items.each(function(){
@@ -49,7 +49,6 @@
                     }
 
 
-
                     clearInterval(check);
                 }
 
@@ -59,7 +58,8 @@
                         var parent = $(this).closest(".column");
                         parent.find(".dropdown-list li").last().remove();
                         parent.find(".button").hide();
-
+                        parent.find(".OverlayPanel").removeAttr("href");
+                        parent.find(".OverlayPanel span").remove();
                         var items = parent.find(".dropdown-list .hd .target-quicktimeplayer");
                         items.each(function(){
                             var self = $(this),

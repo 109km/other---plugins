@@ -37,6 +37,14 @@ body .jn_cover a:hover,body .jn_author_info_text a:hover{
     text-decoration: none!important;
     cursor: default!important;
 }
-body .down_btn a{
-    font-size: 18px;
+body .gui_banner_title{
+    position: relative!important;
+}
+body .gui_banner_title .down_btn{
+    position: absolute!important;
+    right: 20px!important;
+    top:20px!important;
+}
+body .gui_banner_title .down_btn a{
+    font-size: 18px!important;
 }

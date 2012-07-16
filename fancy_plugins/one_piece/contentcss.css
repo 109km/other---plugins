@@ -1,0 +1,109 @@
+/* app */
+body #head{
+    display: none;
+}
+body #com_userbar{
+    display: none;
+}
+body .nav-list{
+    display: none;
+}
+body .content_header{
+    display: none;
+}
+body .nav .nav-rightcorner{
+    display: none;
+}
+body .footer{
+    display: none;
+}
+body .middle{
+    width: 760px;
+}
+body .game_content .dataList li{
+    width: 370px;
+    margin-left: 0px;
+}
+body .game_content{
+    width: 760px;
+}
+body .game_content .dataList li.odd{
+    margin-left: 12px;
+}
+body .dataList li .left{
+    padding-left: 10px;
+}
+body .dataList li .right{
+    margin-left:75px;
+    padding-right: 5px;
+}
+body #bdshare{
+    display: none;
+}
+body .commend .right .piccode{
+    display: none;
+}
+body .commend .ban_left .download .cloud{
+    display: none;
+}
+body .commend .ban_left .download .help_p{
+    display: none;
+}
+body .article_aside{
+    display: none;
+}
+body .article_detail .page{
+    display: none;
+}
+body .commend .ban_left .download .down a{
+    background: #1f9bf0;
+    border-radius: 5px;
+    color:#fff;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 45px;
+    text-align: center;
+}
+body .commend .ban_left .download .down a:hover{
+    text-decoration: none;
+}
+
+/* wallpaper */
+body iframe,body .divbodyW .logo_top,body .divbodyW .logoM1,body .list0Body .hotR,
+body .divbodyW .logo_logo,body .hot,body .list0Body .listLTitle,body .div_body_foot,body ins{
+    display: none;
+}
+body .divbodyW,body .list0Body,body .list0Body .listL{
+    width: 760px;
+    padding: 0px;
+    margin: 0 auto;
+}
+body .list0Body .listL{
+    padding-left:15px;
+}
+body ins{
+    display: none;
+}
+body .list0Body .lb{
+    width: 190px;
+    margin-bottom: 5px;
+    padding: 0px;
+}
+body .lb .lbCon{
+    width: auto;
+    padding: 0px;
+    border: none;
+}
+body .list0Body .page{
+    width: 760px;
+}
+body .lbConTxt a{
+    cursor: pointer;
+}
+body .lbConTxt img{
+    width: 160px;
+}
+body .fancybox-inner img{
+    width: 640px;
+    height: 480px;
+}

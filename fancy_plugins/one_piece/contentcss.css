@@ -154,6 +154,79 @@ body .lbConTxt .right{
 }
 
 
+/* video */
+body .zerotop,body .logo,body .zerodh,body .zeropddh,body .syad,
+body object,body .iright,body .zerozztj,body h3.title,body #bottom,body .top,
+body .ad_ban,body .top_tips,body .file_right,body .liebiao .c_1,body .r_ico,
+body .check_all,body .downLoad_area,body .file_op,body .recom_box{
+    display: none!important;
+}
+body .nrlj a:hover{
+    color:#333;
+}
+body .file_left{
+    width: auto;
+}
+body .ileft{
+    float: none;
+    margin:0 auto;
+}
+body .main{
+    width: 760px;
+    margin: 0 auto;
+}
+body .numlist li{
+    width: 68px;
+    height: 25px;
+    margin:5px;
+}
+body .numlist ul li a{
+    width: auto;
+    height: auto;
+    line-height: 23px;
+    font-size: 14px;
+    display: block;
+    border:none;
+    background: #f60;
+    color:#fff;
+    border-radius: 3px;
+}
+body .numlist ul li a:hover{
+    text-decoration: underline;
+    opacity: 0.8;
+}
+body .numlist ul li a:visited,body .numlist ul li a:link{
+    color:#fff;
+}
+body .fList_area{
+    height: auto;
+    width: 760px;
+    overflow: hidden;
+}
+body .fList_area li{
+    width: 250px!important;
+    float: left;
+    clear: none;
+    padding-left: 0px;
+    height: 30px;
+}
+body .bor{
+    margin-top:10px;
+}
+h1.my_tips{
+    margin-top:10px;
+    height: 24px;
+    line-height: 24px;
+    font-size: 20px;
+    text-align: center;
+}
+body .c_2{
+    width: 250px!important;
+    padding-left: 0px!important;
+    margin-right: 10px!important;
+    text-align: center;
+}
+
 
 
 
@@ -240,14 +313,12 @@ body .lbConTxt .right{
     margin: 0;
     overflow: hidden;
     zoom: 1;
-    background: url('skins/blank.gif');
 }
 .lv_inner_previous_next_overlays * { padding: 0; margin: 0; }
 .lv_inner_previous_next_overlays .lv_button {
     position: relative;
     height: 100%;
     width: 49%;
-    background: url('skins/blank.gif');
     zoom: 1;
     cursor: pointer;
 }
@@ -306,7 +377,6 @@ body .lbConTxt .right{
     margin: 0;
     overflow: auto; /* scrollbars */
     text-align: left;
-    background: url('skins/blank.gif'); /* Chrome 18+ opacity bug */
 }
 
 .lv_measure_element {
@@ -329,9 +399,7 @@ body .lbConTxt .right{
 }
 
 
-.lv_blank_background, /* IE  */
-.lv_content /* Chrome 18+ */
-{ background-image: url('skins/blank.gif'); }
+
 
 /* The buttons on the side when you view a gallery */
 .lv_side_buttons_underneath {
@@ -518,7 +586,6 @@ body .lbConTxt .right{
     margin-left: -150px;
     height: 50px;
     overflow: hidden;
-    background: url('skins/blank.gif');
 }
 .lv_slider {
     font-family: "Lucida Sans", "Lucida Grande", Tahoma, sans-serif;
@@ -826,20 +893,6 @@ body .lbConTxt .right{
 /* title/caption */
 .lv_window_mac .lv_title_caption { text-shadow: 0px 1px 1px rgba(0,0,0,.25); }
 
-/* sprite */
-.lv_window_mac .lv_side_button_previous,
-.lv_window_mac .lv_side_button_next,
-.lv_window_mac .lv_button_top_close,
-.lv_window_mac .lv_controls_top_close_button,
-.lv_window_mac .lv_slider .lv_icon,
-.lv_window_mac .lv_slider_number,
-.lv_window_mac .lv_slider_number_empty,
-.lv_window_mac .lv_controls_top_close_button,
-.lv_controls_top_skin_mac .lv_icon,
-.lv_controls_top_close_skin_mac .lv_controls_top_close_button,
-.lv_thumbnails_skin_mac .lv_thumbnail_icon {
-    background-image: url('skins/mac/sprite.png') !important;
-}
 
 /* close button */
 .lv_window_mac .lv_button_top_close {

@@ -1,8 +1,10 @@
 (function($){
     var wanDouJiaExt = {
         init: function(){
+            var url = location.href;
             wanDouJiaExt.modifyAppDetail();
             wanDouJiaExt.modifyWallpaperList();
+            wanDouJiaExt.modifyVideoPage();
             wanDouJiaExt.removeTarget();
         },
         modifyAppDetail:function(){
@@ -52,39 +54,37 @@
                             }
                         });
                     });
-
-
-                    /*
-                    // add fancy box
-                    self.fancybox({
-                        autoSize:false,
-                        minWidth:642,
-                        minHeight:482,
-                        maxWidth:642,
-                        maxHeight:512,
-                        scrolling:"no",
-                        fixed:true,
-                        nextClick:false,
-                        mouseWheel:false,
-                        arrows:false,
-                        afterLoad:function(){
-
-                            setTimeout(function(){
-
-                                if($(".fancybox-inner .lbConTxt").find(".down_btn").length == 0){
-                                    var down_btn = $('<a class="down_btn" download="'+file_name+'" href="'+big_pic+'">下载图片</a>');
-                                    $(".fancybox-inner .lbConTxt").first().append(down_btn);
-                                }
-                                $(".fancybox-inner .lb,.fancybox-inner .lb .lbCon").detach("click");
-                                $("");
-                                //$(".fancybox-inner .lb").trigger("click");
-
-                            },500);
-                        }
-                    });
-                    */
-
                 });
+            }
+        },
+        modifyVideoPage:function(){
+            var lists = $(".numlist");
+            if( lists.length > 0 ){
+                lists.eq(1).hide();
+                lists.eq(2).hide();
+
+                lists.first().find("h3").html("全集下载地址：");
+
+                $(".nrlj a").removeAttr("href");
+            }
+
+            var down_list = $(".bor");
+            if(down_list.length > 0 ){
+                down_list.before('<h1 class="my_tips">点击下面的链接即可下载<h1/>');
+                var items = $(".liebiao li");
+                if(items.length > 0){
+                    items.each(function(){
+                        var link = $(this).find(".file_name"),
+                            file_name = link.attr("title"),
+                            old_href = link.attr("href"),
+                            new_href;
+                        new_href = old_href + "#name=" + file_name + "&content-type=video/rmvb";
+
+                        link.attr("download",file_name);
+                        link.attr("href",new_href);
+
+                    });
+                }
             }
         },
         // get params from a url

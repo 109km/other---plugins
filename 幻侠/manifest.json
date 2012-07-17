@@ -1,0 +1,53 @@
+{
+	"name": "幻侠小说",
+	"version": "1.0.0.3",
+	"description": "幻侠小说--豌豆荚",
+	"content_scripts": [
+	    {
+			"matches":["http://*.huanxia.com/*"],
+			"run_at": "document_end",
+            "css": ["contentcss.css"],
+			"js": ["jquery-1.5.1.min.js", "contentscript.js"],
+            "all_frames":false
+	    }
+    ],
+    "icons":{
+        "16":"icon16.png",
+        "72":"icon72.png"
+    },
+  "app": {
+      "launch": {
+          "web_url": "http://360.huanxia.com/360hx/index.html"
+      },
+      "navigation": [
+        {
+            "label": "玄幻奇幻",
+            "web_url": "http://360.huanxia.com/360hx/list_1.html"
+        },
+        {
+            "label": "都市情感",
+            "web_url": "http://360.huanxia.com/360hx/list_2.html"
+        },
+        {
+            "label": "武侠仙侠",
+            "web_url": "http://360.huanxia.com/360hx/list_3.html"
+        },
+        {
+            "label": "惊悚小说",
+            "web_url": "http://360.huanxia.com/360hx/list_4.html"
+        },
+        {
+            "label": "悬疑小说",
+            "web_url": "http://360.huanxia.com/360hx/list_5.html"
+        },
+        {
+            "label": "科幻小说",
+            "web_url": "http://360.huanxia.com/360hx/list_6.html"
+        },
+        {
+            "label": "历史小说",
+            "web_url": "http://360.huanxia.com/360hx/list_7.html"
+        }
+      ]
+  }
+}

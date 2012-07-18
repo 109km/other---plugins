@@ -1,0 +1,23 @@
+{
+	"name": "a8音乐网",
+	"version": "1.0.0.6",
+	"description": "a8音乐网",
+	"content_scripts": [
+	    {
+	        "matches":["http://*.a8.com/*"],
+	        "run_at": "document_end",
+            "css": ["contentcss.css"],
+	        "js": ["jquery-1.7.min.js", "contentscript.js"],
+            "all_frames":false
+	    }
+    ],
+    "icons": {
+        "16": "icon16.png",
+        "72": "icon72.png"
+    },
+    "app": {
+        "launch": {
+            "web_url": "http://rank.a8.com"
+        }
+    }
+}

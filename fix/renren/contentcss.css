@@ -1,0 +1,122 @@
+body.home{
+    padding-top:0px!important;
+}
+#miqiang #publishbar{
+    display: none!important;
+}
+body#miqiang{
+    width:760px!important;
+    margin: 0 auto!important;
+}
+body #header #siteTopic{
+    display: none!important;
+}
+body #header #sitesummary{
+    width:auto!important;
+}
+body #postList .post{
+    float: left!important;
+}
+body #content{
+    width: 760px!important;
+}
+body .column{
+    width: 185px!important;
+    margin-right: 3px!important;
+}
+body #postList .article-box{
+    width: 180px!important;
+}
+body #postList .post-panel{
+    padding:5px!important;
+    width: 170px!important;
+}
+body #postList .post-panel img{
+    width: 170px!important;
+}
+body #main{
+    padding-top:50px!important;
+}
+body .help-enter{
+    display: none!important;
+}
+body #aside{
+    display: none!important;
+}
+body .pic_container img{
+    width: 300px!important;
+}
+body #pic_show{
+    position: absolute!important;
+    width: 300px!important;
+    padding: 50px!important;
+    padding-bottom: 30px!important;
+    overflow: hidden!important;
+    text-align: center!important;
+    top:0px!important;
+    left:0px!important;
+    z-index: 1000!important;
+    background: #000!important;
+    opacity: 0.9!important;
+}
+body #pic_show #J_Close{
+    position: absolute!important;
+    top:10px!important;
+    right: 10px!important;
+    display: block!important;
+    font-size: 16px!important;
+    color:#fff!important;
+}
+body #pic_show p a{
+    font-size: 16px!important;
+    color:#fff!important;
+}
+body #pic_show p a:hover{
+    text-decoration: underline!important;
+}
+body #postList .post-photo .photo{
+    cursor: pointer!important;
+}
+body #postList .article-box h3{
+    display: none!important;
+}
+body .fancybox-outer{
+    position: relative!important;
+}
+body .fancybox-outer h3{
+    position: absolute!important;
+    top: 30px!important;
+    left: 30px!important;
+    text-align: center!important;
+    display: block!important;
+    background: #fff!important;
+    color:#000!important;
+    width: 150px!important;
+    height: 30px!important;
+    line-height: 30px!important;
+    border-radius: 5px!important;
+    opacity: 0.8!important;
+}
+body .fancybox-outer h3 a{
+    color:#000!important;
+    font-size: 18px!important;
+    font-weight: normal!important;
+    font-family: "宋体";
+}
+body #postList .download_pic{
+    display: none!important;
+    position: absolute!important;
+    top:10px!important;
+    left:10px!important;
+    padding: 0 10px!important;
+    height: 18px!important;
+    line-height: 18px!important;
+    border-radius: 5px!important;
+    opacity: 0.8!important;
+    color:#000!important;
+    font-size: 14px!important;
+    background: #fff!important;
+}
+body #postList .hover .download_pic{
+    display: block!important;
+}

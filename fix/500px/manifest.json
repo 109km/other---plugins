@@ -1,0 +1,33 @@
+{
+	"name": "500px壁纸",
+	"version": "1.0.0.2",
+	"description": "500px专业摄影师图片社区在2003年创建于加拿大，为大家分享和发现精彩的照片，寻找最优秀的摄影人才，找到志同道合的朋友。",
+	"content_scripts": [
+	    {
+			"matches":["http://500px.com/*"],
+			"run_at": "document_end",
+            "css": ["contentcss.css","jquery.fancybox.css"],
+			"js": ["jquery-1.5.1.min.js","jquery.mousewheel-3.0.6.pack.js","jquery.fancybox.pack.js", "contentscript.js"],
+            "all_frames":false
+	    }
+    ],
+    "icons":{
+        "16":"icon16.png",
+        "72":"icon72.png"
+    },
+  "app": {
+      "launch": {
+          "web_url": "http://500px.com/popular"
+      },
+      "navigation": [
+        {
+            "label": "编辑推荐",
+            "web_url": "http://500px.com/editors"
+        },
+        {
+            "label": "趋势",
+            "web_url": "http://500px.com/upcoming"
+        }
+      ]
+  }
+}

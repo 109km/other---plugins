@@ -1,0 +1,81 @@
+body .container .d4{
+    width: 250px!important;
+}
+body .d4 .photo{
+    width: 250px!important;
+    height: 250px!important;
+}
+body div.photo img{
+    width: 250px!important;
+}
+body .container .col{
+    margin:0 3px 20px 0!important;
+}
+body #header{
+    min-width: 760px!important;
+}
+body #infobb{
+    display: none!important;
+}
+body .container,body #header .container{
+    width: 760px!important;
+    margin: 0 auto!important;
+}
+body #photo-index-msg{
+    display: none!important;
+}
+body div.photo .details .rating a,body div.photo .userdetails a{
+    font-size: 12px!important;
+}
+body .store-availability{
+    display: none!important;
+}
+body div.photo .details a{
+    font-size: 16px!important;
+}
+body div.photo .details .info a{
+    font-size: 14px!important;
+}
+body #userbar{
+    display: none!important;
+}
+body div.photo .userdetails .title a{
+    font-size: 16px!important;
+}
+body .fb_edge_widget_with_comment{
+    display: none!important;
+}
+body .container .d1{
+    width: 760px!important;
+}
+body #csb{
+    display: none!important;
+}
+body #header .right{
+    display: none!important;
+}
+body #footercontainer{
+    display: none!important;
+}
+body .fancybox-outer{
+    position: relative!important;
+}
+body .fancybox-outer .btn_down{
+    position: absolute!important;
+    top:20px!important;
+    left:20px!important;
+    text-align: center!important;
+    display: block!important;
+    background: #fff!important;
+    color:#000!important;
+    width: 150px!important;
+    height: 30px!important;
+    line-height: 30px!important;
+    border-radius: 5px!important;
+    opacity: 0.8!important;
+    font-size: 18px!important;
+}
+body .details .title_link:hover{
+    color:#fff!important;
+    cursor: text!important;
+}

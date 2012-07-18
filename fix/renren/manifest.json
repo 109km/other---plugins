@@ -1,0 +1,23 @@
+{
+	"name": "Airzooo壁纸",
+	"version": "1.0.0.3",
+	"description": "欢迎来到airzooo的世界！ airzooo是使用iPad进行设计的一系列非主流可爱风格小兽的卡通形象品牌",
+	"content_scripts": [
+	    {
+			"matches":["http://zhan.renren.com/airzooo*"],
+			"run_at": "document_end",
+            "css": ["contentcss.css","jquery.fancybox.css"],
+			"js": ["jquery-1.5.1.min.js","jquery.mousewheel-3.0.6.pack.js","jquery.fancybox.pack.js" ,"contentscript.js"],
+            "all_frames":false
+	    }
+    ],
+    "icons":{
+        "16":"icon16.png",
+        "72":"icon72.png"
+    },
+  "app": {
+      "launch": {
+          "web_url": "http://zhan.renren.com/airzooo"
+      }
+  }
+}

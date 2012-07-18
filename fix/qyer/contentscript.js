@@ -10,7 +10,7 @@
             // 从guide跳到login
             if( $("#asynclogininfo .qyer_head_login_entry").length > 0 && $("#asynclogininfo .qyer_head_login_entry a").length == 3 && location.href.indexOf("guide") >= 0 ){
                 $("body").hide();
-                location.href = "http://login.qyer.com/login.php";
+                window.location.href = "http://login.qyer.com/login.php";
             }
 
             // 执行登录

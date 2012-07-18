@@ -1,7 +1,8 @@
+
 (function($){
+
     var wanDouJiaExt = {
         init: function(){
-            var url = location.href;
             wanDouJiaExt.modifyAppDetail();
             wanDouJiaExt.modifyWallpaperList();
             wanDouJiaExt.modifyVideoPage();
@@ -10,11 +11,18 @@
         modifyAppDetail:function(){
             var item = $(".commend .ban_left .download .down a");
             if( item.length > 0 ){
+                var name = $("#appname").text(),
+                    old_href = item.attr("href"),
+                    pic_url = $('.commend .pic img').attr("src"),
+                    new_href;
+                new_href = old_href + "#name=" + name +".apk" + "&image=" + pic_url +
+                    "&content-type=application/vnd.android.package-archive";
+
                 item.html("下载到豌豆荚");
+                item.attr("download",name+".apk").attr("href",new_href);
             }
         },
         modifyWallpaperList:function(){
-
             var items = $(".list0Body .listL .lb");
             if(items.length>0){
                 items.each(function(){
@@ -26,32 +34,35 @@
                         group_id = pic_src.slice( pic_src.indexOf("mid_")+4, pic_src.indexOf("mid_")+7),
                         mid_pic = "http://img9.zol.com.cn/dp_800/"+group_id+"/"+ pic_id +".jpg",
                         big_pic = "http://img9.zol.com.cn/desk_pic/big_"+group_id+"/"+pic_id+".jpg",
-                        file_name =link.eq(1).text() + ".jpg",
-                        down_url = big_pic + "#name=" + file_name + "&image=" + pic_src + "&content-type=image/jpeg",
-                        btns = $('<div class="lbConTxt"><a class="left">预览</a><a class="right" href="'+down_url+'" download="'+file_name+'">下载</a></div>');
+                        name = link.eq(1).text(),
+                        file_name =name + ".jpg",
+                        down_url = big_pic + "#name=" + file_name + "&content-type=image/jpeg" +
+                            "&image=" + pic_src,
+                        btns = $('<div class="lbConTxt"><a class="left">预览</a><a class="right" href="'+down_url +'" rel="download">下载</a></div>');
+
 
                     // replace the small pics with mid pics
                     self.find("img").attr("src",mid_pic);
                     link.removeAttr("href");
-                    //link.attr("href",mid_pic).attr("data-lightview-options","width:640,height:480").addClass("lightview");
+                    //link.attr("href",mid_pic).attr("data-lightview-options","viewport:false,width:400,height:300").addClass("lightview");
                     self.append(btns);
 
                     self.click(function(e){
                         if(e.srcElement.className == "right"){
                             return;
                         }
-
                         Lightview.show({
                             url:mid_pic,
                             type:"image",
                             options:{
                                 viewport:false,
-                                width:640,
-                                height:480,
+                                width:400,
+                                height:300,
                                 effects:false
                             }
                         });
                     });
+
                 });
             }
         },
@@ -76,7 +87,7 @@
                             file_name = link.attr("title"),
                             old_href = link.attr("href"),
                             new_href;
-                        new_href = old_href + "#name=" + file_name + "&content-type=video/rmvb";
+                        new_href = old_href + "#name=" + file_name + "&content-type=video/mp4";
 
                         link.attr("download",file_name);
                         link.attr("href",new_href);
@@ -103,6 +114,44 @@
             setTimeout(function(){
                 $('a','body').removeAttr('target');
             },1000);
+        },
+        cookie:function(name, value, options) {
+            if (typeof value != 'undefined') {
+                options = options || {};
+                if (value === null) {
+                    value = '';
+                    options = $.extend({}, options);
+                    options.expires = -1;
+                }
+                var expires = '';
+                if (options.expires && (typeof options.expires == 'number' || options.expires.toUTCString)) {
+                    var date;
+                    if (typeof options.expires == 'number') {
+                        date = new Date();
+                        date.setTime(date.getTime() + (options.expires * 24 * 60 * 60 * 1000));
+                    } else {
+                        date = options.expires;
+                    }
+                    expires = '; expires=' + date.toUTCString();
+                }
+                var path = options.path ? '; path=' + (options.path) : '';
+                var domain = options.domain ? '; domain=' + (options.domain) : '';
+                var secure = options.secure ? '; secure' : '';
+                document.cookie = [name, '=', encodeURIComponent(value), expires, path, domain, secure].join('');
+            } else {
+                var cookieValue = null;
+                if (document.cookie && document.cookie != '') {
+                    var cookies = document.cookie.split(';');
+                    for (var i = 0; i < cookies.length; i++) {
+                        var cookie = jQuery.trim(cookies[i]);
+                        if (cookie.substring(0, name.length + 1) == (name + '=')) {
+                            cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                            break;
+                        }
+                    }
+                }
+                return cookieValue;
+            }
         }
     };
     wanDouJiaExt.init();

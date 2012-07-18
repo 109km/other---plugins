@@ -6,7 +6,6 @@
 	    {
 			"matches":["http://guide.qyer.com/*","http://login.qyer.com/*"],
 			"run_at": "document_end",
-            "css": ["contentcss.css"],
 			"js": ["jquery-1.5.1.min.js" , "contentscript.js"],
             "all_frames":false
 	    }

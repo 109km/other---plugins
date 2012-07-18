@@ -77,6 +77,7 @@ body .divbodyW,body .list0Body,body .list0Body .listL,body .div_body{
     width: 760px!important;
     padding: 0px!important;
     margin: 0 auto!important;
+    overflow: hidden;
 }
 body .list0Body .listL{
     padding-left:15px!important;
@@ -96,6 +97,7 @@ body .lb .lbCon{
 }
 body .list0Body .page{
     width: 760px!important;
+    text-align: center!important;
 }
 body .lbConTxt a{
     cursor: pointer!important;
@@ -158,7 +160,8 @@ body .lbConTxt .right{
 body .zerotop,body .logo,body .zerodh,body .zeropddh,body .syad,
 body object,body .iright,body .zerozztj,body h3.title,body #bottom,body .top,
 body .ad_ban,body .top_tips,body .file_right,body .liebiao .c_1,body .r_ico,
-body .check_all,body .downLoad_area,body .file_op,body .recom_box,body .zjjj p a{
+body .check_all,body .downLoad_area,body .file_op,body .recom_box,body .zjjj p a,
+body #comment_list{
     display: none!important;
 }
 body .nrlj a:hover{
@@ -228,10 +231,6 @@ body .c_2{
 }
 
 
-
-
-
-
 /*
  *  Part of Lightview - The jQuery Lightbox
  *  http://projects.nickstakenburg.com/lightview
@@ -246,143 +245,143 @@ body .c_2{
  */
 
 .lv_window {
-    position: absolute!important;
-    top: 50%!important;
-    left: 50%!important;
-    padding: 0!important;
-    overflow: hidden!important;
-    text-align: left!important;
-    -webkit-tap-highlight-color: rgba(0,0,0,0)!important;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 0;
+    overflow: hidden;
+    text-align: left;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 .lv_window,
 .lv_controls_top,
 .lv_controls_top_close,
 .lv_thumbnails,
 .lv_thumbnails_top_close {
-    z-index: 100000!important;
+    z-index: 100000;
 }
 .lv_skin {
-    float: left!important;
-    width: 100%!important;
-    height: 100%!important;
-    position: relative!important;
-    overflow: visible!important;
+    float: left;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: visible;
 }
 
 .lv_bubble,
 .lv_shadow {
-    position: absolute!important;
+    position: absolute;
 }
 .lv_bubble * {
-    display: inline!important;
-    position: relative!important;
-    float: left!important;
-    z-index: 0!important;
+    display: inline;
+    position: relative;
+    float: left;
+    z-index: 0;
 }
 
 .lv_skin * {
-    margin: 0!important;
-    padding: 0!important;
+    margin: 0;
+    padding: 0;
 }
 
 .lv_overlay {
-    position: fixed!important;
-    top: 0!important;
-    left: 0!important;
-    height: 100%!important;
-    width: 100%!important;
-    z-index: 99999!important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 99999;
 }
 
 /* wrapper for the spinner */
 .lv_spinner_wrapper {
-    position: absolute!important;
-    top: 50%!important;
-    left: 50%!important;
-    cursor: pointer!important;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    cursor: pointer;
 }
 
 /* The the previous/next overlay buttons on top of images */
 .lv_inner_previous_next_overlays {
-    position: absolute!important;
-    top: 0px!important;
-    left: 0px!important;
-    width: 100%!important;
-    height: 100%!important;
-    padding: 0!important;
-    margin: 0!important;
-    overflow: hidden!important;
-    zoom: 1!important;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    zoom: 1;
 }
-.lv_inner_previous_next_overlays * { padding: 0!important; margin: 0!important; }
+.lv_inner_previous_next_overlays * { padding: 0; margin: 0; }
 .lv_inner_previous_next_overlays .lv_button {
-    position: relative!important;
-    height: 100%!important;
-    width: 49%!important;
-    zoom: 1!important;
-    cursor: pointer!important;
+    position: relative;
+    height: 100%;
+    width: 49%;
+    zoom: 1;
+    cursor: pointer;
 }
-.lv_button_inner_previous_overlay { float: left!important; }
-.lv_button_inner_next_overlay { float: right!important; }
+.lv_button_inner_previous_overlay { float: left; }
+.lv_button_inner_next_overlay { float: right; }
 
 
 .lv_title_caption {
-    position:absolute!important;
-    font: 11px/18px "Lucida Sans", "Lucida Sans Unicode", "Lucida Grande", Tahoma, Arial, sans-serif!important;
-    color: #eaeaea!important;
+    position:absolute;
+    font: 11px/18px "Lucida Sans", "Lucida Sans Unicode", "Lucida Grande", Tahoma, Arial, sans-serif;
+    color: #eaeaea;
 }
-.lv_title_caption_slider { position: relative!important; float:left!important; overflow-y: hidden!important;}
-.lv_title_caption_slide { position: relative!important; float: left!important; top: 0!important; left: 0!important; padding: 15px 0 7px 0!important; }
-.lv_title { font-weight: bold!important; }
+.lv_title_caption_slider { position: relative; float:left; overflow-y: hidden;}
+.lv_title_caption_slide { position: relative; float: left; top: 0; left: 0; padding: 15px 0 7px 0; }
+.lv_title { font-weight: bold; }
 .lv_title, .lv_caption {
-    float: left!important;
-    clear: both!important;
+    float: left;
+    clear: both;
 }
 
 .lv_update_queue {
-    position: absolute!important;
-    top: -15000px!important;
-    left: -15000px!important;
-    width: 5000px!important;
-    height: 5000px!important;
-    visibility: hidden!important;
+    position: absolute;
+    top: -15000px;
+    left: -15000px;
+    width: 5000px;
+    height: 5000px;
+    visibility: hidden;
 }
 .lv_update_queue .lv_window,
 .lv_update_queue .lv_content {
-    position: relative!important;
-    overflow: visible!important;
-    float: left!important;
-    top: auto!important;
-    left: auto!important;
-    width: 100%!important;
+    position: relative;
+    overflow: visible;
+    float: left;
+    top: auto;
+    left: auto;
+    width: 100%;
 }
 .lv_content .lv_content_wrapper {
-    float: left!important;
-    clear: both!important;
-    position: relative!important;
+    float: left;
+    clear: both;
+    position: relative;
 }
 .lv_update_queue .lv_content_wrapper {
-    position: absolute!important;
-    top: 0!important;
-    left: 0!important;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 .lv_content_wrapper canvas {
-    float: left!important;
-    zoom: 1!important;
+    float: left;
+    zoom: 1;
 }
 
 .lv_content {
-    position: absolute!important;
-    padding: 0!important;
-    margin: 0!important;
-    overflow: auto!important; /* scrollbars */
-    text-align: left!important;
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    overflow: auto; /* scrollbars */
+    text-align: left;
 }
 
 .lv_measure_element {
-    position: relative!important;
-    float: left!important;
-    clear: both!important;
+    position: relative;
+    float: left;
+    clear: both;
 }
 .lv_content_canvas,
 .lv_content_image,
@@ -390,12 +389,12 @@ body .c_2{
 .lv_content_object,
 .lv_content_iframe,
 .lv_content_html {
-    float: left!important;
-    border: 0!important;
-    clear: both!important;
-    padding: 0!important;
-    margin: 0!important;
-    background: none!important;
+    float: left;
+    border: 0;
+    clear: both;
+    padding: 0;
+    margin: 0;
+    background: none;
 }
 
 
@@ -403,76 +402,76 @@ body .c_2{
 
 /* The buttons on the side when you view a gallery */
 .lv_side_buttons_underneath {
-    position: absolute!important;
-    top: 50%!important;
-    left: 50%!important;
-    clear: both!important;
-    width: 100%!important;
-    padding: 0!important;
-    height: 67px!important;
-    margin-top: -34px!important;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    clear: both;
+    width: 100%;
+    padding: 0;
+    height: 67px;
+    margin-top: -34px;
 }
-.lv_side_buttons_underneath * { padding: 0!important; margin: 0!important; }
+.lv_side_buttons_underneath * { padding: 0; margin: 0; }
 
-.lv_side_buttons_underneath .lv_side_left { float: left!important; }
-.lv_side_buttons_underneath .lv_side_right { float: right!important; }
+.lv_side_buttons_underneath .lv_side_left { float: left; }
+.lv_side_buttons_underneath .lv_side_right { float: right; }
 
 .lv_side,
 .lv_side_button {
-    height: 37px!important;
-    width: 41px!important;
-    position: absolute!important;
+    height: 37px;
+    width: 41px;
+    position: absolute;
 }
 .lv_side {
-    position: relative!important;
-    overflow: hidden!important;
-    padding: 15px 0!important;
-    cursor: pointer!important;
+    position: relative;
+    overflow: hidden;
+    padding: 15px 0;
+    cursor: pointer;
 }
 
-.lv_side_left { margin-left: -41px!important; }
-.lv_side_right { margin-right: -41px!important; }
+.lv_side_left { margin-left: -41px; }
+.lv_side_right { margin-right: -41px; }
 .lv_side_button {
-    height: 31px!important;
-    width: 41px!important;
-    cursor: pointer!important;
+    height: 31px;
+    width: 41px;
+    cursor: pointer;
 }
 .lv_side_button_previous {
-    margin-left: 0px!important;
-    background-image: url(http://projects.nickstakenburg.com/css/lightview/skins/light/sprite.png)!important;
-    background-repeat: no-repeat!important;
-    background-position: 0px -33px!important;
+    margin-left: 0px;
+    background-image: url(http://projects.nickstakenburg.com/css/lightview/skins/light/sprite.png);
+    background-repeat: no-repeat;
+    background-position: 0px -33px;
 }
 .lv_side_button_previous:hover,
-.lv_side_left .lv_side_button_out { background-position: 0px -64px!important; }
+.lv_side_left .lv_side_button_out { background-position: 0px -64px; }
 .lv_side_button_next {
-    margin-left: 0px!important;
-    background-image: url(http://projects.nickstakenburg.com/css/lightview/skins/light/sprite.png)!important;
-    background-repeat: no-repeat!important;
-    background-position: -41px -33px!important;
+    margin-left: 0px;
+    background-image: url(http://projects.nickstakenburg.com/css/lightview/skins/light/sprite.png);
+    background-repeat: no-repeat;
+    background-position: -41px -33px;
 }
 .lv_side_button_next:hover,
-.lv_side_right .lv_side_button_out { background-position: -41px -64px!important; }
-.lv_side_buttons_underneath .lv_side_button_out { margin-left: 0!important; }
+.lv_side_right .lv_side_button_out { background-position: -41px -64px; }
+.lv_side_buttons_underneath .lv_side_button_out { margin-left: 0; }
 
 /* disabled states */
 .lv_side_buttons_underneath .lv_side_left_disabled .lv_side_button,
-.lv_side_buttons_underneath .lv_side_left_disabled:hover .lv_side_button { background-position: 0px -95px!important; }
+.lv_side_buttons_underneath .lv_side_left_disabled:hover .lv_side_button { background-position: 0px -95px; }
 
 .lv_button_top_close {
-    width: 33px!important;
-    height: 33px!important;
-    position: absolute!important;
-    cursor: pointer!important;
-    background-image: url(http://projects.nickstakenburg.com/css/lightview/skins/light/sprite.png)!important;
-    background-repeat: no-repeat!important;
-    background-position: 0px 0px!important;
+    width: 33px;
+    height: 33px;
+    position: absolute;
+    cursor: pointer;
+    background-image: url(http://projects.nickstakenburg.com/css/lightview/skins/light/sprite.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
     /* the spacing option set on the relative controls is taken into account when positioning */
-    top: 17px!important;
+    top: 17px;
     /* left or right is set on the css of the skin */
 }
 .lv_button_top_close:hover {
-    background-position: -33px 0px!important;
+    background-position: -33px 0px;
 }
 
 
@@ -481,98 +480,98 @@ body .c_2{
  * Top Controls
  */
 .lv_controls_top {
-    position: fixed!important;
-    top: 0!important;
-    left: 50%!important;
-    width: 126px!important;
-    margin-left: -63px!important;
-    height: 63px!important;
-    overflow: hidden!important;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    width: 126px;
+    margin-left: -63px;
+    height: 63px;
+    overflow: hidden;
 }
 .lv_controls_top_with_slideshow {
-    width: 147px!important;
-    margin-left: -74px!important;
+    width: 147px;
+    margin-left: -74px;
 }
 
 .lv_controls_top .lv_top_middle {
-    width: 100%!important;
-    height: 33px!important;
-    margin-top: 15px!important;
-    float: left!important;
-    position: relative!important;
+    width: 100%;
+    height: 33px;
+    margin-top: 15px;
+    float: left;
+    position: relative;
 }
 
 .lv_controls_top .lv_top_button {
-    height: 100%!important;
-    float: left!important;
-    position: relative!important;
+    height: 100%;
+    float: left;
+    position: relative;
 }
 .lv_controls_top .lv_icon {
-    background-image: url(http://projects.nickstakenburg.com/css/lightview/skins/light/sprite.png)!important;
-    background-repeat: no-repeat!important;
-    width: 100%!important;
-    height: 100%!important;
-    float: left!important;
-    cursor: pointer!important;
-    font-family: "Lucida Sans", "Lucida Grande", Tahoma, sans-serif!important;
-    color: #d4d4d4!important;
-    text-shadow: 0 0 2px rgba(0, 0, 0, 0.5)!important;
-    position: relative!important;
+    background-image: url(http://projects.nickstakenburg.com/css/lightview/skins/light/sprite.png);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    float: left;
+    cursor: pointer;
+    font-family: "Lucida Sans", "Lucida Grande", Tahoma, sans-serif;
+    color: #d4d4d4;
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+    position: relative;
 }
 .lv_controls_top .lv_icon_disabled {
-    cursor: default!important;
-    color: #2e2e2e!important;
-    text-shadow: none!important;
+    cursor: default;
+    color: #2e2e2e;
+    text-shadow: none;
 }
 
-.lv_top_previous { width: 63px!important; }
-.lv_top_previous .lv_icon { background-position: 0px -96px!important; }
-.lv_top_previous:hover .lv_icon { background-position: 0px -129px!important; }
+.lv_top_previous { width: 63px; }
+.lv_top_previous .lv_icon { background-position: 0px -96px; }
+.lv_top_previous:hover .lv_icon { background-position: 0px -129px; }
 .lv_top_previous .lv_icon_disabled,
-.lv_top_previous:hover .lv_icon_disabled { background-position: 0px -162px!important; }
+.lv_top_previous:hover .lv_icon_disabled { background-position: 0px -162px; }
 
-.lv_top_slideshow { width: 21px!important; display: none!important; position: relative!important; }
-.lv_controls_top_with_slideshow .lv_top_slideshow { display: block!important; }
-.lv_top_slideshow .lv_icon { background-position: -63px -96px!important; }
-.lv_top_slideshow:hover .lv_icon { background-position: -63px -129px!important; }
+.lv_top_slideshow { width: 21px; display: none; position: relative; }
+.lv_controls_top_with_slideshow .lv_top_slideshow { display: block; }
+.lv_top_slideshow .lv_icon { background-position: -63px -96px; }
+.lv_top_slideshow:hover .lv_icon { background-position: -63px -129px; }
 .lv_top_slideshow .lv_icon_disabled,
-.lv_top_slideshow:hover .lv_icon_disabled { background-position: -63px -162px!important; }
+.lv_top_slideshow:hover .lv_icon_disabled { background-position: -63px -162px; }
 
-.lv_top_slideshow_playing .lv_icon { background-position: -148px -96px!important; }
-.lv_top_slideshow_playing:hover .lv_icon { background-position: -148px -129px!important; }
+.lv_top_slideshow_playing .lv_icon { background-position: -148px -96px; }
+.lv_top_slideshow_playing:hover .lv_icon { background-position: -148px -129px; }
 
 
-.lv_top_next { width: 62px!important; }
-.lv_top_next .lv_icon { background-position: -84px -96px!important; }
-.lv_top_next:hover .lv_icon { background-position: -84px -129px!important; }
+.lv_top_next { width: 62px; }
+.lv_top_next .lv_icon { background-position: -84px -96px; }
+.lv_top_next:hover .lv_icon { background-position: -84px -129px; }
 .lv_top_next .lv_icon_disabled,
-.lv_top_next:hover .lv_icon_disabled { background-position: -84px -162px!important; }
+.lv_top_next:hover .lv_icon_disabled { background-position: -84px -162px; }
 
-.lv_icon span { margin-top: 5px!important; width: 30px!important; text-align: center!important; line-height: 23px!important; }
-.lv_top_previous span { float: right!important; margin-right: 7px!important; }
-.lv_top_next span { float: left!important; margin-left: 6px!important; }
+.lv_icon span { margin-top: 5px; width: 30px; text-align: center; line-height: 23px; }
+.lv_top_previous span { float: right; margin-right: 7px; }
+.lv_top_next span { float: left; margin-left: 6px; }
 
 
 .lv_controls_top_close {
-    height: 33px!important;
-    width: 33px!important; /* 46 */
-    position: fixed!important;
-    top: 0!important;
-    right: 0!important;
-    padding: 13px!important;
+    height: 33px;
+    width: 33px; /* 46 */
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 13px;
 }
 .lv_controls_top_close_button {
-    height: 33px!important;
-    width: 33px!important;
-    float: left!important;
-    position: relative!important;
-    background-image: url(http://projects.nickstakenburg.com/css/lightview/skins/light/sprite.png)!important;
-    background-repeat: no-repeat!important;
-    background-position: -166px -21px!important;
-    cursor: pointer!important;
+    height: 33px;
+    width: 33px;
+    float: left;
+    position: relative;
+    background-image: url(http://projects.nickstakenburg.com/css/lightview/skins/light/sprite.png);
+    background-repeat: no-repeat;
+    background-position: -166px -21px;
+    cursor: pointer;
 }
 .lv_controls_top_close_button:hover {
-    background-position: -166px -54px!important;
+    background-position: -166px -54px;
 }
 
 
@@ -580,203 +579,203 @@ body .c_2{
  * Relative Controls / Slider
  */
 .lv_controls_relative {
-    position: absolute!important;
-    bottom: 10px!important;
-    left: 50%!important;
-    margin-left: -150px!important;
-    height: 50px!important;
-    overflow: hidden!important;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    margin-left: -150px;
+    height: 50px;
+    overflow: hidden;
 }
 .lv_slider {
-    font-family: "Lucida Sans", "Lucida Grande", Tahoma, sans-serif!important;
-    font-size: 9px!important;
-    height: 21px!important;
-    line-height: 21px!important;
-    padding: 15px 0 14px 0!important;
-    position: relative!important;
-    overflow: hidden!important;
+    font-family: "Lucida Sans", "Lucida Grande", Tahoma, sans-serif;
+    font-size: 9px;
+    height: 21px;
+    line-height: 21px;
+    padding: 15px 0 14px 0;
+    position: relative;
+    overflow: hidden;
 }
 .lv_slider .lv_slider_numbers {
-    float: left!important;
-    position: relative!important;
-    height: 21px!important;
-    overflow: hidden!important;
-    margin: 0 2px!important;
+    float: left;
+    position: relative;
+    height: 21px;
+    overflow: hidden;
+    margin: 0 2px;
 }
 .lv_slider .lv_slider_slide {
-    position: absolute!important;
-    top: 0!important;
-    left: 0!important;
-    height: 21px!important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 21px;
 }
 
 .lv_slider_number,
 .lv_slider_number_empty {
-    float: left!important;
-    position: relative!important;
-    height: 21px!important;
-    width: 28px!important;
-    line-height: 21px!important;
-    overflow: hidden!important;
-    color: #d4d4d4!important;
-    text-shadow: 0 0 2px rgba(0, 0, 0, 0.5)!important;
-    background: #4a4a4a!important;
-    text-align: center!important;
-    padding: 0!important;
-    margin: 0!important;
-    zoom: 1!important;
-    text-transform: none!important;
-    text-decoration: none!important;
-    border: none!important;
-    background-repeat: no-repeat!important;
-    background: url(http://projects.nickstakenburg.com/css/lightview/skins/light/sprite.png)!important;
-    background-position: -67px 0px!important;
-    cursor: pointer!important;
+    float: left;
+    position: relative;
+    height: 21px;
+    width: 28px;
+    line-height: 21px;
+    overflow: hidden;
+    color: #d4d4d4;
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+    background: #4a4a4a;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    zoom: 1;
+    text-transform: none;
+    text-decoration: none;
+    border: none;
+    background-repeat: no-repeat;
+    background: url(http://projects.nickstakenburg.com/css/lightview/skins/light/sprite.png);
+    background-position: -67px 0px;
+    cursor: pointer;
 }
 
-.lv_slider_number_empty { background-position: -151px 0px!important; cursor: default!important; }
-.lv_slider_number_last { margin-right: 0!important; }
+.lv_slider_number_empty { background-position: -151px 0px; cursor: default; }
+.lv_slider_number_last { margin-right: 0; }
 
 .lv_slider_number:hover {
-    background-position: -95px 0px!important;
+    background-position: -95px 0px;
 
 }
 .lv_slider_numbers .lv_slider_number_active,
 .lv_slider_numbers .lv_slider_number_active:hover {
-    background-position: -123px 0px!important;
-    color: #808080!important;
-    cursor: default!important;
+    background-position: -123px 0px;
+    color: #808080;
+    cursor: default;
 }
 
 .lv_slider .lv_slider_icon,
 .lv_slider .lv_icon {
-    height: 21px!important;
-    width: 21px!important;
+    height: 21px;
+    width: 21px;
 }
 .lv_slider .lv_slider_icon {
-    zoom: 1!important;
-    padding: 0 2px!important; /* IE6 needs padding instead of margin */
-    display: inline!important;
-    position: relative!important;
-    cursor: pointer!important;
-    float: left!important;
+    zoom: 1;
+    padding: 0 2px; /* IE6 needs padding instead of margin */
+    display: inline;
+    position: relative;
+    cursor: pointer;
+    float: left;
 }
 .lv_slider .lv_icon {
-    background: url(http://projects.nickstakenburg.com/css/lightview/skins/light/sprite.png)!important;
-    background-repeat: no-repeat!important;
+    background: url(http://projects.nickstakenburg.com/css/lightview/skins/light/sprite.png);
+    background-repeat: no-repeat;
     /* IE6 */
-    position: absolute!important;
-    top: 0!important;
-    left: 2px!important;
-    display: block!important;
+    position: absolute;
+    top: 0;
+    left: 2px;
+    display: block;
 }
 
-.lv_slider_previous .lv_icon { background-position: -82px -21px!important; }
-.lv_slider_previous .lv_icon:hover { background-position: -82px -42px!important; }
+.lv_slider_previous .lv_icon { background-position: -82px -21px; }
+.lv_slider_previous .lv_icon:hover { background-position: -82px -42px; }
 .lv_slider_previous_disabled .lv_icon,
-.lv_slider_previous_disabled .lv_icon:hover { background-position: -82px -63px!important; cursor: default!important; }
+.lv_slider_previous_disabled .lv_icon:hover { background-position: -82px -63px; cursor: default; }
 
-.lv_slider_next .lv_icon { background-position: -103px -21px!important; }
-.lv_slider_next .lv_icon:hover { background-position: -103px -42px!important; }
+.lv_slider_next .lv_icon { background-position: -103px -21px; }
+.lv_slider_next .lv_icon:hover { background-position: -103px -42px; }
 .lv_slider_next_disabled .lv_icon,
-.lv_slider_next_disabled .lv_icon:hover { background-position: -103px -63px!important; cursor: default!important; }
+.lv_slider_next_disabled .lv_icon:hover { background-position: -103px -63px; cursor: default; }
 
-.lv_slider_slideshow { position: relative!important; top : 0!important; left: 0!important; display: inline!important; }
-.lv_slider_slideshow .lv_icon { background-position: -125px -21px!important;}
-.lv_slider_slideshow .lv_icon:hover { background-position: -125px -42px!important; }
-.lv_slider_slideshow_playing .lv_icon { background-position: -146px -21px!important; }
-.lv_slider_slideshow_playing .lv_icon:hover { background-position: -146px -42px!important; }
+.lv_slider_slideshow { position: relative; top : 0; left: 0; display: inline; }
+.lv_slider_slideshow .lv_icon { background-position: -125px -21px;}
+.lv_slider_slideshow .lv_icon:hover { background-position: -125px -42px; }
+.lv_slider_slideshow_playing .lv_icon { background-position: -146px -21px; }
+.lv_slider_slideshow_playing .lv_icon:hover { background-position: -146px -42px; }
 .lv_slider_slideshow_disabled .lv_icon,
-.lv_slider_slideshow_disabled .lv_icon:hover { background-position: -125px -63px!important; cursor: default!important; }
+.lv_slider_slideshow_disabled .lv_icon:hover { background-position: -125px -63px; cursor: default; }
 
 
 /* thumbnails */
 .lv_thumbnails {
-    position: fixed!important;
-    bottom: 0!important;
-    left: 0!important;
-    width: 100%!important;
-    height: 72px!important;
-    padding: 15px 0 25px 0!important;
-    overflow: hidden!important;
-    -webkit-tap-highlight-color: rgba(0,0,0,0)!important;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 72px;
+    padding: 15px 0 25px 0;
+    overflow: hidden;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
 .lv_thumbnails_slider {
-    position: relative!important;
-    width: 100%!important;
-    height: 100%!important;
-    float: left!important;
-    overflow: hidden!important;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    float: left;
+    overflow: hidden;
 }
 
 .lv_thumbnails_slide {
-    position: absolute!important;
-    top: 0!important;
-    left: 0!important;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .lv_thumbnail {
-    width: 119px!important;
-    height: 72px!important;
-    float: left!important;
-    position: relative!important;
-    display: inline!important;
-    overflow: hidden!important; /* IE6 */
+    width: 119px;
+    height: 72px;
+    float: left;
+    position: relative;
+    display: inline;
+    overflow: hidden; /* IE6 */
 }
 .lv_thumbnail_image {
-    position: relative!important;
-    background: red!important;
-    background: #161616!important;
-    width: 108px!important;
-    height: 60px!important;
-    margin: 6px!important;
-    float: left!important;
-    box-shadow: 0 -1px 4px rgba(0, 0, 0, .3)!important;
-    cursor: pointer!important;
-    overflow: hidden!important;
-    display: inline!important; /* IE6 */
-    z-index: 0!important; /* IE8 */
+    position: relative;
+    background: red;
+    background: #161616;
+    width: 108px;
+    height: 60px;
+    margin: 6px;
+    float: left;
+    box-shadow: 0 -1px 4px rgba(0, 0, 0, .3);
+    cursor: pointer;
+    overflow: hidden;
+    display: inline; /* IE6 */
+    z-index: 0; /* IE8 */
 
 }
-.lv_thumbnail_image img { position: absolute!important; }
+.lv_thumbnail_image img { position: absolute; }
 .lv_thumbnail_active .lv_thumbnail_image {
-    filter: alpha(opacity=35)!important;
-    opacity: .35!important;
-    display: inline!important;
+    filter: alpha(opacity=35);
+    opacity: .35;
+    display: inline;
 }
 
 .lv_thumbnail_icon {
-    width: 36px!important;
-    height: 36px!important;
-    position: absolute!important;
-    top: 50%!important;
-    left: 50%!important;
-    margin-left: -18px!important;
-    margin-top: -18px!important;
-    background-position: 99px 99px!important;
-    background-repeat: no-repeat!important;
-    display: block !important;
-    display: none!important; /* IE6 */
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -18px;
+    margin-top: -18px;
+    background-position: 99px 99px;
+    background-repeat: no-repeat;
+    display: block ;
+    display: none; /* IE6 */
 }
 
 .lv_thumbnail_image_spinner_overlay {
-    width: 100%!important;
-    height: 100%!important;
-    float: left!important;
-    position: relative!important;
-    background: #161616!important;
+    width: 100%;
+    height: 100%;
+    float: left;
+    position: relative;
+    background: #161616;
 }
 
-.lv_thumbnail_icon_video { background-position: 0px -196px!important; }
-.lv_thumbnail:hover .lv_thumbnail_icon_video { background-position: -36px -196px!important; }
-.lv_thumbnail_active:hover .lv_thumbnail_icon_video { background-position: 0px -196px!important; }
+.lv_thumbnail_icon_video { background-position: 0px -196px; }
+.lv_thumbnail:hover .lv_thumbnail_icon_video { background-position: -36px -196px; }
+.lv_thumbnail_active:hover .lv_thumbnail_icon_video { background-position: 0px -196px; }
 
 /*
  * Skins
  */
 /* normalization for all skins */
-.lv_content { text-align: left!important; }
+.lv_content { text-align: left; }
 
 .lv_content,
 .lv_content h1,
@@ -784,38 +783,38 @@ body .c_2{
 .lv_content h3,
 .lv_content h4,
 .lv_content h5,
-.lv_content h6 { color: #333!important; }
+.lv_content h6 { color: #333; }
 
 .lv_content a,
 .lv_content a:hover {
-    color: #0088cc!important;
-    font-weight: normal!important;
-    background: none!important;
-    border: 0!important;
-    text-decoration: none!important;
+    color: #0088cc;
+    font-weight: normal;
+    background: none;
+    border: 0;
+    text-decoration: none;
 }
-.lv_content a:hover { text-decoration: underline!important; }
+.lv_content a:hover { text-decoration: underline; }
 
 .lv_title_caption a,
 .lv_title_caption a:hover {
-    color: #b4b4b4!important;
-    font-weight: normal!important;
-    background: none!important;
-    border: 0!important;
-    text-decoration: none!important;
+    color: #b4b4b4;
+    font-weight: normal;
+    background: none;
+    border: 0;
+    text-decoration: none;
 }
-.lv_title_caption a:hover { text-decoration: underline!important; }
+.lv_title_caption a:hover { text-decoration: underline; }
 
 /*
  * skin: 'light'
  */
 /* title/caption */
-.lv_window_light .lv_title_caption { text-shadow: 0px 1px 1px rgba(0,0,0,.25)!important; }
+.lv_window_light .lv_title_caption { text-shadow: 0px 1px 1px rgba(0,0,0,.25); }
 
 /* close button */
 .lv_window_light .lv_button_top_close {
-    top: 17px!important;
-    left: 55px!important;
+    top: 17px;
+    left: 55px;
 }
 
 /* sprite */
@@ -830,7 +829,7 @@ body .c_2{
 .lv_controls_top_skin_light .lv_icon,
 .lv_controls_top_close_skin_light .lv_controls_top_close_button,
 .lv_thumbnails_skin_light .lv_thumbnail_icon {
-    background-image: url(http://projects.nickstakenburg.com/css/lightview/skins/light/sprite.png) !important;
+    background-image: url(http://projects.nickstakenburg.com/css/lightview/skins/light/sprite.png) ;
 }
 
 
@@ -845,12 +844,12 @@ body .c_2{
 .lv_content_dark h4,
 .lv_content_dark h5,
 .lv_content_dark h6 {
-    color: #f3f3f3!important;
+    color: #f3f3f3;
 }
 
 .lv_content_dark a,
 .lv_content_dark a:hover {
-    color: #b4b4b4!important;
+    color: #b4b4b4;
 }
 
 /* sprite */
@@ -865,50 +864,54 @@ body .c_2{
 .lv_controls_top_skin_dark .lv_icon,
 .lv_controls_top_close_skin_dark .lv_controls_top_close_button,
 .lv_thumbnails_skin_dark .lv_thumbnail_icon {
-    background-image: url(http://projects.nickstakenburg.com/css/lightview/skins/dark/sprite.png) !important;
+    background-image: url(http://projects.nickstakenburg.com/css/lightview/skins/dark/sprite.png) ;
 }
 
 /* close button */
 .lv_window_dark .lv_button_top_close {
-    top: 18px!important;
-    left: 53px!important;
+    top: 18px;
+    left: 53px;
 }
 
 /* controls: 'relative' */
-.lv_window_dark .lv_slider_number { color: #acacac!important; }
-.lv_window_dark .lv_slider_number:hover { color: #e3e3e3!important; }
+.lv_window_dark .lv_slider_number { color: #acacac; }
+.lv_window_dark .lv_slider_number:hover { color: #e3e3e3; }
 .lv_window_dark .lv_slider_number_active,
-.lv_window_dark .lv_slider_number_active:hover { color: #5d5d5d!important;}
+.lv_window_dark .lv_slider_number_active:hover { color: #5d5d5d;}
 
 /* controls: 'top' */
-.lv_controls_top_skin_dark .lv_icon { color: #a6a6a6!important; }
-.lv_controls_top_skin_dark .lv_icon:hover { color: #e0e0e0!important; }
+.lv_controls_top_skin_dark .lv_icon { color: #a6a6a6; }
+.lv_controls_top_skin_dark .lv_icon:hover { color: #e0e0e0; }
 .lv_controls_top_skin_dark .lv_icon_disabled,
-.lv_controls_top_skin_dark .lv_icon_disabled:hover { color: #575757!important; }
+.lv_controls_top_skin_dark .lv_icon_disabled:hover { color: #575757; }
 
 
 /*
  * skin: 'mac'
  */
 /* title/caption */
-.lv_window_mac .lv_title_caption { text-shadow: 0px 1px 1px rgba(0,0,0,.25)!important; }
+.lv_window_mac .lv_title_caption { text-shadow: 0px 1px 1px rgba(0,0,0,.25); }
 
 
 /* close button */
 .lv_window_mac .lv_button_top_close {
-    top: 39px!important;
-    left: 39px!important;
+    top: 39px;
+    left: 39px;
 }
 
 /* controls: 'relative' */
-.lv_window_mac .lv_slider_number { color: #acacac!important; }
-.lv_window_mac .lv_slider_number:hover { color: #e1e1e1!important; }
+.lv_window_mac .lv_slider_number { color: #acacac; }
+.lv_window_mac .lv_slider_number:hover { color: #e1e1e1; }
 .lv_window_mac .lv_slider_number_active,
-.lv_window_mac .lv_slider_number_active:hover { color: #5d5d5d!important; }
+.lv_window_mac .lv_slider_number_active:hover { color: #5d5d5d; }
 
 /* controls: 'top' */
-.lv_controls_top_skin_mac .lv_icon { color: #a6a6a6!important; }
-.lv_controls_top_skin_mac .lv_icon:hover { color: #e0e0e0!important; }
+.lv_controls_top_skin_mac .lv_icon { color: #a6a6a6; }
+.lv_controls_top_skin_mac .lv_icon:hover { color: #e0e0e0; }
 .lv_controls_top_skin_mac .lv_icon_disabled,
-.lv_controls_top_skin_mac .lv_icon_disabled:hover { color: #575757!important; }
+.lv_controls_top_skin_mac .lv_icon_disabled:hover { color: #575757; }
+
+
+
+
 

@@ -14,5 +14,10 @@
     "icons":{
         "16":"icon16.png",
         "72":"icon72.png"
+    },
+    "app": {
+        "launch": {
+            "web_url": "http://www.pickywallpapers.com/"
+        }
     }
 }

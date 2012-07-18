@@ -12,18 +12,22 @@
             $("#header .left").find("li").first().show();
             $("#header .left").find("li").first().find("li").show();
 
-            $("#photo_category").removeAttr("id");
+            /*
+            $("#photo_category").removeAttr("id").removeAttr("onchange");
+            var origin_url = location.origin;
             $("select.ddown").change(function(){
-                var w = this.selectedIndex;
-                if(w == 0){
-                    location.href = '?';
-                }else {
-                    var selected_text = this.options[w].text;
-                    location.href = '?only='+ selected_text;
-                }
+                location.href = "http://www.baidu.com";
             });
+            */
 
+            if(location.href.indexOf("fresh") < 0){
+                $(".subheader .tabs").append('<li class="clickable "><a href="http://500px.com/fresh/today">Fresh</a></li>');
 
+                if( location.href.indexOf("fresh/today") >= 0 ){
+                    $(".subheader .tabs li").removeClass("active");
+                    $(".subheader .tabs li").last().addClass("active");
+                }
+            }
             //hide the right ul
             $("#header .right").hide();
 

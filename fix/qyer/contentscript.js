@@ -9,13 +9,13 @@
 
             // 从guide跳到login
             if( $("#asynclogininfo .qyer_head_login_entry").length > 0 && $("#asynclogininfo .qyer_head_login_entry a").length == 3 && location.href.indexOf("guide") >= 0 ){
-                $("body").hide();
-                window.location.href = "http://login.qyer.com/login.php";
+                //$("body").hide();
+                location.href = "http://login.qyer.com/login.php";
             }
 
             // 执行登录
             if( $("#loginform").length > 0 ){
-                $("body").hide();
+                //$("body").hide();
                 $("#account").val("wandoujia_qyer");
                 $(".infoform_txt[type='password']").val("wandoujia163");
                 $(".infoform_btn input").val("aHR0cDovL2d1aWRlLnF5ZXIuY29tLw==");

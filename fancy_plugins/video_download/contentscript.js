@@ -100,36 +100,59 @@
 (function($){
     var wanDouJiaExt = {
         init: function(){
+            // youku home
             if( wanDouJiaExt.page_url == "http://www.youku.com/" ){
                 wanDouJiaExt.modifyHomePage();
             }
-
-            if( wanDouJiaExt.page_url.indexOf("tv.youku.com")>= 0 ){
-                wanDouJiaExt.modifyTvPage();
+            // youku detail
+            if( wanDouJiaExt.page_url.indexOf("v_show")>= 0){
+                wanDouJiaExt.modifyDetailPage();
+            }
+            // soku home
+            if( wanDouJiaExt.page_url == "http://www.soku.com/" ){
+                wanDouJiaExt.modifySokuHome();
             }
 
-            wanDouJiaExt.modifyDetailPage();
+            if( wanDouJiaExt.page_url.indexOf("soku")>= 0){
+                wanDouJiaExt.removeTag();
+            }
+
+
+            wanDouJiaExt.modifyGlobe();
             wanDouJiaExt.clearAds();
             wanDouJiaExt.removeTarget();
-            wanDouJiaExt.removeTag();
+
+
         },
         page_url : location.href,
         base_down_url:"http://videodl.sinaapp.com/?url=",
+        modifyGlobe:function(){
+            var head_search_form = $('#headSearchForm'),
+                submit_btn = $('#headSearchForm .sokutool button');
+            head_search_form.removeAttr("onsubmit");
+            submit_btn.removeAttr("onclick");
 
+            head_search_form.submit(function(e){
+                e.preventDefault();
+                wanDouJiaExt.jump_search("#headq");
+            });
+            submit_btn.click(function(e){
+                e.preventDefault();
+                wanDouJiaExt.jump_search("#headq");
+            });
+        },
         modifyHomePage:function(){
             $("body .window .collfocus .collappend .items").find(".clear").hide();
-        },
-        modifyTvPage:function(){
-            $(".collgrid4w .items").find(".clear").hide();
+            $(".tabs li a").removeAttr("href");
+            $('.caption .title a').removeAttr("href");
         },
         modifyDetailPage:function(){
-
             // disable ads
             var video_layer = $('<div class="video_layer"></div>'),
                 btn_layer =$('<div class="video_btn_layer"></div>'),
                 player = $("#player"),
-                width = player.width(),
-                height = player.height()-100;
+                width = player.width()-40,
+                height = player.height()-40;
             player.find("object").append('<param name="wmode" value="transparent">');
             video_layer.height(height).width(width);
             player.append(video_layer).append(btn_layer);
@@ -145,9 +168,32 @@
 
             down_url = down_url + "#name=" + name + "&content-type=video/mp4";
             var down_btn = $('<a class="download_btn" href="'+down_url+'" rel="download">下载视频</a>');
-            $(".show_intro .title").append(down_btn);
+
+            $("h1.title").append(down_btn);
+
         },
         modifyPlayList:function(){
+
+        },
+        modifySokuHome:function(){
+            var search_box = $('.socore form'),
+                search_btn = $('.socore .sobtn');
+
+            search_box.removeAttr("onsubmit");
+            search_box.submit(function(e){
+                e.preventDefault();
+                wanDouJiaExt.jump_search("#headq");
+            });
+            search_btn.click(function(e){
+                e.preventDefault();
+                wanDouJiaExt.jump_search("#headq");
+            });
+
+            $(".autolist li").live("click",function(e){
+                e.preventDefault();
+                var val = $(this).attr("hitq");
+                wanDouJiaExt.jump_search(false,val);
+            });
 
         },
         clearAds:function(){
@@ -165,7 +211,14 @@
                     wanDouJiaExt.is_check_ads = false;
                 }
 
-            },2000);
+            },1500);
+
+        },
+        jump_search : function(input,val){
+
+            var key_word = input != false ? $(input).val() : val,
+                url = "http://www.soku.com/search_video/q_" + key_word;
+            location.href = url;
 
         },
         // get params from a url
@@ -190,7 +243,6 @@
                     $(this).remove();
                 }
             });
-            //$('.rank10coll .clear').remove();
         },
         removeTarget:function(){
             setTimeout(function(){

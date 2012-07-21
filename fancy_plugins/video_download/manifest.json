@@ -4,7 +4,7 @@
     "description": "视频下载",
     "content_scripts": [
         {
-            "matches":["http://*.youku.com/*"],
+            "matches":["http://*.youku.com/*","http://*.soku.com/*"],
             "run_at": "document_end",
             "css": ["contentcss.css"],
             "js": ["jquery-1.5.1.min.js","contentscript.js"],

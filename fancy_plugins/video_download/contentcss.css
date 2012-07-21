@@ -1,65 +1,230 @@
 body .layout_121 .sideCol,body .ucenter,body .s_header .prinav .sub .channel,
-body .AB600,body iframe,body .col2_21 .left,body .ad_area,body .s_footer{
+body .AB600,body iframe,body .col2_21 .left,body .ad_area,body .s_footer,body .col2_21 .right,
+body #pop,body .v_user,body .guide,body .s_miniHeader .nav,body .s_header .prinav,body .collfocus .focus_info .user
+{
     display: none!important;
 }
+body .s_header,body .s_miniHeader,body .s_footer,body .s_miniFooter,body .s_body{
+    min-width: 760px!important;
+    margin: 0 auto!important;
+}
+body .window, body .screen{
+    min-width: 760px!important;
+    margin: 0 auto!important;
+}
+body .s_main{
+    position: relative!important;
+}
 body .s_main,body .s_header .conbox,body .s_header .navbox,body .s_miniHeader .headerBox{
-    width: 760px;
-    padding:0px;
-    margin: 0 auto;
+    width: 760px!important;
+    padding:0px!important;
+    margin: 0 auto!important;
+}
+body .playArea .player,body .playBox_thx{
+    max-width: 760px!important;
 }
 body .row_index_1{
-    height:670px;
+    height:600px!important;
 }
-body .row_index_head .caption{
-    width: 600px;
-}
-body .s_header .headcon .logo{
-    width: 150px;
-    margin-right: 15px;
+body .row_index_head .caption,body .row_index_head{
+    width: 600px!important;
 }
 body .video_layer{
-    position: absolute;
-    top:0px;
-    left:0px;
-    z-index: 10001;
+    position: absolute!important;
+    top:0px!important;
+    left:0px!important;
+    z-index: 10001!important;
+}
+body .video_btn_layer{
+    width: 93px!important;
+    height: 27px!important;
+    position: absolute!important;
+    right:0px!important;
+    bottom:0px!important;
+    z-index: 10001!important;
 }
 body .col2_21 .right{
-    float: left;
-    width: 200px;
-    margin-left: 10px;
-    overflow: hidden;
+    float: left!important;
+    width: 200px!important;
+    margin-left: 10px!important;
+    overflow: hidden!important;
 }
-body .playBox{
-    width: 550px;
-}
+
 body .listArea,body #vprelationvideo_wrap{
-    float: left;
+    float: left!important;
 }
 body .collgrid3s .v,body .collgrid3s .p{
-    margin-right: 13px;
+    margin: 0 7px!important;
 }
 body .items .v_title{
-    height:30px;
-    line-height: 14px;
-    overflow: hidden;
+    height:30px!important;
+    line-height: 14px!important;
+    overflow: hidden!important;
 }
 body .items .v_title a{
-    line-height: 14px;
+    line-height: 14px!important;
 }
 body #vpfolderinfo_wrap,body #vpvideoinfo_wrap,body #vpcommendvideos,body #stripping-wrap{
-    display: none;
+    display: none!important;
 }
 
 body .listArea .pack_list,.listArea .pack_list li{
-    width: 188px;
-    overflow: hidden;
+    width: 188px!important;
+    overflow: hidden!important;
 }
 body .collgrid3s .items{
-    width: 200px;
+    width: 200px!important;
+    margin-bottom: 10px!important;
 }
 body .collgrid3s,body #vprelationvideo_wrap{
-    width: 200px;
+    width: 200px!important;
 }
 body .right .box .body, body .sideCol .box .body{
-    padding: 5px;
+    padding: 5px!important;
+}
+body #vpofficialinfo{
+    display: none!important;
+}
+body .tab_outer li.current{
+    background: none!important;
+}
+
+/*  Home page */
+body .window .s_header .navbox,body .window .s_header .conbox,body .window .s_main,
+body .row_index_1 .collfocus,body .layout_121 .row_index_1 .mainCol{
+    width: 760px!important;
+    min-width: 760px!important;
+}
+body .window .s_header .so .soextend a.daquan,body .window .s_header .so .soextend .separate{
+    display: none!important;
+}
+body .window .row_index_1 .qBox .head,body .ABtitled .ABcon{
+    display: none!important;
+}
+body .collgrid4w .items{
+    width: 760px!important;
+    margin-bottom: 0px!important;
+}
+body .window .collfocus .collappend,body .window .collfocus .collappend .items{
+    width:435px!important;
+}
+body .window .collfocus .collappend .items .v{
+    margin-right: 17px!important;
+}
+body .window .collgrid4w{
+    width: 760px!important;
+}
+body .window .goldenshow .collgrid4w{
+    width: 128px!important;
+}
+body .window .row_index_2 .layout_121 .mainCol{
+    width: 760px!important;
+}
+body .box .head .extend{
+    display: none!important;
+}
+body .window .colltext4w{
+    margin-top:0px!important;
+}
+
+/* 详情页 */
+body #vpvideotitle_wrap,body #vpofficialtitle_wrap{
+    height: 30px!important;
+    margin: 10px 0!important;
+}
+body #vpvideotitle_wrap .title,body #vpvideotitle_wrap,body #vpofficialtitle_wrap .title{
+    position: relative!important;
+}
+body #vpvideotitle_wrap .title .download_btn,body #vpvideotitle_wrap,body #vpofficialtitle_wrap .title .download_btn{
+    color:#014CCC!important;
+    cursor: pointer!important;
+}
+body #vpvideotitle_wrap .title .download_btn:hover,
+body #vpvideotitle_wrap,body #vpofficialtitle_wrap .title .download_btn:hover{
+    cursor: pointer!important;
+    text-decoration: underline!important;
+    color:#014CCC!important;
+}
+body #vpvideotitle_wrap a,#vpofficialtitle a{
+    color:#000!important;
+    cursor: default!important;
+}
+body #vpvideotitle_wrap a:hover,#vpofficialtitle a:hover{
+    cursor: default!important;
+    text-decoration: none!important;
+}
+
+/* 排行榜 */
+body .col2_16 .pageTitle,body .col2_61 .pageTitle{
+    display: none!important;
+}
+body .col2_61 .left{
+    width: 760px!important;
+    margin-top:10px!important;
+}
+body .col2_16 .right,body .col2_61 .rank_right{
+    width: 630px!important;
+    margin-left: 10px!important;
+}
+body .rankcoll{
+    width: 630px!important;
+}
+body .rankall10 .rank10{
+    margin:10px!important;
+    width: 290px!important;
+}
+body .rankall10 .rank{
+    width: 290px!important;
+}
+
+
+/* soku */
+body .core #wall,body .minifooter .copyright,body #soswitch,
+body .footer .copyright {
+    display: none!important;
+}
+.foryouku .typechk .main,
+.foryouku .header .main,
+.foryouku .layout_16,
+.foryouku .footer{
+    width: 760px!important;
+    margin: 0px auto!important;
+    padding:0px!important;
+    overflow: hidden!important;
+}
+.foryouku .layout_16{
+    padding:20px 0!important;
+}
+body .rank10coll .items,body .rank10coll,body .result .collgrid4w .items{
+    width: 640px !important;
+}
+body .result .collgrid4w .v,body .result .collgrid4w .p{
+    margin-right: 32px !important;
+}
+body .typechk .main li:last-child,body .header .subnav,body .direct{
+    display: none!important;
+}
+body .rank50{
+    width: 640px!important;
+}
+body .rank50 .skey{
+    width:400px!important;
+}
+body .layout_16 .maincol{
+    float:left!important;
+    width: 620px!important;
+}
+body .feedwin,body #bgwall{
+    display: none !important;
+}
+body .footer .main{
+    padding-left: 20px!important;
+}
+body .page_index .core{
+    width: 500px!important;
+}
+
+/* 专辑 */
+body .listsub .handle,body .col2_21 .guide,body .videoList #ico1_2{
+    display: none;
 }

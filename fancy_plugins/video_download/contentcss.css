@@ -1,7 +1,7 @@
 body .layout_121 .sideCol,body .ucenter,body .s_header .prinav .sub .channel,
 body .AB600,body iframe,body .col2_21 .left,body .ad_area,body .s_footer,body .col2_21 .right,
 body #pop,body .v_user,body .guide,body .s_miniHeader .nav,body .s_header .prinav,body .collfocus .focus_info .user
-{
+,body #AB100{
     display: none!important;
 }
 body .s_header,body .s_miniHeader,body .s_footer,body .s_miniFooter,body .s_body{
@@ -169,9 +169,14 @@ body .col2_16 .right,body .col2_61 .rank_right{
 body .rankcoll{
     width: 630px!important;
 }
+body .rankall10 .bar{
+    display: none!important;
+}
 body .rankall10 .rank10{
     margin:10px!important;
     width: 290px!important;
+    height:378px!important;
+    overflow: hidden!important;
 }
 body .rankall10 .rank{
     width: 290px!important;
@@ -180,12 +185,12 @@ body .rankall10 .rank{
 
 /* soku */
 body .core #wall,body .minifooter .copyright,body #soswitch,
-body .footer .copyright {
+body .footer .copyright,body .header .sotool .soswitch{
     display: none!important;
 }
 .foryouku .typechk .main,
-.foryouku .header .main,
-.foryouku .layout_16,
+body .header .main,
+body .layout_16,
 .foryouku .footer{
     width: 760px!important;
     margin: 0px auto!important;
@@ -212,6 +217,7 @@ body .rank50 .skey{
 body .layout_16 .maincol{
     float:left!important;
     width: 620px!important;
+    margin-left: 10px;
 }
 body .feedwin,body #bgwall{
     display: none !important;
@@ -250,7 +256,13 @@ body .kubox{
 body #kubox .panels{
     display: none!important;
 }
-
+body .rank10coll .rank10{
+    margin-right: 10px;
+    width: 192px;
+}
+body .rank10coll .rank10 em{
+    display: none;
+}
 
 /* 专辑 */
 body .listsub .handle,body .col2_21 .guide,body .videoList #ico1_2{
@@ -263,7 +275,7 @@ body .kubox{
     left: 60px!important;
     width: 183px!important;
 }
-body .foreso .kubox,body .headcon .kubox{
+body .foreso .kubox,body .headcon .kubox,body .sotool .kubox{
     left:0!important;
 }
 body .col2_21 .left{
@@ -285,7 +297,7 @@ body .base_info .title a{
     color:#000!important;
 }
 body .cooperation{
-    display: none;
+    display: none!important;
 }
 body #vpaction_wrap,body #commentArea,body #vphotvideo{
     display: none!important;
@@ -310,4 +322,15 @@ body .viewchange .viewby{
     z-index: 10000!important;
     text-align: center!important;
     color:#fff!important;
+}
+
+
+/* youku rank */
+body .status .num a{
+    color:#000!important;
+}
+body .status .num a:hover{
+    cursor:default!important;
+    text-decoration: none!important;
+    color:#000!important;
 }

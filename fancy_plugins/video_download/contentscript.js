@@ -117,11 +117,18 @@
                 wanDouJiaExt.removeTag();
             }
 
+            if( wanDouJiaExt.page_url.indexOf("index.youku.com") >=0 ){
+                wanDouJiaExt.modifyRankPage();
+            }
 
             wanDouJiaExt.modifyGlobe();
             wanDouJiaExt.clearAds();
             wanDouJiaExt.removeTarget();
 
+            if( wanDouJiaExt.page_url == 'http://www.soku.com/newtop/all.html' ){
+                wanDouJiaExt.modifySokuHome();
+                wanDouJiaExt.modifySokuRank();
+            }
 
         },
         page_url : location.href,
@@ -175,6 +182,14 @@
         modifyPlayList:function(){
 
         },
+        modifyRankPage:function(){
+            $(".status .num a").each(function(){
+                this.onclick = "";
+            });
+
+            $(".rankcoll .clear").hide();
+
+        },
         modifySokuHome:function(){
             var search_box = $('.socore form'),
                 search_btn = $('.socore .sobtn');
@@ -195,6 +210,26 @@
                 wanDouJiaExt.jump_search(false,val);
             });
 
+            $(".sotool .sotxt").live("keydown",function(e){
+                if( e.keyCode == 13 ){
+                    e.preventDefault();
+
+                    var val = $(this).val();
+                    wanDouJiaExt.jump_search(false,val);
+                }
+            });
+
+        },
+        modifySokuRank:function(){
+            var items = $(".rank10 .skey a");
+            items.each(function(){
+                var old_href = $(this).attr("href"),
+                    new_href;
+                new_href = old_href.replace('/v?keyword=','http://www.soku.com/search_video/q_');
+
+                $(this).attr("href",new_href);
+
+            });
         },
         clearAds:function(){
             setInterval(function(){

@@ -1,0 +1,65 @@
+body .layout_121 .sideCol,body .ucenter,body .s_header .prinav .sub .channel,
+body .AB600,body iframe,body .col2_21 .left,body .ad_area,body .s_footer{
+    display: none!important;
+}
+body .s_main,body .s_header .conbox,body .s_header .navbox,body .s_miniHeader .headerBox{
+    width: 760px;
+    padding:0px;
+    margin: 0 auto;
+}
+body .row_index_1{
+    height:670px;
+}
+body .row_index_head .caption{
+    width: 600px;
+}
+body .s_header .headcon .logo{
+    width: 150px;
+    margin-right: 15px;
+}
+body .video_layer{
+    position: absolute;
+    top:0px;
+    left:0px;
+    z-index: 10001;
+}
+body .col2_21 .right{
+    float: left;
+    width: 200px;
+    margin-left: 10px;
+    overflow: hidden;
+}
+body .playBox{
+    width: 550px;
+}
+body .listArea,body #vprelationvideo_wrap{
+    float: left;
+}
+body .collgrid3s .v,body .collgrid3s .p{
+    margin-right: 13px;
+}
+body .items .v_title{
+    height:30px;
+    line-height: 14px;
+    overflow: hidden;
+}
+body .items .v_title a{
+    line-height: 14px;
+}
+body #vpfolderinfo_wrap,body #vpvideoinfo_wrap,body #vpcommendvideos,body #stripping-wrap{
+    display: none;
+}
+
+body .listArea .pack_list,.listArea .pack_list li{
+    width: 188px;
+    overflow: hidden;
+}
+body .collgrid3s .items{
+    width: 200px;
+}
+body .collgrid3s,body #vprelationvideo_wrap{
+    width: 200px;
+}
+body .right .box .body, body .sideCol .box .body{
+    padding: 5px;
+}

@@ -69,90 +69,74 @@ body .commend .ban_left .download .down a:hover{
 }
 
 /* wallpaper */
-body iframe,body .divbodyW .logo_top,body .divbodyW .logoM1,body .list0Body .hotR,
-body .divbodyW .logo_logo,body .hot,body .list0Body .listLTitle,body .div_body_foot,body ins{
-    display: none!important;
+body #pub_hd,body .header,body .nav,body #search_bg,body #leftbar,
+body .right_t,body .rmss,body #footer,body #bmnav,body #mn_content .video_l,
+body .video_r{
+    display: none;
 }
-body .divbodyW,body .list0Body,body .list0Body .listL,body .div_body{
-    width: 760px!important;
-    padding: 0px!important;
-    margin: 0 auto!important;
+body.index_bg{
+    background:none;
+}
+body .right_c,body #mn_content,body #rightbar,body .hot_video_c,body #mn_content,
+body #mn_content .video,body .flip{
+    width: 760px;
+    margin:0 auto;
+}
+body .right_c{
+    border:none;
+}
+body .leftimg_li{
+    width: 760px;
+}
+body .leftimg_li ul li{
+    width: 182px;
+    margin:0 8px 10px 0;
+    background: none;
+}
+body .leftimg_li ul li img{
+    border:none;
+}
+body .leftimg_li ul li a{
+    width: 180px;
+    border: 1px solid #ccc;
+    padding:0px;
+    background: none;
     overflow: hidden;
 }
-body .list0Body .listL{
-    padding-left:15px!important;
+body .leftimg_li ul li a:hover{
+    width: 180px;
+    border: 1px solid #ccc;
+    padding:0px;
+    background: #4674a1;
 }
-body ins{
-    display: none!important;
-}
-body .list0Body .lb{
-    width: 190px!important;
-    margin-bottom: 5px!important;
-    padding: 0px!important;
-}
-body .lb .lbCon{
-    width: auto!important;
-    padding: 0px!important;
-    border: none!important;
-}
-body .list0Body .page{
-    width: 760px!important;
-    text-align: center!important;
-}
-body .lbConTxt a{
-    cursor: pointer!important;
-}
-body .lbConTxt img{
-    width: 160px!important;
-}
-body .fancybox-inner img{
-    width: 640px!important;
-    height: 480px!important;
+body .leftimg_li ul li a:hover span{
+    color: #fff;
 }
 
-body .fancybox-inner .lbCon{
-    width: auto!important;
-    height: auto!important;
-    padding:0px!important;
-    background: none!important;
-    border: none!important;
+body .pic_play_t{
+    display: none;
 }
-body .fancybox-inner .lbCon a{
-    opacity: 0!important;
+body .pic_play_center{
+    width: 760px;
 }
-body .fancybox-inner .lbCon a:hover{
-    cursor: default!important;
+body .hot_video_c{
+    border: none;
+    padding:0px;
 }
-body .fancybox-inner .lbCon .lbConTxt{
-    width: auto!important;
-    height: auto!important;
-    position: relative!important;
-    padding:0px!important;
+body .photoList-wrap{
+    width: 760px;
 }
-body .fancybox-inner .lbCon .lbConTxt .down_btn{
-    opacity: 0.8!important;
-    position: absolute!important;
-    bottom:20px!important;
-    right: 20px!important;
-    width: 100px!important;
-    height: 30px!important;
-    line-height: 30px!important;
-    font-size: 16px!important;
-    background: #000!important;
-    border-radius: 5px!important;
-    color:#fff!important;
+body #photo-List{
+    width: 700px;
 }
-body .fancybox-inner .lbCon .lbConTxt .down_btn:hover{
-    cursor: pointer!important;
+body #photo-List ul li{
+    margin:0 8px;
 }
-body .lbConTxt .left{
-    float: left!important;
-    margin-left:40px!important;
+body .pic_play_center{
+    width: 758px;
 }
-body .lbConTxt .right{
-    margin-top:0px!important;
-    margin-right: 40px!important;
-    float: right!important;
+body .two_sc{
+    display: none;
 }
 
 

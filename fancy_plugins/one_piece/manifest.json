@@ -4,7 +4,7 @@
 	"description": "海贼王专辑",
 	"content_scripts": [
 	    {
-			"matches":["http://dmxz.zerodm.cn/*","http://m.baidu.com/*","http://as.baidu.com/*","http://*.zol.com.cn/*","http://kuai.xunlei.com/*"],
+			"matches":["http://dm.4399.com/*","http://m.baidu.com/*","http://as.baidu.com/*","http://*.zol.com.cn/*","http://kuai.xunlei.com/*"],
 			"run_at": "document_end",
             "css": ["contentcss.css"],
 			"js": ["jquery-1.7.2.min.js" ,"spinners.min.js","lightview.js","contentscript.js"],

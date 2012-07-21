@@ -1,0 +1,14 @@
+{
+    "name": "视频下载",
+    "version": "1.0.0.1",
+    "description": "视频下载",
+    "content_scripts": [
+        {
+            "matches":["http://*.youku.com/*"],
+            "run_at": "document_end",
+            "css": ["contentcss.css"],
+            "js": ["jquery-1.5.1.min.js","contentscript.js"],
+            "all_frames":false
+        }
+    ]
+}

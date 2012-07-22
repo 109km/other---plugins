@@ -11,6 +11,7 @@ body .s_header,body .s_miniHeader,body .s_footer,body .s_miniFooter,body .s_body
 body .window, body .screen{
     min-width: 760px!important;
     margin: 0 auto!important;
+    overflow: hidden!important;
 }
 body .s_main{
     position: relative!important;
@@ -22,6 +23,7 @@ body .s_main,body .s_header .conbox,body .s_header .navbox,body .s_miniHeader .h
 }
 body .playArea .player,body .playBox_thx{
     max-width: 760px!important;
+    overflow: hidden!important;
 }
 body .row_index_1{
     height:600px!important;
@@ -182,19 +184,25 @@ body .rankall10 .rank{
     width: 290px!important;
 }
 
-
-/* soku */
-body .core #wall,body .minifooter .copyright,body #soswitch,
-body .footer .copyright,body .header .sotool .soswitch{
+body .fxBox{
     display: none!important;
 }
-.foryouku .typechk .main,
+/* soku */
+body .core #wall,body .minifooter .copyright,body .header .sotool #soswitch,
+body .footer .copyright,body .header .sotool .soswitch,body .dstat,body .copyright,
+body .p_user{
+    display: none!important;
+}
+body .typechk .main,
 body .header .main,
 body .layout_16,
 .foryouku .footer{
     width: 760px!important;
     margin: 0px auto!important;
     padding:0px!important;
+}
+body .layout_16{
+    margin-top:10px!important;
 }
 .foryouku .layout_16{
     padding:20px 0!important;
@@ -217,7 +225,7 @@ body .rank50 .skey{
 body .layout_16 .maincol{
     float:left!important;
     width: 620px!important;
-    margin-left: 10px;
+    margin-left: 10px!important;
 }
 body .feedwin,body #bgwall{
     display: none !important;
@@ -257,11 +265,29 @@ body #kubox .panels{
     display: none!important;
 }
 body .rank10coll .rank10{
-    margin-right: 10px;
-    width: 192px;
+    margin-right: 10px!important;
+    width: 192px!important;
 }
 body .rank10coll .rank10 em{
-    display: none;
+    display: none!important;
+}
+body #vcoll.collgrid4w{
+    width: 640px!important;
+    overflow: hidden!important;
+}
+body .relkeys ul{
+    width:620px!important;
+}
+body .relkeys ul li{
+    margin-right: 10px!important;
+}
+body .rankall .num .stat{
+    color:#333!important;
+}
+body .rankall .num .stat:hover{
+    color:#333!important;
+    text-decoration: none!important;
+    cursor: default!important;
 }
 
 /* 专辑 */
@@ -274,6 +300,9 @@ body .panels,body .layout_21 .sidecol{
 body .kubox{
     left: 60px!important;
     width: 183px!important;
+}
+body #headSearchForm .kubox{
+    left: 0px!important;
 }
 body .foreso .kubox,body .headcon .kubox,body .sotool .kubox{
     left:0!important;
@@ -302,7 +331,6 @@ body .cooperation{
 body #vpaction_wrap,body #commentArea,body #vphotvideo{
     display: none!important;
 }
-
 
 /* search page */
 body .viewchange .viewby{
@@ -333,4 +361,16 @@ body .status .num a:hover{
     cursor:default!important;
     text-decoration: none!important;
     color:#000!important;
+}
+body #re_right,body .message_W,body .backBtn{
+    display: none!important;
+}
+body #vphotofficial{
+    display: none!important;
+}
+body .goyouku,body #headSearchForm .sorank{
+    display: none!important;
+}
+body .headerBox .logo a:hover{
+    cursor: default!important;
 }

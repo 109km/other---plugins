@@ -118,14 +118,18 @@
             }
 
             if( wanDouJiaExt.page_url.indexOf("index.youku.com") >=0 ){
-                wanDouJiaExt.modifyRankPage();
+                wanDouJiaExt.modifyYoukuRankPage();
+            }
+
+            if( wanDouJiaExt.page_url.indexOf("playlist_show") >=0 ){
+                wanDouJiaExt.modifyPlayList();
             }
 
             wanDouJiaExt.modifyGlobe();
             wanDouJiaExt.clearAds();
             wanDouJiaExt.removeTarget();
 
-            if( wanDouJiaExt.page_url == 'http://www.soku.com/newtop/all.html' ){
+            if( wanDouJiaExt.page_url.indexOf( 'soku.com/newtop' ) >= 0 ){
                 wanDouJiaExt.modifySokuHome();
                 wanDouJiaExt.modifySokuRank();
             }
@@ -134,6 +138,8 @@
         page_url : location.href,
         base_down_url:"http://videodl.sinaapp.com/?url=",
         modifyGlobe:function(){
+            $(".headerBox .logo a").removeAttr("href");
+
             var head_search_form = $('#headSearchForm'),
                 submit_btn = $('#headSearchForm .sokutool button');
             head_search_form.removeAttr("onsubmit");
@@ -147,12 +153,32 @@
                 e.preventDefault();
                 wanDouJiaExt.jump_search("#headq");
             });
+
+            $(".autolist li",head_search_form).live("click",function(e){
+                e.preventDefault();
+                var val = $(this).attr("hitq");
+                wanDouJiaExt.jump_search(false,val);
+            });
+
+            $("#headq",head_search_form).live("keydown",function(e){
+                if( e.keyCode == 13 ){
+                    e.preventDefault();
+
+                    var val = $(this).val();
+                    wanDouJiaExt.jump_search(false,val);
+                }
+            });
         },
         modifyHomePage:function(){
             $("body .window .collfocus .collappend .items").find(".clear").hide();
             $(".tabs li a").removeAttr("href");
             $('.caption .title a').removeAttr("href");
         },
+
+        modifyPlayList:function(){
+            $(".base .title a").removeAttr("href");
+        },
+
         modifyDetailPage:function(){
             // disable ads
             var video_layer = $('<div class="video_layer"></div>'),
@@ -176,15 +202,21 @@
             down_url = down_url + "#name=" + name + "&content-type=video/mp4";
             var down_btn = $('<a class="download_btn" href="'+down_url+'" rel="download">下载视频</a>');
 
+            var title = $("h1.title").text();
+            if(title.length > 40){
+                $("h1.title").text(title.slice(0,40));
+            }
+
             $("h1.title").append(down_btn);
 
         },
-        modifyPlayList:function(){
+        modifyYoukuRankPage:function(){
+            $(".rank table a").each(function(){
+                var self = $(this);
 
-        },
-        modifyRankPage:function(){
-            $(".status .num a").each(function(){
-                this.onclick = "";
+                self.removeAttr("onclick");
+                self.attr("href","http://www.soku.com/search_video/q_"+self.text());
+
             });
 
             $(".rankcoll .clear").hide();
@@ -221,18 +253,21 @@
 
         },
         modifySokuRank:function(){
-            var items = $(".rank10 .skey a");
+            var items = $(".skey a");
             items.each(function(){
                 var old_href = $(this).attr("href"),
                     new_href;
-                new_href = old_href.replace('/v?keyword=','http://www.soku.com/search_video/q_');
+
+                if(old_href.indexOf("v?keyword=")>=0){
+                    new_href = old_href.replace('/v?keyword=','http://www.soku.com/search_video/q_');
+                }
 
                 $(this).attr("href",new_href);
 
             });
         },
         clearAds:function(){
-            setInterval(function(){
+            var timer = setInterval(function(){
                 var count=0;
                 $('div','body').each(function(){
                     var self = $(this);
@@ -246,9 +281,14 @@
                     wanDouJiaExt.is_check_ads = false;
                 }
 
-            },1500);
+            },100);
+
+            setTimeout(function(){
+                clearInterval(timer);
+            },5000);
 
         },
+
         jump_search : function(input,val){
 
             var key_word = input != false ? $(input).val() : val,

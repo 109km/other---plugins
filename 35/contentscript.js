@@ -416,20 +416,21 @@
                 }
             }           
         },
-        count_icode : function(link){
-            return link.match(/\/(albumplay|oplay)\/[\w-]+\/([\w-]+)/) != null ? link.match(/\/(albumplay|oplay)\/[\w-]+\/([\w-]+)/)[2] : "8u88I-eTaWI"
+        count_icode : function(link,default_icode){
+            return link.match(/\/(albumplay|oplay)\/[\w-]+\/([\w-]+)/) != null ? link.match(/\/(albumplay|oplay)\/[\w-]+\/([\w-]+)/)[2] : default_icode
         },
         addDownLoadButton: function(){
                 //页面左下侧视频列表
                 $('.pack_video_card').each(function(){
                     var downloadLink = $(this).children('div').eq(0).children('a').eq(0).attr('href');
-                    var icode = wanDouJiaExt.count_icode(downloadLink);
                     $.ajax({
                         url:downloadLink,
                         success:function(data){
                             var page = data,
-                                listData = data.slice( data.indexOf("listData") , data.indexOf("]",data.indexOf("listData"))+1);
-                            console.log(listData);
+                                listData = data.slice( data.indexOf("listData") , data.indexOf("]",data.indexOf("listData"))+1),
+                                default_icode = data.slice(data.indexOf("|| '")+4,data.indexOf("'",data.indexOf("|| '")+4)) ;
+                            var icode = wanDouJiaExt.count_icode(downloadLink,default_icode);
+                            console.log(icode);
                         }
                     });
                     $(this).children('div').eq(1).append("<h6 class='info' style='text-align:center'><a class='btn-min' href='javascript:void()'>\u4e0b\u8f7d</a></h6>");

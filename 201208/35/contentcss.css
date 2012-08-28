@@ -48,7 +48,7 @@
 .conwrap .con_side,body #gBot,body .play_tip_box .play_tip,body #comments,
 #playTipBox,.con_mod .hd a.btn_goto_comment,#fqa,#minibar-panel,#minibar-bar,
 #gotoTop,.cover_banner,.s,#toolbar,.g-mini-play,.ad_banner,#adex_top_banner,iframe,#adFromBAIDU,
-.g-bot{
+.g-bot,.g-mini-nav .g-link .g-link-more,.header .subnav,.g-upload{
     display: none!important;
 }
 #wandou_down{

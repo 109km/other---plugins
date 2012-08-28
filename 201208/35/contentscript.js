@@ -156,6 +156,14 @@
         },
         modifySoku:function(){
             $(".page_content").prev().hide();
+
+            $("#search_result a").each(function(){
+                var self = $(this);
+                self.attr("target","_self");
+            });
+
+            $(".g-mini-nav .g-link .first").next().hide();
+            
         },
         removeFootElement: function(){
             if(this.tabName.indexOf('tudou') >=0){

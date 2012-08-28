@@ -1,0 +1,376 @@
+body .layout_121 .sideCol,body .ucenter,body .s_header .prinav .sub .channel,
+body .AB600,body iframe,body .col2_21 .left,body .ad_area,body .s_footer,body .col2_21 .right,
+body #pop,body .v_user,body .guide,body .s_miniHeader .nav,body .s_header .prinav,body .collfocus .focus_info .user
+,body #AB100{
+    display: none!important;
+}
+body .s_header,body .s_miniHeader,body .s_footer,body .s_miniFooter,body .s_body{
+    min-width: 760px!important;
+    margin: 0 auto!important;
+}
+body .window, body .screen{
+    min-width: 760px!important;
+    margin: 0 auto!important;
+    overflow: hidden!important;
+}
+body .s_main{
+    position: relative!important;
+}
+body .s_main,body .s_header .conbox,body .s_header .navbox,body .s_miniHeader .headerBox{
+    width: 760px!important;
+    padding:0px!important;
+    margin: 0 auto!important;
+}
+body .playArea .player,body .playBox_thx{
+    max-width: 760px!important;
+    overflow: hidden!important;
+}
+body .row_index_1{
+    height:600px!important;
+}
+body .row_index_head .caption,body .row_index_head{
+    width: 600px!important;
+}
+body .video_layer{
+    position: absolute!important;
+    top:0px!important;
+    left:60px!important;
+    z-index: 10001!important;
+}
+body .video_btn_layer{
+    width: 93px!important;
+    height: 27px!important;
+    position: absolute!important;
+    right:0px!important;
+    bottom:0px!important;
+    z-index: 10001!important;
+}
+body .col2_21 .right{
+    float: left!important;
+    width: 200px!important;
+    margin-left: 10px!important;
+    overflow: hidden!important;
+}
+
+body .listArea,body #vprelationvideo_wrap{
+    float: left!important;
+}
+body .collgrid3s .v,body .collgrid3s .p{
+    margin: 0 7px!important;
+}
+body .items .v_title{
+    height:30px!important;
+    line-height: 14px!important;
+    overflow: hidden!important;
+}
+body .items .v_title a{
+    line-height: 14px!important;
+}
+body #vpfolderinfo_wrap,body #vpvideoinfo_wrap,body #vpcommendvideos,body #stripping-wrap{
+    display: none!important;
+}
+
+body .listArea .pack_list,.listArea .pack_list li{
+    width: 188px!important;
+    overflow: hidden!important;
+}
+body .collgrid3s .items{
+    width: 200px!important;
+    margin-bottom: 10px!important;
+}
+body .collgrid3s,body #vprelationvideo_wrap{
+    width: 200px!important;
+}
+body .right .box .body, body .sideCol .box .body{
+    padding: 5px!important;
+}
+body #vpofficialinfo{
+    display: none!important;
+}
+body .tab_outer li.current{
+    background: none!important;
+}
+
+/*  Home page */
+body .window .s_header .navbox,body .window .s_header .conbox,body .window .s_main,
+body .row_index_1 .collfocus,body .layout_121 .row_index_1 .mainCol{
+    width: 760px!important;
+    min-width: 760px!important;
+}
+body .window .s_header .so .soextend a.daquan,body .window .s_header .so .soextend .separate{
+    display: none!important;
+}
+body .window .row_index_1 .qBox .head,body .ABtitled .ABcon{
+    display: none!important;
+}
+body .collgrid4w .items{
+    width: 760px!important;
+    margin-bottom: 0px!important;
+}
+body .window .collfocus .collappend,body .window .collfocus .collappend .items{
+    width:435px!important;
+}
+body .window .collfocus .collappend .items .v{
+    margin-right: 17px!important;
+}
+body .window .collgrid4w{
+    width: 760px!important;
+}
+body .window .goldenshow .collgrid4w{
+    width: 128px!important;
+}
+body .window .row_index_2 .layout_121 .mainCol{
+    width: 760px!important;
+}
+body .box .head .extend{
+    display: none!important;
+}
+body .window .colltext4w{
+    margin-top:0px!important;
+}
+
+/* 详情页 */
+body #vpvideotitle_wrap,body #vpofficialtitle_wrap{
+    height: 30px!important;
+    margin: 10px 0!important;
+}
+body #vpvideotitle_wrap .title,body #vpvideotitle_wrap,body #vpofficialtitle_wrap .title{
+    position: relative!important;
+}
+body #vpvideotitle_wrap .title .download_btn,body #vpvideotitle_wrap .download_btn,body #vpofficialtitle_wrap .title .download_btn{
+    color:#014CCC!important;
+    cursor: pointer!important;
+}
+body #vpvideotitle_wrap .title .download_btn:hover,
+body #vpvideotitle_wrap .download_btn:hover,body #vpofficialtitle_wrap .title .download_btn:hover{
+    cursor: pointer!important;
+    text-decoration: underline!important;
+    color:#014CCC!important;
+}
+body #vpvideotitle_wrap a,#vpofficialtitle a{
+    color:#000!important;
+    cursor: default!important;
+}
+body #vpvideotitle_wrap a:hover,#vpofficialtitle a:hover{
+    cursor: default!important;
+    text-decoration: none!important;
+}
+
+/* 排行榜 */
+body .col2_16 .pageTitle,body .col2_61 .pageTitle{
+    display: none!important;
+}
+body .col2_61 .left{
+    width: 760px!important;
+    margin-top:10px!important;
+}
+body .col2_16 .right,body .col2_61 .rank_right{
+    width: 630px!important;
+    margin-left: 10px!important;
+}
+body .rankcoll{
+    width: 630px!important;
+}
+body .rankall10 .bar{
+    display: none!important;
+}
+body .rankall10 .rank10{
+    margin:10px!important;
+    width: 290px!important;
+    height:378px!important;
+    overflow: hidden!important;
+}
+body .rankall10 .rank{
+    width: 290px!important;
+}
+
+body .fxBox{
+    display: none!important;
+}
+/* soku */
+body .core #wall,body .minifooter .copyright,body .header .sotool #soswitch,
+body .footer .copyright,body .header .sotool .soswitch,body .dstat,body .copyright,
+body .p_user{
+    display: none!important;
+}
+body .typechk .main,
+body .header .main,
+body .layout_16,
+.foryouku .footer{
+    width: 760px!important;
+    margin: 0px auto!important;
+    padding:0px!important;
+}
+body .layout_16{
+    margin-top:10px!important;
+}
+.foryouku .layout_16{
+    padding:20px 0!important;
+}
+body .rank10coll .items,body .rank10coll,body .result .collgrid4w .items{
+    width: 640px !important;
+}
+body .result .collgrid4w .v,body .result .collgrid4w .p{
+    margin-right: 32px !important;
+}
+body .typechk .main li:last-child,body .header .subnav,body .direct{
+    display: none!important;
+}
+body .rank50{
+    width: 640px!important;
+}
+body .rank50 .skey{
+    width:400px!important;
+}
+body .layout_16 .maincol{
+    float:left!important;
+    width: 620px!important;
+    margin-left: 10px!important;
+}
+body .feedwin,body #bgwall{
+    display: none !important;
+}
+body .footer .main{
+    padding-left: 20px!important;
+}
+body.page_index .core{
+    width: 760px!important;
+    padding: 0px!important;
+}
+body.page_index .logobox{
+    width: 460px!important;
+    padding-top:50px!important;
+    margin: 0 auto!important;
+    text-align: center!important;
+}
+body.page_index .toolbox{
+    margin: 20px auto!important;
+    width: 460px!important;
+}
+body.page_index .navbox{
+    width: 460px!important;
+    margin: 0 auto!important;
+    padding-right: 30px!important;
+}
+body.page_index .navbox .gocata,body.page_index .navbox .gostar{
+    display: none!important;
+}
+body .topbar{
+    display: none!important;
+}
+body .kubox{
+    width: 170px!important;
+}
+body #kubox .panels{
+    display: none!important;
+}
+body .rank10coll .rank10{
+    margin-right: 10px!important;
+    width: 192px!important;
+}
+body .rank10coll .rank10 em{
+    display: none!important;
+}
+body #vcoll.collgrid4w{
+    width: 640px!important;
+    overflow: hidden!important;
+}
+body .relkeys ul{
+    width:620px!important;
+}
+body .relkeys ul li{
+    margin-right: 10px!important;
+}
+body .rankall .num .stat{
+    color:#333!important;
+}
+body .rankall .num .stat:hover{
+    color:#333!important;
+    text-decoration: none!important;
+    cursor: default!important;
+}
+
+/* 专辑 */
+body .listsub .handle,body .col2_21 .guide,body .videoList #ico1_2{
+    display: none!important;
+}
+body .panels,body .layout_21 .sidecol{
+    display: none!important;
+}
+body .kubox{
+    left: 60px!important;
+    width: 183px!important;
+}
+body #headSearchForm .kubox{
+    left: 0px!important;
+}
+body .foreso .kubox,body .headcon .kubox,body .sotool .kubox{
+    left:0!important;
+}
+body .col2_21 .left{
+    display: block!important;
+    width:740px!important;
+}
+body .col2_21 .left .videoList .collgrid4w{
+    width: 650px!important;
+}
+body .col2_21 .left .videoList .collgrid4w .v,body .col2_21 .left .videoList  .collgrid4w .p{
+    margin-right: 50px!important;
+}
+body .col2_21 .base{
+    margin-top: 10px!important;
+    width: 740px!important;
+}
+body .base_info .title a{
+    text-decoration: none!important;
+    color:#000!important;
+}
+body .cooperation{
+    display: none!important;
+}
+body #vpaction_wrap,body #commentArea,body #vphotvideo{
+    display: none!important;
+}
+
+/* search page */
+body .viewchange .viewby{
+    display: none!important;
+}
+
+/* my own */
+.global_down_btn{
+    position: absolute!important;
+    display: none!important;
+    width: 80px!important;
+    height: 24px!important;
+    line-height: 24px!important;
+    background: #000!important;
+    opacity: 0.8!important;
+    border-radius: 5px!important;
+    z-index: 10000!important;
+    text-align: center!important;
+    color:#fff!important;
+}
+
+
+/* youku rank */
+body .status .num a{
+    color:#000!important;
+}
+body .status .num a:hover{
+    cursor:default!important;
+    text-decoration: none!important;
+    color:#000!important;
+}
+body #re_right,body .message_W,body .backBtn{
+    display: none!important;
+}
+body #vphotofficial{
+    display: none!important;
+}
+body .goyouku,body #headSearchForm .sorank{
+    display: none!important;
+}
+body .headerBox .logo a:hover{
+    cursor: default!important;
+}

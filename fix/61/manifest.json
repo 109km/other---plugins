@@ -1,0 +1,33 @@
+{
+	"name": "起点中文",
+	"version": "1.0.0.7",
+	"description": "起点中文小说下载",
+	"content_scripts": [
+	    {
+			"matches":["http://*.qidian.com/*"],
+			"run_at": "document_end",
+            "css": ["contentcss.css"],
+			"js": ["jquery-1.5.1.min.js", "contentscript.js"],
+            "all_frames":false
+	    }
+    ] ,
+    "icons":{
+        "16":"icon16.png",
+        "72":"icon72.png"
+    },
+  "app": {
+      "launch": {
+          "web_url": "http://360mobile.qidian.com/moblie/homepage.aspx"
+      },
+      "navigation": [
+        {
+            "label": "小说排行榜",
+            "web_url": "http://360mobile.qidian.com/moblie/TopList.aspx"
+        },
+        {
+            "label": "书库找书",
+            "web_url": "http://360mobile.qidian.com/moblie/BookStore.aspx"
+        }
+      ]
+  }
+}

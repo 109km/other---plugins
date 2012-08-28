@@ -1,0 +1,29 @@
+{
+    "name": "so酷下载",
+    "version": "1.0.0.5",
+    "description": "So酷的视频下载工具",
+    "content_scripts": [
+        {
+            "matches":["http://*.youku.com/*","http://*.soku.com/*"],
+            "run_at": "document_end",
+            "css": ["contentcss.css"],
+            "js": ["jquery-1.5.1.min.js","contentscript.js"],
+            "all_frames":false
+        }
+    ],
+    "icons": {
+        "16": "icon16.png",
+        "72": "icon72.png"
+    },
+    "app": {
+        "launch": {
+            "web_url": "http://www.soku.com"
+        },
+        "navigation": [
+            {
+                "label": "排行榜",
+                "web_url": "http://www.soku.com/newtop/all.html"
+            }
+        ]
+    }
+}

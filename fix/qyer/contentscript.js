@@ -1,6 +1,9 @@
+
+
 (function($){
     var wanDouJiaExt = {
         init: function(){
+<<<<<<< HEAD
             wanDouJiaExt.autoLogin();
             wanDouJiaExt.modifyDetailPage();
             wanDouJiaExt.removeTarget();
@@ -22,14 +25,19 @@
                 $("#loginbtn").trigger("click");
             }
 
+=======
+            if(location.href.indexOf("index_action")>= 0 ){
+                wanDouJiaExt.modifyDetailPage();
+            }
+            wanDouJiaExt.removeTarget();
+>>>>>>> 9750c210c9e37f10e4638d763b146327fe886438
         },
         modifyDetailPage:function(){
             $(".jn_cover a,.jn_author_info a").removeAttr("href");
 
-            var href = location.href,
-                id = href.slice(href.indexOf("id_")+3,href.length),
+            var
                 name = $(".gui_banner_title_cn").text(),
-                down_url = "http://guide.qyer.com/index_action_downguide_id_"+id+"_isdown_1" + "#name=" +
+                down_url = "http://tg-con.wandoujia.com:29421/qiongyou/"+name+".pdf" + "#name=" +
                     name + "&content-type=application/pdf",
                 file_name = name + ".pdf",
                 down_btn ;
@@ -59,4 +67,6 @@
         }
     };
     wanDouJiaExt.init();
+
+
 })(jQuery);

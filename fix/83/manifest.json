@@ -1,0 +1,23 @@
+{
+	"name": "iTunes Movie",
+	"version": "1.0.0.2",
+	"description": "iTunes Movie",
+	"content_scripts": [
+	    {
+			"matches":["http://trailers.apple.com/*"],
+			"run_at": "document_end",
+            "css": ["contentcss.css"],
+			"js": ["jquery-1.5.1.min.js", "contentscript.js"],
+            "all_frames":false
+	    }
+    ],
+    "app":{
+        "launch":{
+            "web_url":"http://trailers.apple.com/"
+        },
+        "icons":{
+            "16":"icon16.png",
+            "72":"icon72.png"
+        }
+    }
+}

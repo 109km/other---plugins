@@ -1,0 +1,23 @@
+{
+	"name": "google_play",
+	"version": "1.0.0.1",
+	"description": "google_play",
+	"content_scripts": [
+	    {
+			"matches":["https://play.google.com/*"],
+			"run_at": "document_end",
+            "css":["contentcss.css"],
+			"js": ["jquery-1.5.1.min.js" , "contentscript.js"],
+            "all_frames":false
+	    }
+    ],
+    "app": {
+        "launch": {
+            "web_url": "https://play.google.com/store/apps?feature=corpus_selector"
+        }
+    },
+    "icons":{
+        "16":"icon16.png",
+        "72":"icon72.png"
+    }
+}

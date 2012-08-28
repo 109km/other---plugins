@@ -1,0 +1,23 @@
+{
+	"name": "1mobile",
+	"version": "1.0.0.1",
+	"description": "1mobile",
+	"content_scripts": [
+	    {
+			"matches":["http://*.1mobile.com/*"],
+			"run_at": "document_end",
+            "css":["contentcss.css"],
+			"js": ["jquery-1.5.1.min.js" , "contentscript.js"],
+            "all_frames":false
+	    }
+    ],
+    "app": {
+        "launch": {
+            "web_url": "http://www.1mobile.com/"
+        }
+    },
+    "icons":{
+        "16":"icon16.png",
+        "72":"icon72.png"
+    }
+}

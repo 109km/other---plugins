@@ -3,7 +3,7 @@
 (function($){
     var wanDouJiaExt = {
         init: function(){
-            //wanDouJiaExt.modifyGlobe();
+            alert(1);
             wanDouJiaExt.removeTarget();
         },
         // get params from a url

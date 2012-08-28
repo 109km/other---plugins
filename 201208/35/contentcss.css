@@ -66,7 +66,7 @@
 .rel_list{
     margin: 0 auto!important;
 }
-.g-mini,.g-mini-main{
+.g-mini,.g-mini-main,.extra{
     min-width: 760px!important;
     width: 760px!important;
 }
@@ -78,4 +78,28 @@
 }
 .fortudou,.page_content{
     width: 760px!important;
+}
+.extra .auto{
+    width: 760px!important;
+    margin: 0px!important;
+}
+.tv_min_list #tvShowMore{
+    left:708px!important;
+}
+.tv_show_more{
+    left:684px!important;
+}
+.extra .lp_list .btn_rel_prev{
+    left:5px!important;
+}
+.lp_list .rel_list_box{
+    left:17px!important;
+    width:720px!important;
+}
+.extra .scroll_tracker{
+    width: 727px!important;
+    left:23px!important;
+}
+.extra .lp_list .btn_rel_next{
+    right:0px!important;
 }

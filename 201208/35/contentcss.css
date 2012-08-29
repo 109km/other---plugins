@@ -92,6 +92,9 @@
 .extra .lp_list .btn_rel_prev{
     left:5px!important;
 }
+#p-pi .rel_wrap, #p-pl .rel_wrap{
+    display: none!important;
+}
 .lp_list .rel_list_box{
     left:17px!important;
     width:720px!important;
@@ -102,4 +105,15 @@
 }
 .extra .lp_list .btn_rel_next{
     right:0px!important;
+}
+#p-pl.normal .lp_list .pack{
+    float: left!important;
+    width: 254px!important;
+}
+.playlist .rel_wrap{
+    position: static!important;
+    width: 579px!important;
+}
+.normal .pl_rel .rel_fd .scroll_tracker{
+    left:560px!important;
 }

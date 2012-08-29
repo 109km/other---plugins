@@ -3,8 +3,18 @@
 (function($){
     var wanDouJiaExt = {
         init: function(){
-            alert(1);
+            wanDouJiaExt.mofifyDownloadTip();
             wanDouJiaExt.removeTarget();
+        },
+        mofifyDownloadTip:function(){
+            $('.buy-button-price').click(function(){
+                var self = $(this);
+                setTimeout(function(){
+                    if( self.text() == 'Install' && $('#co-dialog-install').css("display") != "none"){
+                        $("#co-dialog-button-row").append('<div class="user_tip">Google Play apps download on your phone.</div>');
+                    }
+                },200)
+            });
         },
         // get params from a url
         request_url:function (url){

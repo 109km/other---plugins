@@ -1,0 +1,13 @@
+.wrapper{
+    width:760px!important;
+}
+.contain{
+    width: 758px!important;
+}
+.piclist li{
+    margin:15px 10px 0 10px!important;
+}
+.banner img{
+    width: 760px!important;
+    height: auto!important;
+}

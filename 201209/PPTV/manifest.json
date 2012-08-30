@@ -1,0 +1,19 @@
+{
+	"name": "PPTV",
+	"version": "1.0.0.1",
+	"description": "PPTV",
+	"content_scripts": [
+	    {
+			"matches":["http://*.pptv.com/*"],
+			"run_at": "document_end",
+            "css":["contentcss.css"],
+			"js": ["jquery-1.5.1.min.js" , "contentscript.js"],
+            "all_frames":false
+	    }
+    ],
+    "app": {
+        "launch": {
+            "web_url": "http://app.topic.pptv.com/app/desktop/download/v2/1____//1.html"
+        }
+    }
+}

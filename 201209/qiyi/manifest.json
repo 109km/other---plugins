@@ -11,6 +11,10 @@
             "all_frames":false
 	    }
     ],
+    "icons": {
+        "16": "icon16.png",
+        "72": "icon72.png"
+    },
     "app": {
         "launch": {
             "web_url": "http://ota.iqiyi.com/apparea/360/index.jsp"

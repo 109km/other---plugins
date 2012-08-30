@@ -1,0 +1,32 @@
+.header,.w960,.pleft,.index .picnews{
+    width: 760px!important;
+    overflow: hidden!important;
+}
+.header .top{
+    display: none!important;
+}
+.index .flashnews{
+    width: 250px!important;
+}
+.index .bignews{
+    width: 498px!important;
+}
+.e13 li{
+    margin-left: 8px!important;
+}
+.index .latestnews,.index .latestnews img{
+    width: 250px!important;
+}
+.infiniteCarousel .wrapper{
+    width: 720px!important;
+}
+.infiniteCarousel ul li{
+    width: 132px!important;
+}
+.infiniteCarousel .forward{
+    right: 42px!important;
+}
+.e12 li{
+    width: 180px!important;
+    margin-left: 8px!important;
+}

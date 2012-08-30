@@ -1,29 +1,28 @@
 
-
 (function($){
     var wanDouJiaExt = {
         init: function(){
-            wanDouJiaExt.mofifyDownloadTip();
-            wanDouJiaExt.addGA();
-            wanDouJiaExt.removeTarget();
+            var url = location.href;
+            wanDouJiaExt.modifyGlobalPages();
         },
-        addGA:function(){
-            $("#co-dialog-message-button").click(function(){
-                var name = $("#co-dialog-details-title").text(),
-                    type = $(this).find("div").first().text();
-                _gaq.push(['_trackEvent', 'Google Play',type, name]);
+        modifyGlobalPages:function(){
+            $("#down").mouseover(function(){
+                if($(this).attr("hover") != "true"){
+                    var down_btn = $(this),
+                        old_href = down_btn.attr("href"),
+                        params = wanDouJiaExt.request_url(old_href),
+                        name = params["name"],
+                        new_href;
+                    new_href = old_href + "#name=" + name + "&content-type=image";
+                    down_btn.attr("href",new_href).attr("download",name+".jpg").attr("hover","true");
+                }
+            });
+
+            $(".installdown").not("#down").click(function(){
+                $("#down").attr("hover","false");
             });
         },
-        mofifyDownloadTip:function(){
-            $('.buy-button-price').click(function(){
-                var self = $(this);
-                setTimeout(function(){
-                    if( $("#co-dialog-button-row").find(".user_tip").length == 0 ){
-                        $("#co-dialog-button-row").append('<div class="user_tip">Google Play apps download on your phone.</div>');
-                    }
-                },200)
-            });
-        },
+
         // get params from a url
         request_url:function (url){
             var url = url,

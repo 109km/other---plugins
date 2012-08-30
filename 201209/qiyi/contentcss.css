@@ -1,0 +1,36 @@
+.whole,.nav,.content,.content1,.content2{
+    width: 760px!important;
+    overflow: hidden!important;
+}
+.whole{
+    padding: 0px!important;
+}
+.nav .bd a{
+    padding: 0 10px!important;
+}
+#gmdiv,.footer,.logo{
+    display: none!important;
+}
+#downloadClient,#downloadClient img{
+    width: 760px!important;
+}
+.main,.g_lay_box_c1{
+    width: 758px!important;
+    overflow: hidden!important;
+}
+.gui_QiyiLinks li{
+    padding: 0 3px!important;
+}
+.list li{
+    width:370px!important;
+}
+.main .list li .mRight{
+    width: 173px!important;
+}
+.content ul li,.content1 ul li,.content2 ul li{
+    width: 185px!important;
+    margin-right: 5px!important;
+}
+.downLoad{
+    left:200px!important;
+}

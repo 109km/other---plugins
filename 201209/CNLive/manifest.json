@@ -1,0 +1,19 @@
+{
+	"name": "CNLive",
+	"version": "1.0.0.1",
+	"description": "视讯中国",
+	"content_scripts": [
+	    {
+			"matches":["http://*.cnlive.com/*"],
+			"run_at": "document_end",
+            "css":["contentcss.css"],
+			"js": ["jquery-1.5.1.min.js" , "contentscript.js"],
+            "all_frames":false
+	    }
+    ],
+    "app": {
+        "launch": {
+            "web_url": "http://www.cnlive.com/selfplatform/360/index.action"
+        }
+    }
+}

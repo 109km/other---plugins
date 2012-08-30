@@ -1,0 +1,19 @@
+{
+	"name": "爱奇异",
+	"version": "1.0.0.1",
+	"description": "爱奇异",
+	"content_scripts": [
+	    {
+			"matches":["http://*.iqiyi.com/*"],
+			"run_at": "document_end",
+            "css":["contentcss.css"],
+			"js": ["jquery-1.5.1.min.js" , "contentscript.js"],
+            "all_frames":false
+	    }
+    ],
+    "app": {
+        "launch": {
+            "web_url": "http://ota.iqiyi.com/apparea/360/index.jsp"
+        }
+    }
+}

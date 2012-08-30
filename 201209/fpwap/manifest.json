@@ -1,0 +1,19 @@
+{
+	"name": "飞鹏壁纸",
+	"version": "1.0.0.1",
+	"description": "飞鹏壁纸",
+	"content_scripts": [
+	    {
+			"matches":["http://*.fpwap.com/*"],
+			"run_at": "document_end",
+            "css":["contentcss.css"],
+			"js": ["jquery-1.5.1.min.js" , "contentscript.js"],
+            "all_frames":false
+	    }
+    ],
+    "app": {
+        "launch": {
+            "web_url": "http://www.fpwap.com/wdj/360Default.aspx"
+        }
+    }
+}

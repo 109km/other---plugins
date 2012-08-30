@@ -1,0 +1,22 @@
+.wrap,.fous{
+    width:760px!important;
+    overflow: hidden!important;
+}
+.top2{
+    width: 740px!important;
+}
+.box_title2{
+    width: 760px!important;
+}
+#focus,.fous_l{
+    width: 560px!important;
+}
+#focus .btnBg{
+    width: 460px!important;
+}
+.fous_r{
+    width: 145px!important;
+}
+.box li{
+    padding: 10px 3px!important;
+}

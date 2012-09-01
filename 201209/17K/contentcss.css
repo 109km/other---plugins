@@ -1,0 +1,39 @@
+
+.kd,body{
+    overflow-x: hidden!important;
+    width: 760px!important;
+}
+.header .buts{
+    margin-left:10px!important;
+    width:240px!important;
+}
+.header .buts .but{
+    margin: 0 10px 0 0px!important;
+}
+.tj{
+    width: 220px!important;
+}
+.l1{
+    width: 530px!important;
+}
+.tit a{
+    width: 90px!important;
+}
+.topct li{
+    width: 249px!important;
+}
+.topct p{
+    width: 129px!important;
+}
+.botct li{
+    width: 163px!important;
+}
+.botct p{
+    width: 74px!important;
+}
+.header .ad{
+    height: 67px!important;
+}
+.rtext{
+    width: 300px!important;
+}

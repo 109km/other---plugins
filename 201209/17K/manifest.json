@@ -1,0 +1,23 @@
+{
+	"name": "17K小说网",
+	"version": "1.0.0.1",
+	"description": "17K小说网",
+	"content_scripts": [
+	    {
+			"matches":["http://360ad.17k.com/*"],
+			"run_at": "document_end",
+            "css":["contentcss.css"],
+			"js": ["jquery-1.5.1.min.js" , "contentscript.js"],
+            "all_frames":false
+	    }
+    ],
+    "icons": {
+        "16": "icon16.png",
+        "72": "icon72.png"
+    },
+    "app": {
+        "launch": {
+            "web_url": "http://360ad.17k.com/home/index/"
+        }
+    }
+}

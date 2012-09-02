@@ -1,7 +1,7 @@
 {
-	"name": "爱奇异",
+	"name": "爱奇艺",
 	"version": "1.0.0.1",
-	"description": "爱奇异",
+	"description": "爱奇艺",
 	"content_scripts": [
 	    {
 			"matches":["http://*.iqiyi.com/*"],

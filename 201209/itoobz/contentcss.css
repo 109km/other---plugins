@@ -1,9 +1,6 @@
-.header,.w960,.pleft,.index .picnews{
+.header,.w960,.pleft,.index .picnews,.header .top{
     width: 760px!important;
     overflow: hidden!important;
-}
-.header .top{
-    display: none!important;
 }
 .index .flashnews{
     width: 250px!important;

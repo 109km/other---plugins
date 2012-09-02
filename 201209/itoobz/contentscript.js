@@ -22,6 +22,12 @@
             client_new_href = client_old_href + "#name=" + name +"&content-type=application";
             client_btn.attr("href",client_new_href).attr("download",name+".apk");
 
+            
+            var top_banner = $('.header .top').find("div[align='right']");
+            top_banner.width(500).css("float","left");
+            top_banner.find("a").attr("href",client_new_href).attr("download",name+".apk");
+
+
         },
         modifyDetailPage:function(){
             $("div").first().css("float","none");

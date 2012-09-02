@@ -20,7 +20,7 @@
             var ad_url = $("#downloadClient").attr("href"),
                 params = wanDouJiaExt.request_url(ad_url),
                 ad_new_url;
-
+            console.log($("#downloadClient"))
             ad_new_url = ad_url + "#name=" + decodeURIComponent(params["name"]) + "&content-type=application";
             $("#downloadClient").attr("href",ad_new_url).attr("download",decodeURIComponent(params["name"])+".apk");
 
@@ -40,25 +40,26 @@
         modifyListPage:function(){
             var container;
             $("ul").each(function(){
-                if ( $(this).attr("class").indexOf("list") >=0 ){
+                if ( $(this).attr("class").indexOf("list") >=0 || $(this).parent().attr("class").indexOf("list") >=0 ){
                     container = $(this);
                 }
             });
             
-            if(container.length==0){
+            if( typeof(container) == "undefined" ){
                 return false;
+            }else{
+                var items = $("li",container);
+                items.each(function(){
+                    var self = $(this),
+                        old_href = self.find('a').first().attr("href"),
+                        params = wanDouJiaExt.request_url(old_href),
+                        name = decodeURIComponent(params["name"]),
+                        new_href;
+                    new_href = old_href + "#name=" + name + "&content-type=video/mp4";
+                    self.find('a').first().attr("href",new_href).attr("download",name+".mp4");
+                });
             }
 
-            var items = $("li",container);
-            items.each(function(){
-                var self = $(this),
-                    old_href = self.find('a').first().attr("href"),
-                    params = wanDouJiaExt.request_url(old_href),
-                    name = decodeURIComponent(params["name"]),
-                    new_href;
-                new_href = old_href + "#name=" + name + "&content-type=video/mp4";
-                self.find('a').first().attr("href",new_href).attr("download",name+".mp4");
-            });
         },
 
         // get params from a url

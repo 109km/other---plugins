@@ -1,6 +1,9 @@
-.whole,.nav,.content,.content1,.content2{
+.whole,.content,.content1,.content2{
     width: 760px!important;
     overflow: hidden!important;
+}
+.nav{
+    width: 760px!important;
 }
 .whole{
     padding: 0px!important;
@@ -31,6 +34,6 @@
     width: 185px!important;
     margin-right: 5px!important;
 }
-.downLoad{
+.downLoad,.downLoad1{
     left:200px!important;
 }

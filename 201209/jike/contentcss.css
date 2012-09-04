@@ -1,0 +1,22 @@
+.wrapper,#categories .pics ul,#Right,#id_results{
+    width: 760px!important;
+}
+#hotCate ul li{
+    width: 178px!important;
+    padding: 10px 9px 10px 9px!important;
+    background: none!important;
+}
+#hotCate ul{
+    left:0px!important;
+}
+#categories ul.tabs li a{
+    padding-left:10px!important;
+}
+#categories ul.tabs li a span{
+    padding-right: 10px!important;
+}
+#categories .pics li{
+    background: none!important;
+    padding: 0px!important;
+    width: 149px!important;
+}

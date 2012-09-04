@@ -1,0 +1,12 @@
+.slide,.slide-con,.main,.footer,.area,.detail,.crumbs{
+    width: 760px!important;
+}
+.slide-con li{
+    margin-right: 36px!important;
+}
+.list li{
+    margin-left:30px!important;
+}
+.intro-dl{
+    width: 380px!important;
+}

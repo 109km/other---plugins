@@ -12,7 +12,7 @@
                 btn.mouseover(function(){
                     var params = wanDouJiaExt.request_url(location.href),
                         old_href = $(this).attr("href"),
-                        name = params["q"],
+                        name = params["q"] != undefined ? params["q"] : "图片",
                         new_href = old_href + "#name=" + name + "&content-type=image";
                     btn.attr("href",new_href).attr("download",name+".jpg");
                 });

@@ -1,0 +1,36 @@
+.downbtnbox .optionbox,.appbox li .downbtnbox,.sidetoplist .list li .downbtnbox,
+.detailbox .appdown .downbtnbox,.detailbox .share{
+    display: none!important;
+}
+.appbox li.active .cate{
+    display: block!important;
+}
+.appbox li .down,.rightside li .down{
+    display: none;
+    width: 49px;
+    height: 14px;
+    background: url(http://img.1mobile.com/web2/v4/css/img/bg.png) -150px -70px;
+    font-size: 10px;
+    text-align: center;
+    vertical-align: top;
+    margin-right: 1px;
+}
+.appbox li.active .down,.rightside li.active .down{
+    display: block;
+}
+.rightside li .down{
+    position: absolute;
+    right: 5px;
+    top: 12px;
+}
+.detailbox .appdown .down{
+    display: block;
+    width: 105px;
+    height: 28px;
+    line-height: 28px;
+    background:url(http://img.1mobile.com/web2/v4/css/img/bg.png) no-repeat 0 -456px transparent;
+    font-size: 16px;
+    text-shadow: 1px 1px 1px #F2F4F4;
+    margin-right: 2px;
+    text-align: center;
+}

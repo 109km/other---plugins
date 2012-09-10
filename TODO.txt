@@ -1,5 +1,1 @@
-﻿PPTV(done)、视讯中国(done)、56视频、奇艺视频(done)、即刻搜索、飞鹏(done)、爱图壁纸(done)、17K(done)、3G书城
-
-56：http://app.56.com/platform/api/open.php?action=qihu360  (done)
-3G书城：http://ww.3gsc.com.cn/partner_aide 
-即刻搜索：http://image.jike.com/qihu/
+﻿

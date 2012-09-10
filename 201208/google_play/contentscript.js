@@ -4,11 +4,11 @@
     var wanDouJiaExt = {
         init: function(){
             wanDouJiaExt.mofifyDownloadTip();
-            wanDouJiaExt.addGA();
+            //wanDouJiaExt.addGA();
             wanDouJiaExt.removeTarget();
         },
         addGA:function(){
-            $("#co-dialog-message-button").click(function(){
+            $("#co-dialog-message-button").live("click",function(){
                 var name = $("#co-dialog-details-title").text(),
                     type = $(this).find("div").first().text();
                 _gaq.push(['_trackEvent', 'Google Play',type, name]);
@@ -21,7 +21,10 @@
                     if( $("#co-dialog-button-row").find(".user_tip").length == 0 ){
                         $("#co-dialog-button-row").append('<div class="user_tip">Google Play apps download on your phone.</div>');
                     }
-                },200)
+                    var name = $("#co-dialog-details-title").text(),
+                        type = $(this).find("div").first().text();
+                     _gaq.push(['_trackEvent', 'Google Play',type, name]);
+                },200);
             });
         },
         // get params from a url

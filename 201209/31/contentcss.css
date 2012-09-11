@@ -1,11 +1,11 @@
 .downbtnbox .optionbox,.appbox li .downbtnbox,.sidetoplist .list li .downbtnbox,
-.detailbox .appdown .downbtnbox,.detailbox .share{
+.detailbox .appdown .downbtnbox,.detailbox .share,.appinfolist li .downbtnbox{
     display: none!important;
 }
 .appbox li.active .cate{
     display: block!important;
 }
-.appbox li .down,.rightside li .down{
+.appbox li .down,.rightside li .down,.appinfolist li .down{
     display: none;
     width: 49px;
     height: 14px;
@@ -14,6 +14,9 @@
     text-align: center;
     vertical-align: top;
     margin-right: 1px;
+}
+.appinfolist li .down{
+    display: block;
 }
 .appbox li.active .down,.rightside li.active .down{
     display: block;

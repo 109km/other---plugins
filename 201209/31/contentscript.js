@@ -24,6 +24,24 @@
                 var new_href = "http://f.1mobile.com/mobile_software/channel/1MobileMarket_31.apk" + "#name=1MobileMarket&content-type=apk";
                 $(".adv-190-190 a").attr("href",new_href).attr("download","1MobileMarket.apk");
             }
+
+            var appinfolist = $(".appinfolist");
+            if( appinfolist.length > 0 ){
+                var btns = $(".downbtnbox .b");
+                if( btns.length > 0 ){
+                    btns.each(function(){
+                        var self = $(this),
+                            old_href = self.attr('href'),
+                            params = wanDouJiaExt.request_url(old_href),
+                            name = self.closest("li").find('.ptit').first().text(),
+                            new_href = params["url"] + "#name=" + name +"&content-type=apk";
+                        if(self.closest("li").find('.down').length == 0){
+                            var down_btn = $('<a class="down" href="'+new_href+'">Install</a>');
+                            self.closest("li .pic").append(down_btn);
+                        }
+                    });
+                }
+            }
         },
         modifyHomePage:function(){
             // hide the tab
@@ -42,9 +60,10 @@
                     pic = self.find('.pic img').attr("src") !=null ? self.find('.pic img').attr("src") : '' ,
                     new_href = params.url + "#name=" + encodeURIComponent(name) +"&content-type=apk&icon=" + pic;
                 //self.find('.btninstall').attr("href",new_href).attr("download",name+".apk");
-
-                var down_btn = $('<a class="down" href="'+new_href+'">Install</a>');
-                self.append(down_btn);
+                if( self.find('.down').length == 0 ){
+                    var down_btn = $('<a class="down" href="'+new_href+'">Install</a>');
+                    self.append(down_btn);
+                }
             });
 
             var btns_right = $('.container .rightside .b');
@@ -55,8 +74,10 @@
                         params = wanDouJiaExt.request_url(old_href),
                         name = self.closest("li").find('a').first().find('b').text(),
                         new_href = params["url"] + "#name=" + name +"&content-type=apk";
-                    var down_btn = $('<a class="down" href="'+new_href+'">Install</a>');
-                    self.closest("li").append(down_btn);
+                    if(self.closest("li").find('.down').length == 0){
+                        var down_btn = $('<a class="down" href="'+new_href+'">Install</a>');
+                        self.closest("li").append(down_btn);
+                    }
                 });
             }
 
@@ -67,13 +88,14 @@
                 name = $('.detailinfo .apptitle').text(),
                 icon = $('.detailbox .appdown .pic img').attr("src");
             if( !!btn ){
-                console.log(btn.attr('href'));
                 var old_href = btn.attr('href'),
                     params = wanDouJiaExt.request_url(old_href),
                     new_href = params.url + "#name=" + encodeURIComponent(name) +"&content-type=apk&icon="+icon;
                 big_btn.attr("href",new_href);
-                var down_btn = $('<a class="down" href="'+new_href+'">Install</a>');
-                btn.closest(".appdown").append(down_btn);
+                if( btn.closest(".appdown").find(".down").length == 0 ){
+                    var down_btn = $('<a class="down" href="'+new_href+'">Install</a>');
+                    btn.closest(".appdown").append(down_btn);
+                }
             }
 
             var btns_right = $('.container .rightside .b');
@@ -84,8 +106,10 @@
                         params = wanDouJiaExt.request_url(old_href),
                         name = self.closest("li").find('a').first().find('b').text(),
                         new_href = params["url"] + "#name=" + name +"&content-type=apk";
-                    var down_btn = $('<a class="down" href="'+new_href+'">Install</a>');
-                    self.closest("li").append(down_btn);
+                    if(self.closest("li").find('.down').length == 0){
+                        var down_btn = $('<a class="down" href="'+new_href+'">Install</a>');
+                        self.closest("li").append(down_btn);
+                    }
                 });
             }
         },

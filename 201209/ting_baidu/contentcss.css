@@ -1,0 +1,13 @@
+.song-item .fun-icon span,.song-item span.checkbox-item,
+.music-head,#userbar,.path_navigator,.ad,
+.base-info-cont .c6,.song-list .btm-btn,.sidebar,.singer-works .sort-wrap,
+.music-foot,.song-list .top-btn,.user-voice-hook .comment-form{
+    display: none!important;
+}
+.music-head, .music-body, .music-foot, .banner-ad{
+    width: 760px!important;
+    overflow: hidden!important;
+}
+.singer-works .song-list-btnTop{
+    top:0px!important;
+}

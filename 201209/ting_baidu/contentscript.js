@@ -6,31 +6,59 @@
             wanDouJiaExt.modifyListPages();
         },
         modifyListPages:function(){
-            var items = $(".song-list li").first();
-            items.each(function(){
+
+            $(".tab-list li").last().hide();
+            var add_links = function(p){
+                if( p != null || p != undefined ){
+                    var items = $(".song-list li",p);
+                }else{
+                    var items = $(".song-list li");
+                }
+                items.each(function(){
+                    var self = $(this),
+                        title = self.find(".song-title a"),
+                        href = title.attr("href"),
+                        name = title.attr("title"),
+                        song_id,
+                        ajax_url;
+
+                    song_id = href.slice(6,href.length);
+                    ajax_url = "http://ting.baidu.com/song/"+song_id+"/download";
+
+                    $.ajax({
+                        url:ajax_url,
+                        type:"POST",
+                        success:function(data){
+                            var data = data.toString();
+                            var operation_pos = data.indexOf("bit128"),
+                                link_start_pos = data.indexOf("?link=",operation_pos),
+                                link_end_pos = data.indexOf('"',link_start_pos);
+
+                            var link = data.slice(link_start_pos+6,link_end_pos);
+                            link = link + "#name=" + name + "&content-type=video";
+
+                            title.attr("href",link).attr("download",name+".mp3");
+
+                            var down_btn = $('<a href="'+link+'" download="'+name+'.mp3">下载</a>');
+                            self.find('.fun-icon').append(down_btn);
+                        }
+                    });
+                });
+            }
+
+            add_links();
+
+            $(".album-list li").each(function(){
                 var self = $(this),
-                    href = self.find(".song-title a").attr("href"),
-                    song_id,
-                    ajax_url;
+                    container = self.find('.songlist-expand');
 
-                song_id = href.slice(7,href.length);
-                ajax_url = "http://ting.baidu.com/song/"+song_id+"/download";
-
-                $.ajax({
-                    url:ajax_url,
-                    type:"GET",
-                    success:function(data){
-                        var operation_pos = data.indexOf("operation"),
-                            link_start_pos = data.indexOf("link=",operation_pos),
-                            link_end_pos = data.indexOf('id',link_start_pos);
-
-                        var link = data.slice(link_start_pos+10,link_end_pos);
-
-                        console.log(operation_pos,link_start_pos,link_end_pos,link);
-
+                self.click(function(){
+                    if (container.html() == ''){
+                        setTimeout(function(){
+                            add_links(self);
+                        },500);
                     }
                 });
-
 
             });
         },

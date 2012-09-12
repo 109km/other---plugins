@@ -8,8 +8,12 @@
         modifyListPages:function(){
 
             $(".tab-list li").last().hide();
+
+            $(".base-info .singer-name").text("中国好声音专刊");
+
+
             var add_links = function(p){
-                if( p != null || p != undefined ){
+                if( p != null && p != undefined ){
                     var items = $(".song-list li",p);
                 }else{
                     var items = $(".song-list li");
@@ -41,6 +45,17 @@
 
                             var down_btn = $('<a href="'+link+'" download="'+name+'.mp3">下载</a>');
                             self.find('.fun-icon').append(down_btn);
+
+
+                            var author_list_pos = data.indexOf("author_list"),
+                                author_start = data.indexOf("<a",author_list_pos),
+                                author_end = data.indexOf("/a>",author_start);
+
+                            var author_html = data.slice(author_start,author_end+3);
+
+                            var author_tag = $(author_html);
+                            self.find('.hot-info').append(author_tag);
+
                         }
                     });
                 });
@@ -56,7 +71,7 @@
                     if (container.html() == ''){
                         setTimeout(function(){
                             add_links(self);
-                        },500);
+                        },1000);
                     }
                 });
 

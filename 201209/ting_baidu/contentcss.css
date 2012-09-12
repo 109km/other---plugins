@@ -1,7 +1,9 @@
 .song-item .fun-icon span,.song-item span.checkbox-item,
 .music-head,#userbar,.path_navigator,.ad,
 .base-info-cont .c6,.song-list .btm-btn,.sidebar,.singer-works .sort-wrap,
-.music-foot,.song-list .top-btn,.user-voice-hook .comment-form{
+.music-foot,.song-list .top-btn,.user-voice-hook .comment-form,
+.base-info .play-num,.song-item .hot-info .hot-num,.song-item .hot-bar,
+.base-info .cover-img{
     display: none!important;
 }
 .music-head, .music-body, .music-foot, .banner-ad{

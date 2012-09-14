@@ -39,11 +39,11 @@
                                 link_end_pos = data.indexOf('"',link_start_pos);
 
                             var link = data.slice(link_start_pos+6,link_end_pos);
-                            link = link + "#name=" + name + "&content-type=video";
+                            link = link + "#name=" + name + "&content-type=audio";
 
                             title.attr("href",link).attr("download",name+".mp3");
 
-                            var down_btn = $('<a href="'+link+'" download="'+name+'.mp3">下载</a>');
+                            var down_btn = $('<a href="'+link+'" download="'+name+'.mp3" class="down_btn">下载</a>');
                             self.find('.fun-icon').append(down_btn);
 
 
@@ -60,19 +60,37 @@
                     });
                 });
             }
-
-            add_links();
-
+            
+            var check_down = setInterval(function(){
+                if ($(".song-list").find('.down_btn').length > 0 ){
+                    //clearInterval(check_down);
+                }else{
+                    add_links();
+                }
+            },1000);
+            
             $(".album-list li").each(function(){
                 var self = $(this),
                     container = self.find('.songlist-expand');
 
                 self.click(function(){
-                    if (container.html() == ''){
-                        setTimeout(function(){
+                    var check = setInterval(function(){
+                        if (container.find('.down_btn').length > 0 ){
+                            clearInterval(check);
+                        }else{
                             add_links(self);
-                        },1000);
-                    }
+                        }
+                    },1000);
+                });
+
+                self.find(".songlist-fold-hook").click(function(){
+                    var check = setInterval(function(){
+                        if (container.find('.down_btn').length > 0 ){
+                            clearInterval(check);
+                        }else{
+                            add_links(self);
+                        }
+                    },1000);
                 });
 
             });

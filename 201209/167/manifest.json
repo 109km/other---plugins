@@ -1,6 +1,6 @@
 {
 	"name": "中国好声音",
-	"version": "1.0.0.2",
+	"version": "1.0.0.4",
 	"description": "中国好声音",
 	"content_scripts": [
 	    {
@@ -17,7 +17,7 @@
     },
     "app": {
         "launch": {
-            "web_url": "http://ting.baidu.com/artist/16183933"
+            "web_url": "http://music.baidu.com/artist/16183933"
         }
     }
 }

@@ -11,7 +11,8 @@
 
             $(".base-info .singer-name").text("中国好声音专刊");
 
-
+            var baidu_declaration = $('<p class="baidu_declaration">音乐内容来自百度ting，试听请直接进入<a href="http://music.baidu.com/artist/16183933" target="_default">百度ting页面</a></p>');
+            $(".base-info .singer-name").after(baidu_declaration);
             var add_links = function(p){
                 if( p != null && p != undefined ){
                     var items = $(".song-list li",p);
@@ -27,8 +28,8 @@
                         ajax_url;
 
                     song_id = href.slice(6,href.length);
-                    ajax_url = "http://ting.baidu.com/song/"+song_id+"/download";
-
+                    ajax_url = "http://music.baidu.com/song/"+song_id+"/download";
+                    console.log(ajax_url);
                     $.ajax({
                         url:ajax_url,
                         type:"POST",
@@ -41,9 +42,9 @@
                             var link = data.slice(link_start_pos+6,link_end_pos);
                             link = link + "#name=" + name + "&content-type=audio";
 
-                            title.attr("href",link).attr("download",name+".mp3");
+                            title.attr("href",link).attr("download","");
 
-                            var down_btn = $('<a href="'+link+'" download="'+name+'.mp3" class="down_btn">下载</a>');
+                            var down_btn = $('<a href="'+link+'" download="" class="down_btn">下载</a>');
                             self.find('.fun-icon').append(down_btn);
 
 

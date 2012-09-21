@@ -11,7 +11,7 @@
 
             $(".base-info .singer-name").text("中国好声音专刊");
 
-            var baidu_declaration = $('<p class="baidu_declaration">音乐内容来自百度ting，试听请直接进入<a href="http://ting.baidu.com/artist/16183933" target="_default">百度ting页面</a></p>');
+            var baidu_declaration = $('<p class="baidu_declaration">音乐内容来自百度ting，试听请直接进入<a href="http://music.baidu.com/artist/16183933" target="_default">百度ting页面</a></p>');
             $(".base-info .singer-name").after(baidu_declaration);
             var add_links = function(p){
                 if( p != null && p != undefined ){
@@ -28,8 +28,8 @@
                         ajax_url;
 
                     song_id = href.slice(6,href.length);
-                    ajax_url = "http://ting.baidu.com/song/"+song_id+"/download";
-
+                    ajax_url = "http://music.baidu.com/song/"+song_id+"/download";
+                    console.log(ajax_url);
                     $.ajax({
                         url:ajax_url,
                         type:"POST",

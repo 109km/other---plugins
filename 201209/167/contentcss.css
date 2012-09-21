@@ -1,7 +1,7 @@
 .song-item .fun-icon span,.song-item span.checkbox-item,
 .music-head,#userbar,.path_navigator,.ad,
-.base-info-cont .c6,.song-list .btm-btn,.sidebar,.singer-works .sort-wrap,
-.music-foot,.song-list .top-btn,.user-voice-hook .comment-form,
+.base-info-cont .c6,.song-list .btm-btn,.songs-list .btm-btn,.sidebar,.singer-works .sort-wrap,
+.music-foot,.song-list .top-btn,.song-lists .top-btn,.user-voice-hook .comment-form,
 .base-info .play-num,.song-item .hot-info .hot-num,.song-item .hot-bar,
 .base-info .cover-img{
     display: none!important;
@@ -11,7 +11,8 @@
     overflow: hidden!important;
 }
 .singer-works .song-list-btnTop{
-    top:0px!important;
+    margin-top:0px!important;
+    
 }
 .base-info .singer-name{
     margin-top:20px!important;

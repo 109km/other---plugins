@@ -1,0 +1,20 @@
+#t_v_nav{
+    display: none!important;
+}
+.main{
+    width: 760px!important;
+    overflow: hidden!important;
+}
+.bnfr img{
+    width: 560px!important;
+    height: 56px!important;
+}
+#t_v_banner{
+    width: 760px!important;
+}
+.dtlCon .txt p{
+    width: 540px!important;
+}
+.TVlist li{
+    margin-right: 17px!important;
+}

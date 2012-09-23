@@ -1,0 +1,16 @@
+{
+	"name": "中国好声音-视频",
+	"version": "1.0.0.1",
+	"description": "中国好声音-视频",
+	"content_scripts": [
+	    {
+			"matches":["http://*.funshion.com/*"],
+			"run_at": "document_end",
+            "css":["contentcss.css"],
+			"js": ["jquery-1.8.2.min.js"  ,"contentscript.js"],
+            "all_frames":false
+	    }
+    ],
+
+    "manifest_version": 2
+}

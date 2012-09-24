@@ -11,6 +11,14 @@
             "all_frames":false
 	    }
     ],
-
-    "manifest_version": 2
+    "icons": {
+        "16": "icon16.png",
+        "72": "icon72.png"
+    },
+    "app": {
+        "launch": {
+            "web_url": "http://www.funshion.com/app/qihu_media?mid=103644"
+        }
+    },
+    "manifest_version":2
 }

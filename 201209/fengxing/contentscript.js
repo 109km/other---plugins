@@ -5,58 +5,75 @@
     var wanDouJiaExt = {
         init: function(){
             var url = location.href;
-            wanDouJiaExt.modifyHomePage();
+            if ( url.indexOf("hashid") > 0 ){
+                wanDouJiaExt.modifyDetailPage();
+            }else{
+                wanDouJiaExt.modifyHomePage();
+            }
+
+            wanDouJiaExt.modifyGlobePage();
+
+        },
+        modifyGlobePage:function(){
+            if ( $("#t_v_banner .bnfr a").length > 0 ){
+                var old_href = $("#t_v_banner .bnfr a").attr("href"),
+                    params = wanDouJiaExt.request_url(old_href),
+                    name = decodeURIComponent(params["name"]),
+                    new_href = old_href + "#name=" + name + "&content-type=video";
+
+                $("#t_v_banner .bnfr a").attr("href",new_href).attr("download","");
+            }
         },
         modifyHomePage:function(){
             var timer = setInterval(function(){
                 if ( $('#t_v_list li').length > 0 ){
                     $('#t_v_list li').each(function(){
-                        document.domain = "funshion.com";
-                        var self = $(this),
-                            hashid = self.find('.dbtn').attr("rel").toString(),
-                            url = "http://jobsfe.funshion.com/query/v1/mp4/"+hashid+".json";
+                        if ( $(this).find(".my_btn").length == 0 ){
+                            var self = $(this),
+                                hashid = self.find('.dbtn').attr("rel").toString(),
+                                url = "http://jobsfe.funshion.com/query/v1/mp4/"+hashid+".json",
+                                name = self.find("p a").text();
 
-                        //wanDouJiaExt.downSoft(hashid);
-                        /*
-                        F.jsonp(url,function(data){
-                            console.log(data);
-                        });
-                        */
-                        /*
-                        $.jsonp({
-                            url:url,
-                            success:function(data){
-                                console.log(data);
-                            }
-                        });
-                         */
-
-                        $.ajax({
-                            async:false,
-                            url:url,
-                            type:"GET",
-                            dataType:"jsonp",
-                            success:function(data){
-                                console.log(data);
-                                //var data = $.parseJSON(data);
-                                //var down_url = data["playlist"]["urls"][0];
-
-                            },
-                            complete:function(d){
-                                console.log(d);
-
-                            },
-                            error:function(d){
-                                //console.log(d);
-                            }
-                        });
-
-
+                            $.getJSON(
+                                url,
+                                null,
+                                function(data){
+                                    var down_url = data["playlist"][0]["urls"][0];
+                                    down_url += "#name=" + name + "&content-type=video";
+                                    self.find('.dbtn').hide();
+                                    var btn = $('<a class="dbtn normal my_btn" href="'+down_url+'" download="">下载</a>');
+                                    self.append(btn);
+                                }
+                            );
+                        }
                     });
-                    clearInterval(timer);
+                    //clearInterval(timer);
                 }
             },1000);
 
+        },
+        modifyDetailPage:function(){
+
+            if ( $('#dbtn_big').length > 0 ){
+                setTimeout(function(){
+                    var self = $('#dbtn_big'),
+                        hashid = self.attr("rel").toString(),
+                        url = "http://jobsfe.funshion.com/query/v1/mp4/"+hashid+".json",
+                        name = $("#player").find(".title em").text();
+
+                    $.getJSON(
+                        url,
+                        null,
+                        function(data){
+                            var down_url = data["playlist"][0]["urls"][0];
+                            down_url += "#name=" + name + "&content-type=video";
+                            self.hide();
+                            var btn = $('<a class="btn my_btn" href="'+down_url+'" download="">下载本集</a>');
+                            self.after(btn);
+                        }
+                    );
+                },1000);
+            }
         },
 
         // get params from a url

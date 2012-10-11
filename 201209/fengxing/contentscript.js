@@ -19,9 +19,9 @@
                 var old_href = $("#t_v_banner .bnfr a").attr("href"),
                     params = wanDouJiaExt.request_url(old_href),
                     name = decodeURIComponent(params["name"]),
-                    new_href = old_href + "#name=" + name + "&content-type=video";
+                    new_href = old_href + "#name=" + name + "&content-type=video/mp4";
 
-                $("#t_v_banner .bnfr a").attr("href",new_href).attr("download","");
+                $("#t_v_banner .bnfr a").attr("href",new_href).attr("download",name+".mp4");
             }
         },
         modifyHomePage:function(){
@@ -33,15 +33,14 @@
                                 hashid = self.find('.dbtn').attr("rel").toString(),
                                 url = "http://jobsfe.funshion.com/query/v1/mp4/"+hashid+".json",
                                 name = self.find("p a").text();
-
                             $.getJSON(
                                 url,
                                 null,
                                 function(data){
                                     var down_url = data["playlist"][0]["urls"][0];
-                                    down_url += "#name=" + name + "&content-type=video";
+                                    down_url += "#name=" + name + "&content-type=video/mp4";
                                     self.find('.dbtn').hide();
-                                    var btn = $('<a class="dbtn normal my_btn" href="'+down_url+'" download="">下载</a>');
+                                    var btn = $('<a class="dbtn normal my_btn" href="'+down_url+'" download="'+name+'.mp4">下载</a>');
                                     self.append(btn);
                                 }
                             );

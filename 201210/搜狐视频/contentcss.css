@@ -1,0 +1,27 @@
+.inavbar,.area,.aBlock,.aBlock .wrap,#foot,#player,
+.video{
+    width: 760px!important;
+    overflow: hidden!important;
+}
+#nvId .nav{
+    width: 618px!important;
+}
+.fi_movie .fi_acts{
+    width: 85px!important;
+}
+.ad img{
+    width: 760px!important;
+    height: auto!important;
+}
+.aBlock .wrap{
+    padding: 20px 10px 0 10px!important;
+}
+.pp4 li{
+    margin: 0 8px 0 8px!important;
+}
+.pp-hor li{
+    margin-right: 33px!important;
+}
+.jcarousel-list li, .jcarousel-item{
+    width: 68px!important;
+}

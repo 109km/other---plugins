@@ -1,0 +1,29 @@
+#consider{
+    width: 760px!important;
+    overflow: hidden!important;
+}
+.rightbar{
+    width: 160px!important;
+}
+.rank li{
+    overflow: hidden!important;
+}
+.rank ul{
+    padding:10px 0!important;
+}
+a.downBtn{
+    display: inline-block!important;
+    text-align: center!important;
+}
+a.downBtn:hover{
+    text-decoration: none!important;
+    color:#fff!important;
+}
+.download{
+    background-position: -31px 0!important;
+    border-left: 1px solid #ccc!important;
+    border-right: 1px solid #ccc!important;
+}
+.download a{
+    left:0!important;
+}

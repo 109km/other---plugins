@@ -2,6 +2,10 @@ body .content360{
     width:760px!important;
     overflow: hidden!important;
 }
+.top ul.navfeng{
+    width: 540px!important;
+    margin-top:13px!important;
+}
 body .focus .pics{
     width:640px!important;
 }
@@ -15,7 +19,8 @@ body .addgg{
     display: none!important;
 }
 body .top ul.navfeng li{
-    width:106px!important;
+    width:60px!important;
+    font-size: 14px!important;
 }
 body .focus ul li span{
     width: 119px!important;
@@ -45,4 +50,46 @@ body .cont .box{
 }
 body .jslist li{
     margin:0 10px 10px 16px!important;
+}
+
+.two{
+    width: 192px!important;
+}
+.fengright{
+    width: 109px!important;
+}
+.fengright p.font2{
+    height: 85px!important;
+    overflow: hidden!important;
+}
+.nav01 ul.list_01 li{
+    padding: 0px!important;
+}
+.nav01 ul.list_01 li p{
+    left:0px!important;
+    bottom: 0px!important;
+}
+.nav02all ul.list_01 li{
+    width: 116px!important;
+    margin-left: 0px!important;
+}
+.nav03all ul.list_01 li{
+    width: 118px!important;
+    margin-left: 0px!important;
+}
+.nav03mid{
+    margin-left: 2px!important;
+}
+.banner img{
+    width: 760px!important;
+    height: auto!important;
+}
+.ztlist li{
+    margin:0 10px 15px 15px!important;
+}
+.ptlist li{
+    margin:0 15px 15px 12px!important;
+}
+.words{
+    width: 580px!important;
 }

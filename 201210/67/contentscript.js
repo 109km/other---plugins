@@ -3,59 +3,88 @@
         init: function(){
             wanDouJiaExt.modifyHomePage();
             wanDouJiaExt.modifyDetailPage();
-            wanDouJiaExt.removeTarget();
         },
         modifyHomePage:function(){
-            var focus_links = $('a','.focus');
+            var focus_links = $(".list_01 li a");
             // focus pic
             if( focus_links.length > 0 ){
                 focus_links.each(function(){
                     var old_href = $(this).attr('href'),
-                        params , new_href ,pic_url;
+                        params , new_href ;
 
                     params = wanDouJiaExt.request_url(old_href);
-                    new_href = params['url'] + '#name=' +  params['name'] +
+                    new_href = params['url'] + '#name=' +  decodeURIComponent(params['name']) +
                         '&content-type=' + encodeURIComponent('video/mp4');
 
-                    $(this).attr('rel','download').attr('href',new_href);
+                    $(this).attr('download','').attr('href',new_href);
 
                 });
             }
 
-            // list
-            var small_slider_links = $('.cont .box','.ctt');
-            if( small_slider_links.length > 0 ){
-                small_slider_links.each(function(){
+            var banner = $(".banner a");
+            if( banner.length > 0 ){
+                banner.each(function(){
+                    var old_href = $(this).attr('href'),
+                        params , new_href ,pic_url;
+
+                    params = wanDouJiaExt.request_url(old_href);
+                    new_href = old_href + '#name=' +  decodeURIComponent(params['name']) +
+                        '&content-type=' + encodeURIComponent('application');
+
+                    $(this).attr('download','').attr('href',new_href);
+
+                });
+            }
+
+            var text_btns = $(".two .font3");
+            if( text_btns.length > 0 ){
+                text_btns.each(function(){
+                    var old_href = $(this).attr('href'),
+                        params , new_href ,pic_url;
+
+                    params = wanDouJiaExt.request_url(old_href);
+                    new_href = old_href + '#name=' +  decodeURIComponent(params['name']) +
+                        '&content-type=' + encodeURIComponent('application');
+
+                    $(this).attr('download','').attr('href',new_href);
+
+                });
+            }
+
+
+        },
+        modifyDetailPage:function(){
+            var items = $('.ztlist li');
+            if (items.length > 0){
+                items.each(function(){
                     var old_href = $(this).find('a').first().attr('href'),
                         params , new_href ,pic_url;
 
                     pic_url = $(this).find('img').attr('src');
                     params = wanDouJiaExt.request_url(old_href);
-                    new_href = params['url'] + '#name=' +  params['name'] +
-                        '&content-type=' + encodeURIComponent('video/mp4') +
-                        '&image=' + encodeURIComponent(pic_url);
+                    new_href = params['url'] + '#name=' +  decodeURIComponent(params['name']) +
+                        '&content-type=' + encodeURIComponent('video/mp4');
 
-                    $(this).find('a').attr('rel','download').attr('href',new_href);
+                    $(this).find('a').attr('download','').attr('href',new_href);
 
                 });
             }
 
-        },
-        modifyDetailPage:function(){
-            var items = $('li','.jslist');
-            items.each(function(){
-                var old_href = $(this).find('a').first().attr('href'),
-                    params , new_href ,pic_url;
+            var list_items = $(".ptlist li");
+            if (list_items.length > 0){
+                list_items.each(function(){
+                    var old_href = $(this).find('a').first().attr('href'),
+                        params , new_href ,pic_url;
 
-                pic_url = $(this).find('img').attr('src');
-                params = wanDouJiaExt.request_url(old_href);
-                new_href = params['url'] + '#name=' +  params['name'] +
-                    '&content-type=' + encodeURIComponent('video/mp4') +
-                    '&image=' + encodeURIComponent(pic_url);
+                    pic_url = $(this).find('img').attr('src');
+                    params = wanDouJiaExt.request_url(old_href);
+                    new_href = params['url'] + '#name=' +  decodeURIComponent(params['name']) +
+                        '&content-type=' + encodeURIComponent('video/mp4');
 
-                $(this).find('a').attr('rel','download').attr('href',new_href);
+                    $(this).find('a').attr('download','').attr('href',new_href);
 
-            });
+                });
+            }
 
         },
         // get params from a url

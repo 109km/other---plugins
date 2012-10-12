@@ -12,17 +12,29 @@
 
         },
         modifyGlobalPage:function(){
-            var self = $(".ad a"),
-                download_link = self.attr("onclick").toString(),
-                download_arr = download_link.split(","),
-                start = download_arr[0].indexOf("('") + 2,
-                end  = download_arr[0].indexOf(".apk",start) + 4,
-                url = download_arr[0].slice(start,end),
-                name = download_arr[1].slice(1,download_arr[1].length-1);
+            if ( $(".ad a").length > 0 ){
+                var self = $(".ad a"),
+                    download_link = self.attr("onclick").toString(),
+                    download_arr = download_link.split(","),
+                    start = download_arr[0].indexOf("('") + 2,
+                    end  = download_arr[0].indexOf(".apk",start) + 4,
+                    url = download_arr[0].slice(start,end),
+                    name = download_arr[1].slice(1,download_arr[1].length-1);
 
-            var down_link = url + "#name=" + name + "&content-type=application";
-            self.attr("href",down_link).attr("download","");
-            self.removeAttr("onclick");
+                var down_link = url + "#name=" + name + "&content-type=application";
+                self.attr("href",down_link).attr("download","");
+                self.removeAttr("onclick");
+            }
+
+            if ( $("#right #r3 a").length > 0 ){
+                var app_item = $("#right #r3 a"),
+                    old_url = app_item.attr("href"),
+                    params = wanDouJiaExt.request_url(old_url),
+                    app_link = old_url + "#name=" + decodeURIComponent(params["name"]) + "&content-type=application";
+
+                app_item.attr("href",app_link).attr("download","");
+            }
+
         },
         modifyDownloadList:function(){
             var items = $(".btn-download"),

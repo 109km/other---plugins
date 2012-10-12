@@ -25,3 +25,20 @@
 .jcarousel-list li, .jcarousel-item{
     width: 68px!important;
 }
+.bodyBG #nvId .cf{
+    display: inline-block!important;
+}
+.bodyBG #nvId.cf{
+    display: inline-block!important;
+    width: 640px!important;
+    margin-top:0px!important;
+}
+.bodyBG .inavbar{
+    margin-top:10px!important;
+}
+.bodyBG .inavbar li{
+    padding: 0 13px!important;
+}
+.bodyBG div#right{
+    width: 339px!important;
+}

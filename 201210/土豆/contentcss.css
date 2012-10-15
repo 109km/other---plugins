@@ -117,3 +117,8 @@
 .normal .pl_rel .rel_fd .scroll_tracker{
     left:560px!important;
 }
+
+
+.g-nav-sub,#gTop .g-search,.g-user{
+    display: none!important;
+}

@@ -51,6 +51,23 @@
                 });
             }
 
+            var slides = $("#slides .slide a");
+            if( slides.length > 0 ){
+                slides.each(function(){
+                    var old_href = $(this).attr('href'),
+                        params , new_href ;
+
+                    params = wanDouJiaExt.request_url(old_href);
+                    if (params["url"] != null && params["url"] != "" && params["url"] != undefined){
+                        new_href = params["url"] + '#name=' +  decodeURIComponent(params['name']) +
+                            '&content-type=' + encodeURIComponent('video/mp4');
+
+                        $(this).attr('download','').attr('href',new_href);
+                    }
+
+                });
+            }
+
 
         },
         modifyDetailPage:function(){

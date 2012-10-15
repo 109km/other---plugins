@@ -119,6 +119,6 @@
 }
 
 
-.g-nav-sub,#gTop .g-search,.g-user{
+.g-nav-sub,#gTop .g-search,.g-user,#g-nav-first,#sideCol{
     display: none!important;
 }

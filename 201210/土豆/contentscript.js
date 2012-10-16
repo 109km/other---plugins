@@ -561,7 +561,7 @@
                                     var encode_url = m_html.slice(encode_url_4+10,m_html.indexOf('"',encode_url_4));
                                     down_url = $.base64Decode(encode_url) + "#name=" + name + "&content-type=video/mp4";
                                     if( down_url != null && down_url != undefined && encode_url_1 > 0){
-                                        self.find('div.txt').eq(0).append("<h6 class='info' style='text-align:center'><a class='btn-min' href='"+down_url+"' download='"+name+".mp4'>下载</a></h6>");
+                                        self.find('div.txt').eq(0).append("<h6 class='info' style='text-align:center'><a class='btn-min' href='"+down_url+"' download=''>下载</a></h6>");
                                     }else if ( self.find('div.txt').eq(0).find(".btn-min").length == 0 ){
                                         self.find('div.txt').eq(0).append("<h6 class='info' style='text-align:center'><a class='btn-min' href='javascript:void()'>暂不提供下载</a></h6>");
                                     }
@@ -589,7 +589,7 @@
                                             var encode_url = m_html.slice(encode_url_4+10,m_html.indexOf('"',encode_url_4));
                                             down_url = $.base64Decode(encode_url) + "#name=" + name + "&content-type=video/mp4";
                                             if( down_url != null && down_url != undefined && encode_url_1 > 0){
-                                                self.find('div.txt').eq(0).append("<h6 class='info' style='text-align:center'><a class='btn-min' href='"+down_url+"' download='"+name+".mp4'>下载</a></h6>");
+                                                self.find('div.txt').eq(0).append("<h6 class='info' style='text-align:center'><a class='btn-min' href='"+down_url+"' download=''>下载</a></h6>");
                                             }else if ( self.find('div.txt').eq(0).find(".btn-min").length == 0 ){
                                                 self.find('div.txt').eq(0).append("<h6 class='info' style='text-align:center'><a class='btn-min' href='javascript:void()'>暂不提供下载</a></h6>");
                                             }

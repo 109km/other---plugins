@@ -1,0 +1,38 @@
+.t_v_nav_inr,.main,.warp795{
+    width: 760px!important;
+    overflow: hidden!important;
+}
+.header{
+    padding:0px!important;
+    width:760px!important;
+}
+.clsHot{
+    width: 206px!important;
+}
+.clsHot .menu li span{
+    padding:0 5px!important;
+}
+.clsHot .meuList h3{
+    width: 100px!important;
+}
+.warp795{
+    width: 760px!important;
+}
+.sidebar{
+    width: 205px!important;
+}
+.tag1 a, .tag2 a{
+    margin-left: 6px!important;
+}
+.dtlCon .txt li{
+    width: 597px!important;
+}
+.TVlist li{
+    margin-right: 15px!important;
+}
+.bnfr img{
+    width: 560px!important;
+}
+.dtl_banner .bnfr{
+    float: none!important;
+}

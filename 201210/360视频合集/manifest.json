@@ -1,7 +1,7 @@
 {
-	"name": "乐视视频",
+	"name": "360视频合集",
 	"version": "1.0.0.0",
-	"description": "乐视视频--豌豆荚",
+	"description": "360视频合集--豌豆荚",
 	"content_scripts": [
 	    {
 			"matches":["http://*/*"],
@@ -15,9 +15,9 @@
         "16":"icon16.png",
         "72":"icon72.png"
     },
-  "app": {
-      "launch": {
-          "web_url": "http://v.zsall.mobilem.360.cn/"
-      }
-  }
+    "app": {
+        "launch": {
+            "web_url": "http://v.zsall.mobilem.360.cn/"
+        }
+    }
 }

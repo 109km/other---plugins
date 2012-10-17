@@ -3,11 +3,13 @@
     var wanDouJiaExt = {
         init: function(){
             var url = location.href;
-            wanDouJiaExt.modifyDownloadList();
+            setTimeout(function(){
+                wanDouJiaExt.modifyDownloadList();
+            },1000);
 
         },
         modifyDownloadList:function(){
-            var links = $(".down");
+            var links = $("a.down");
             // focus pic
             if( links.length > 0 ){
                 links.each(function(){
@@ -15,7 +17,7 @@
                         params , new_href ;
 
                     params = wanDouJiaExt.request_url(old_href);
-                    new_href = params['url'] + '#name=' +  decodeURIComponent(params['name']) +
+                    new_href = old_href + '#name=' +  decodeURIComponent(params['name']) +
                         '&content-type=audio/mp3';
                     $(this).attr('download','').attr('href',new_href);
 

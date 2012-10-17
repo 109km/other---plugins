@@ -3,6 +3,9 @@
         init: function(){
             wanDouJiaExt.modifyDownPage();
         },
+        modifyGlobe:function(){
+            
+        },
         modifyDownPage:function(){
             // no downurl
             setTimeout(function(){
@@ -109,10 +112,24 @@
 
                 }
 
+                var detail_big_btn = $("#t_v_info .dbtn_big");
+                if ( detail_big_btn.length > 0 ){
+                    var old_href = detail_big_btn.attr('href'),
+                        params , new_href ;
+
+                    params = wanDouJiaExt.request_url(old_href);
+                    new_href = old_href + '#name=' +  decodeURIComponent(params['name']) +
+                        '&content-type=' + 'video/mp4';
+
+                    detail_big_btn.hide();
+                    var btn = $('<a class="dbtn_big" href="'+new_href+'" download=""></a>');
+                    detail_big_btn.after(btn);
+                }
+
 
                 
 
-            },1500);
+            },1000);
 
 
 

@@ -1,0 +1,17 @@
+body .list{
+    width: 760px!important;
+}
+body #nr ul{
+    width: 760px!important;
+    padding-left:0px!important;
+}
+body #nr li,body #nr2 li{
+    margin-left:11px!important;
+    margin-right: 11px!important;
+}
+body .read,body .top{
+    width: 760px!important;
+}
+body .vid{
+    width: 760px!important;
+}

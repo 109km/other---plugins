@@ -1,0 +1,37 @@
+{
+	"name": "优酷",
+	"version": "1.0.0.2",
+	"description": "优酷网是中国领先的视频分享网站，是中国网络视频行业的第一品牌。",
+	"icons": {
+    	"16": "icon16.png",
+    	"72": "icon72.png"
+    },
+	"content_scripts": [
+	    {
+			"matches":["http://*.youku.com/*", "http://*.soku.com/*"],
+			"run_at": "document_end",
+            "css": ["contentcss.css"],
+			"js": ["jquery-1.5.1.min.js", "contentscript.js"],
+            "all_frames":false
+	    }
+    ],
+    "app": {
+        "launch": {
+            "web_url": "http://tv.youku.com/"
+        },
+      "navigation": [
+        {
+            "label": "电影",
+            "web_url": "http://movie.youku.com/"
+        },
+        {
+            "label": "综艺",
+            "web_url": "http://zy.youku.com/"
+        },
+        {
+            "label": "动漫",
+            "web_url": "http://comic.youku.com/"
+        }
+      ]
+    }
+}

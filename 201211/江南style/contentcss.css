@@ -38,7 +38,7 @@
 }
 .tabContent,.s_miniHeader .headerBox,
 .s_miniHeader .headerBox,.s_header, .s_miniHeader, .s_footer, .s_miniFooter, .s_body,
-.it_content,.stillsBox{
+.it_content,.stillsBox,.playBox_thx{
     width: 760px!important;
     overflow: hidden!important;
     min-width: 760px!important;
@@ -102,4 +102,7 @@
 .jj_item .text{
     height: 20px!important;
     overflow: hidden!important;
+}
+#player{
+    max-width: 760px!important;
 }

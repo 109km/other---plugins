@@ -1,0 +1,97 @@
+.btn-min {
+    height: 18px;
+    color: #444;
+    background-color: #e8e8e8;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), color-stop(0.25, #fff), to(#e8e8e8));
+    background-image: -moz-linear-gradient(0 25% 270deg, #fff,#e8e8e8);
+    filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr='#ffffff',EndColorStr='#e8e8e8');
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    display: inline-block;
+    padding: 0 10px;
+    line-height: 20px\9;
+    _line-height: 18px;
+    _vertical-align:bottom;
+}
+.btn-min:hover {
+    color: #444;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#e8e8e8));
+    background-image: -moz-linear-gradient(center top, #fff, #e8e8e8);
+    text-decoration: none;
+}
+.btn-min:active {
+    outline:none;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#e8e8e8), to(#fff));
+    background-image: -moz-linear-gradient(center top, #e8e8e8, #fff);
+    filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr='#e8e8e8',EndColorStr='#ffffff');
+    text-decoration: none;
+}
+.btn-min.disabled-btn{
+    padding:0 6px;
+    color:#999;
+    background-color: #E6E6E6;
+    background-image: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+.window, .screen{
+    min-width: 760px!important;
+}
+.tabContent,.s_miniHeader .headerBox,
+.s_miniHeader .headerBox,.s_header, .s_miniHeader, .s_footer, .s_miniFooter, .s_body,
+.it_content,.stillsBox{
+    width: 760px!important;
+    overflow: hidden!important;
+    min-width: 760px!important;
+    padding: 0px!important;
+}
+.s_main{
+    width: 760px!important;
+    padding:15px 0!important;
+    overflow: hidden!important;
+}
+.collgrid6t .items,.collgrid6t{
+    width: 730px!important;
+}
+#showBox,.s_miniFooter,.layout_121 .sideCol{
+    display: none!important;
+}
+.mBox .l{
+    padding-left: 0px!important;
+}
+.mBox .r{
+    padding-right: 0px!important;
+}
+.jj_item{
+    margin-right: 0px!important;
+    padding: 0 5px!important;
+    width: 180px!important;
+}
+.jj_item img{
+    width: 180px!important;
+    height: auto!important;
+}
+.stillsBox ul li{
+    width: 130px!important;
+    margin-bottom: 13px!important;
+}
+.stillsBox ul li img{
+    width: 130px!important;
+    height: auto!important;
+}
+.stillsBox .showPhoto{
+    left:135px!important;
+}
+.stillsBox .showPhoto img{
+    width: 490px!important;
+    height: auto!important;
+}
+.collgrid6t .v, .collgrid6t .p{
+    margin-right: 2px!important;
+}
+.v,.v .v_thumb{
+    width: 118px!important;
+}
+.v .v_link img{
+    width: 118px!important;
+    height: auto!important;
+}

@@ -52,7 +52,8 @@
 .collgrid6t .items,.collgrid6t{
     width: 730px!important;
 }
-#showBox,.s_miniFooter,.layout_121 .sideCol{
+#showBox,.s_miniFooter,.layout_121 .sideCol,#miniheader,.s_main .right,
+.s_footer,#vphotvideo,#commentArea{
     display: none!important;
 }
 .mBox .l{
@@ -94,4 +95,11 @@
 .v .v_link img{
     width: 118px!important;
     height: auto!important;
+}
+.s_body{
+    background-position: -450px 0!important;
+}
+.jj_item .text{
+    height: 20px!important;
+    overflow: hidden!important;
 }

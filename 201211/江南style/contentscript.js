@@ -13,7 +13,7 @@
 
                 down_url = down_url + "#name=" + name + "&content-type=video/mp4";
                 self.append('<div class="down_div"><a class="btn-min" style="color:black;" href="'+down_url+'" download="">\u4e0b\u8f7d</a></div>');
-                self.find("a").attr("href",down_url).attr("download","");
+                //self.find("a").attr("href",down_url).attr("download","");
             });
 
             var items_2 = $("div.stillsBox li");
@@ -24,7 +24,7 @@
 
                 down_url = down_url + "#name=" + name + "&content-type=video/mp4";
                 self.append('<div class="down_div"><a class="btn-min" style="color:black;" href="'+down_url+'" download="'+name+'.mp4">\u4e0b\u8f7d</a></div>');
-                self.find('a').attr("href",down_url).attr("download","");
+                //self.find('a').attr("href",down_url).attr("download","");
             });
 
             var items_3 = $("div.collgrid6t ul.v");
@@ -35,8 +35,20 @@
 
                 down_url = down_url + "#name=" + name + "&content-type=video/mp4";
                 self.append('<div class="down_div"><a class="btn-min" style="color:black;" href="'+down_url+'" download="'+name+'.mp4">\u4e0b\u8f7d</a></div>');
-                self.find('a').attr("href",down_url).attr("download","");
+                //self.find('a').attr("href",down_url).attr("download","");
             });
+
+            var fn_download = $('#fn_download');
+            if(fn_download.length > 0){
+                fn_download.each(function(){
+                    $('#fn_download').hide();
+                    var p = $('#fn_download').parent();
+                    var down_url = window.location.href;
+                    var title = $.trim($('.title').text());
+                    down_url = down_url + "#name=" + title + "&content-type=video/mp4";
+                    p.append('<a class="btn-min" style="color:black;width:80px;height:26px;text-align:center;display:block;" href="'+down_url+'" download="">\u4e0b\u8f7d</a>');
+                });
+            }
 
         }
     };

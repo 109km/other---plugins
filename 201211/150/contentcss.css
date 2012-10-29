@@ -1,0 +1,22 @@
+.wrap{
+    min-width: 760px!important;
+}
+.q56_head,.q56_menu_content,.q56_bodyArea{
+    width: 760px!important;
+}
+.mod56_video_list_H .m_v_list{
+    margin-left: 0px!important;
+}
+.mod56_video_list_H .m_v_list li{
+    margin-left:10px!important;
+}
+.q56_prisecArea .q56_pri{
+    width: 430px!important;
+}
+.q56_view_right{
+    width: 215px!important;
+    overflow: hidden!important;
+}
+#1_a img{
+    width: 215px!important;
+}

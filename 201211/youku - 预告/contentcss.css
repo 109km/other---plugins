@@ -38,11 +38,14 @@
 }
 .tabContent,.s_miniHeader .headerBox,
 .s_miniHeader .headerBox,.s_header, .s_miniHeader, .s_footer, .s_miniFooter, .s_body,
-.it_content,.stillsBox,.playBox_thx{
+.it_content,.stillsBox,.playBox_thx,#postflash,#postflash embed{
     width: 760px!important;
     overflow: hidden!important;
     min-width: 760px!important;
     padding: 0px!important;
+}
+#postflash{
+    height: 300px!important;
 }
 .s_main{
     width: 760px!important;
@@ -54,8 +57,14 @@
 }
 #showBox,.s_miniFooter,.layout_121 .sideCol,#miniheader,.s_main .right,
 .s_footer,#vphotvideo,#commentArea,.ad_area,#fn_share,.guide .crumbs,
-#fn_favo,iframe{
+#fn_favo,iframe,.sNav,#header,#vprelationofficial,#vphotofficial,.baseaction .btnplaytrailer,
+.showInfo .offsee,#comment_wrap,.col2_16 .left,#ab_171,
+.cooperation,.frange .panel{
     display: none!important;
+}
+.col2_16 .right{
+    width: 760px!important;
+    display: block!important;
 }
 .mBox .l{
     padding-left: 0px!important;
@@ -90,16 +99,7 @@
 .collgrid6t .v, .collgrid6t .p{
     margin-right: 2px!important;
 }
-.v,.v .v_thumb{
-    width: 118px!important;
-}
-.v .v_link img{
-    width: 118px!important;
-    height: auto!important;
-}
-.s_body{
-    background: url(http://images2.jumei.com/activity/jiangnanstyle.jpg)no-repeat center top!important;
-}
+
 .jj_item .text{
     height: 20px!important;
     overflow: hidden!important;

@@ -5,6 +5,10 @@
             wanDouJiaExt.modifyHome();
 	    },
         modifyHome:function(){
+            if ( $("div.mainCol div.body div.c").length > 0 ){
+                $("div.mainCol div.body div.c").append('<div class="down_div" style="text-align: right;padding-right: 30px;"><a class="btn-min" style="color:black;" href="http://v.youku.com/v_show/id_XNDYyNDE3MTA4.html" download="">\u4e0b\u8f7d</a></div>');
+            }
+
             var items_1 = $("div.tabContent li.jj_item");
             items_1.each(function(){
                 var self = $(this),
@@ -15,7 +19,7 @@
                 self.append('<div class="down_div"><a class="btn-min" style="color:black;" href="'+down_url+'" download="">\u4e0b\u8f7d</a></div>');
                 //self.find("a").attr("href",down_url).attr("download","");
             });
-
+            /*
             var items_2 = $("div.stillsBox li");
             items_2.each(function(){
                 var self = $(this),
@@ -26,6 +30,7 @@
                 self.append('<div class="down_div"><a class="btn-min" style="color:black;" href="'+down_url+'" download="'+name+'.mp4">\u4e0b\u8f7d</a></div>');
                 //self.find('a').attr("href",down_url).attr("download","");
             });
+            */
 
             var items_3 = $("div.collgrid6t ul.v");
             items_3.each(function(){

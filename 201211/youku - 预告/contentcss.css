@@ -45,11 +45,15 @@
     padding: 0px!important;
 }
 #postflash{
-    height: 300px!important;
+    height: 260px!important;
+    margin-top:0px!important;
+}
+#postflash embed{
+    margin-top:-30px!important;
 }
 .s_main{
     width: 760px!important;
-    padding:15px 0!important;
+    padding: 15px 0!important;
     overflow: hidden!important;
 }
 .collgrid6t .items,.collgrid6t{
@@ -59,7 +63,7 @@
 .s_footer,#vphotvideo,#commentArea,.ad_area,#fn_share,.guide .crumbs,
 #fn_favo,iframe,.sNav,#header,#vprelationofficial,#vphotofficial,.baseaction .btnplaytrailer,
 .showInfo .offsee,#comment_wrap,.col2_16 .left,#ab_171,
-.cooperation,.frange .panel{
+.cooperation,.frange .panel,#ab_26 .mod,#ab_26{
     display: none!important;
 }
 .col2_16 .right{
@@ -112,4 +116,12 @@
 }
 .layout_121 .mainCol{
     margin-left: 50px!important;
+}
+.items .p .p_actor,.items .p .p_title{
+    height: 20px!important;
+    margin-bottom: 5px!important;
+    overflow: hidden!important;
+}
+.modTitle{
+    text-indent: 16px;
 }

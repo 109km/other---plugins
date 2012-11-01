@@ -1,0 +1,53 @@
+{
+	"name": "最牛铃声",
+	"version": "1.0.0.8",
+	"description": "最牛铃声--豌豆荚",
+	"content_scripts": [
+	    {
+			"matches":["http://*.v3gp.com/*"],
+			"run_at": "document_end",
+            "css": ["contentcss.css"],
+			"js": ["jquery-1.5.1.min.js", "contentscript.js"],
+            "all_frames":false
+	    }
+    ],
+    "icons":{
+        "16":"icon16.png",
+        "72":"icon72.png"
+    },
+  "app": {
+      "launch": {
+          "web_url": "http://360-v3.v3gp.com/"
+      },
+      "navigation": [
+        {
+            "label": "短信铃声",
+            "web_url": "http://360-v3.v3gp.com/list.php?id=7"
+        },
+        {
+            "label": "个性另类",
+            "web_url": "http://360-v3.v3gp.com/list.php?id=2"
+        },
+        {
+            "label": "搞笑铃声",
+            "web_url": "http://360-v3.v3gp.com/list.php?id=1"
+        },
+        {
+            "label": "流行歌曲",
+            "web_url": "http://360-v3.v3gp.com/topic/singer-1.html"
+        },
+        {
+            "label": "经典影视",
+            "web_url": "http://360-v3.v3gp.com/list.php?id=6"
+        },
+	{
+            "label": "游戏动漫",
+            "web_url": "http://360-v3.v3gp.com/list.php?id=4"
+        },
+	{
+            "label": "DJ舞曲",
+            "web_url": "http://360-v3.v3gp.com/list.php?id=5"
+        }
+      ]
+  }
+}

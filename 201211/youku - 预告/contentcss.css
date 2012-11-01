@@ -45,6 +45,7 @@
     padding: 0px!important;
 }
 #postflash{
+    display: none!important;
     height: 260px!important;
     margin-top:0px!important;
 }

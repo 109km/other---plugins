@@ -1,0 +1,15 @@
+.doc-sharing-section{
+    display: none!important;
+}
+#gbzc{
+    display: none!important;
+}
+.product-info p,.signin-box .email-label, .signin-box .passwd-label{
+    font-size: 12px!important;
+}
+.user_tip{
+    background: #fffcde!important;
+    padding: 5px 10px!important;
+    float: right!important;
+    margin-right: 10px!important;
+}

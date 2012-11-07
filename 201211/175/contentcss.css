@@ -1,5 +1,5 @@
 .inavbar,.area,.aBlock,.aBlock .wrap,#foot,#player,
-.video{
+.video,.aBlockB ul{
     width: 760px!important;
     overflow: hidden!important;
 }

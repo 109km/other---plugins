@@ -1,6 +1,5 @@
-﻿下一次我们想做 “豆瓣FM”  
+﻿凤凰读书：
+http://inf.read.ifeng.com/readcp/cp/360/index.htm
 
-核心FEATURE是把 红心 歌曲下载并传输到手机上 （这个网上有很多破解的扩展，这个你可以看看）
-其次一个FEATURE是FM里有很多兆赫，红心既然可以下载的话，这些UGC产生的兆赫内的歌曲是否也可下载。。。
-
-这个也是打算做明星扩展的，这两个主FEATURE，你先看看？？然后我之后会大致给你一个图示
+铃声多多：
+http://360web.shoujiduoduo.com/360web/

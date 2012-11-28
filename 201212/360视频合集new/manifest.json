@@ -1,0 +1,23 @@
+{
+	"name": "360视频合集",
+	"version": "1.0.0.0",
+	"description": "360视频合集--豌豆荚",
+	"content_scripts": [
+	    {
+			"matches":["http://*/*"],
+			"run_at": "document_end",
+            "css": ["contentcss.css"],
+			"js": ["jquery-1.5.1.min.js", "contentscript.js"],
+            "all_frames":false
+	    }
+    ],
+    "icons":{
+        "16":"icon16.png",
+        "72":"icon72.png"
+    },
+    "app": {
+        "launch": {
+            "web_url": "http://v.zsall.mobilem.360.cn/"
+        }
+    }
+}

@@ -1,0 +1,5 @@
+#communityMenu,#header .leader_1,.button.upload,
+#footer,#emailbutton,#sharebutton,#favorite,#rate,#iteminfo,
+#uploader,#item .secondary,#lightbox .speech,#lightbox .slide{
+    display: none;
+}

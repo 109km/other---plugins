@@ -1,0 +1,41 @@
+.warp{
+    width: 760px;
+    padding:20px 0;
+}
+.nav a.active{
+    height: 49px;
+}
+.nav a{
+    margin-bottom: 15px;
+    margin-right: 3px;
+}
+.big-post{
+    margin: 0 10px 10px 10px;
+}
+.post-detail{
+    width: 740px;
+    padding:10px;
+    overflow: hidden;
+}
+.post-footer a,.more-content,.post-header .post-cover ul .name{
+    display: none;
+}
+.btn-green {
+    border: 1px solid #7BAD38;
+    color:white;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 10px 20px;
+    box-shadow: 0 2px 0
+    rgba(120, 163, 51, .6);
+    text-shadow: 0 1px 0
+    rgba(0, 0, 0, .2);
+    background-color:#98D449;
+    border-radius: 2px;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#98D449), to(#7BBD24));
+    background-image: -moz-linear-gradient(center top,#98D449,#7BBD24);
+    filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr='#98d449',EndColorStr='#7bbd24');
+}

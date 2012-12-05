@@ -1,0 +1,160 @@
+.btn-min {
+    height: 18px!important;
+    color: #444!important;
+    background-color: #e8e8e8!important;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), color-stop(0.25, #fff), to(#e8e8e8))!important;
+    background-image: -moz-linear-gradient(0 25% 270deg, #fff,#e8e8e8)!important;
+    filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr='#ffffff',EndColorStr='#e8e8e8')!important;
+    border: 1px solid #ccc!important;
+    border-radius: 2px!important;
+    display: inline-block!important;
+    padding: 0 10px!important;
+    line-height: 20px\9!important;
+    _line-height: 18px!important;
+    _vertical-align:bottom!important;
+}
+.btn-min:hover {
+    color: #444!important;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#e8e8e8))!important;
+    background-image: -moz-linear-gradient(center top, #fff, #e8e8e8)!important;
+    text-decoration: none!important;
+}
+.btn-min:active {
+    outline:none!important;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#e8e8e8), to(#fff))!important;
+    background-image: -moz-linear-gradient(center top, #e8e8e8, #fff)!important;
+    filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr='#e8e8e8',EndColorStr='#ffffff')!important;
+    text-decoration: none!important;
+}
+.btn-min.disabled-btn{
+    padding:0 6px!important;
+    color:#999!important;
+    background-color: #E6E6E6!important;
+    background-image: none!important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) inset, 0 1px 2px rgba(0, 0, 0, 0.05)!important;
+}
+
+.widescreen .player,.videowrap,.g-mini-play,.videowrap .auto, .conwrap .auto{
+    width:760px!important;
+    overflow: hidden!important;
+    margin:0 auto;
+}
+.videowrap,.g-mini-play,.conwrap{
+    min-width: 760px!important;
+}
+#playerObject{
+    max-width: 760px!important;
+}
+.conwrap .con_side,body #gBot,body .play_tip_box .play_tip,body #comments,
+#playTipBox,.con_mod .hd a.btn_goto_comment,#fqa,#minibar-panel,#minibar-bar,
+#gotoTop,.cover_banner,.s,#toolbar,.g-mini-play,.ad_banner,#adex_top_banner,iframe,#adFromBAIDU,
+.g-bot,.g-mini-nav .g-link .g-link-more,.header .subnav,.g-upload{
+    display: none!important;
+}
+#wandou_down{
+    font-size: 14px!important;
+    background: #fff!important;
+    border-radius: 5px!important;
+    color:#000!important;
+    display: block!important;
+    width:100px!important;
+    height: 30px!important;
+    line-height: 30px!important;
+    text-align: center!important;
+    margin:15px auto!important;
+}
+.rel_list{
+    margin: 0 auto!important;
+}
+.g-mini,.g-mini-main,.extra{
+    min-width: 760px!important;
+    width: 760px!important;
+}
+.fortudou .header .main{
+    width: 730px!important;
+}
+.searchContainer{
+    width: 356px!important;
+}
+.fortudou,.page_content,.g_main_c,.g_nav_main{
+    width: 760px!important;
+}
+.extra .auto{
+    width: 760px!important;
+    margin: 0px!important;
+}
+.tv_min_list #tvShowMore{
+    left:708px!important;
+}
+.tv_show_more{
+    left:684px!important;
+}
+.extra .lp_list .btn_rel_prev{
+    left:5px!important;
+}
+#p-pi .rel_wrap, #p-pl .rel_wrap{
+    display: none!important;
+}
+.lp_list .rel_list_box{
+    left:17px!important;
+    width:720px!important;
+}
+.extra .scroll_tracker{
+    width: 727px!important;
+    left:23px!important;
+}
+.extra .lp_list .btn_rel_next{
+    right:0px!important;
+}
+#p-pl.normal .lp_list .pack{
+    float: left!important;
+    width: 254px!important;
+}
+.playlist .rel_wrap{
+    position: static!important;
+    width: 579px!important;
+}
+.normal .pl_rel .rel_fd .scroll_tracker{
+    left:560px!important;
+}
+
+.g-top{
+    width: 760px!important;
+    min-width: 760px!important;
+}
+.g-nav-sub,#gTop .g-search,.g-user,#g-nav-first,#sideCol{
+    display: none!important;
+}
+.m_col{
+    width: 620px;
+    margin-left: 10px;
+}
+.content{
+    margin-left:0px;
+}
+.category-item, .list_item{
+    margin-left:10px;
+}
+.category-sort{
+    width: 758px;
+    margin:18px 0;
+    clear: both;
+    overflow: hidden;
+}
+.s_col{
+    width: 128px;
+    margin-right: 0px;
+}
+.row .pack{
+    margin:0 10px;
+}
+.page_content{
+    margin: 15px 0px!important;
+}
+#secMcol .showcase .pack_video_card{
+    width: 100px;
+    overflow: hidden;
+}
+#secMcol .showcase .pack_video_card .txt{
+    width: 100px;
+}

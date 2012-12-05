@@ -1,0 +1,24 @@
+{
+	"name": "土豆视频",
+	"version": "1.0.0.11",
+	"description": "支持土豆视频下载",
+	"content_scripts": [
+	    {
+			"matches":["http://*.tudou.com/*", "http://tudou.letv.com/*","http://*.soku.com/*"],
+			"run_at": "document_end",
+            "css": ["contentcss.css"],
+			"js": ["jquery-1.5.1.min.js", "contentscript.js"],
+            "all_frames":false
+	    }
+    ],
+    "icons": {
+        "16": "icon16.png",
+        "72": "icon72.png"
+    },
+    "app": {
+        "launch": {
+          "web_url": "http://tv.tudou.com/"
+        }
+    },
+    "permissions": ["http://*.tudou.com/*"]
+}

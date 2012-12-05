@@ -1,0 +1,14 @@
+#jp_container{
+    position: fixed!important;
+    bottom:0px!important;
+}
+.player-total{
+    position: fixed!important;
+    bottom:58px!important;
+    z-index: 10!important;
+    width: 750px!important;
+}
+#all{
+    padding-bottom: 60px!important;
+}
+

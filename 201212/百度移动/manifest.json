@@ -1,11 +1,11 @@
 {
-	"name": "360软件",
+	"name": "百度移动",
 	"version": "1.0.0.1",
     "manifest_version": 2,
-	"description": "360软件",
+	"description": "百度移动",
 	"content_scripts": [
 	    {
-			"matches":["http://*.mobilem.360.cn/*"],
+			"matches":["http://as.baidu.com/*"],
 			"run_at": "document_end",
             "css":["contentcss.css"],
 			"js": ["jquery-1.5.1.min.js" , "contentscript.js"],
@@ -18,7 +18,7 @@
     },
     "app": {
         "launch": {
-            "web_url": "http://zsall.mobilem.360.cn/"
+            "web_url": "http://as.baidu.com/a?pre=web_am_header&f=web_alad_6%40next"
         }
     }
 }

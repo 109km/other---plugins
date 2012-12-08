@@ -3,6 +3,7 @@
         init: function(){
             var url = location.href;
             wanDouJiaExt.modifyHomePage();
+            wanDouJiaExt.modifyDetailPage();
             wanDouJiaExt.removeTarget();
         },
         modifyHomePage:function(){
@@ -26,6 +27,19 @@
         },
         modifyDetailPage:function(){
             if ( $("#down_as_durl") ){
+                var item = $("#down_as_durl"),
+                    url = item.attr("href"),
+                    name = $("#appname").text();
+
+                url = url + "#name=" + name + "&content-type=application";
+                item.attr("href",url);
+
+                $.ajax({
+                    url:url,
+                    success:function(data){
+                        console.log(data);
+                    }
+                });
 
             }
         },
@@ -45,7 +59,7 @@
         },
         removeTarget:function(){
             setTimeout(function(){
-                $('a','body').removeAttr('target');
+                $('a','body').attr('target',"_self");
             },1000);
         }
     };

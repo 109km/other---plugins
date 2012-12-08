@@ -1,0 +1,20 @@
+#head,#com_userbar,#bdshare,.s-index-side,
+.home-index .lunbo-recommend .recommend,.content-side,.footer,
+.s-index-ad,.topic_list_l,.content-main .com .info-top dl dd .share-feedback,
+.content-main .com .info-middle table td .bd-push,.lunbo-recommend .recommend{
+    display: none;
+}
+.topic-detail-main li{
+    width: 250px;
+}
+.topic-detail-main li .cell{
+    padding:10px;
+}
+.banner-des{
+    width: 190px;
+    margin-right: 210px;
+}
+.topic_list_r{
+    float: left;
+    margin-left: 30px;
+}

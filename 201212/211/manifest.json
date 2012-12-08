@@ -1,0 +1,33 @@
+{
+	"name": "凤凰读书",
+	"version": "1.0.0.1",
+	"description": "凤凰读书",
+	"content_scripts": [
+	    {
+			"matches":["http://*.ifeng.com/*"],
+			"run_at": "document_end",
+            "css":["contentcss.css"],
+			"js": ["jquery-1.5.1.min.js" , "contentscript.js"],
+            "all_frames":false
+	    }
+    ],
+    "icons": {
+        "16": "icon16.png",
+        "72": "icon72.png"
+    },
+    "app": {
+        "launch": {
+            "web_url": "http://inf.read.ifeng.com/readcp/cp/360/index.htm"
+        },
+      "navigation": [
+        {
+            "label": "精品图书",
+            "web_url": "http://inf.read.ifeng.com/readcp/cp/shuku.htm?cp=360&cate=1"
+        },
+        {
+            "label": "古典文学",
+            "web_url": "http://inf.read.ifeng.com/readcp/cp/shuku.htm?cp=360&cate=2"
+        }
+      ]
+    }
+}

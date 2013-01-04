@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>BIG GAME</title>
+    <link rel="stylesheet" type="text/css" href="appstyle.css" media="screen" />
+    <script type="text/javascript" src="jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="require.js"></script>
+    <script type="text/javascript" src="Narya.js"></script>
+</head>
+<body class="grid">
+    <div class="top_tips">
+        <img src="ok.jpg" alt="ok" class="ok">
+        <span class="text">Save your data plan: content here sideloads from your PC to your Android.</span>
+        <a href="#" class="more">Learn more.</a>
+        <a class="close" href="javascript:;">X</a>
+    </div>
+    <div class="header">
+        <div class="title">
+            Must Have Apps
+            <div class="title_right">
+                <p>1-Click Installs From:</p>
+                <p><a href="#"><img src="1mobile.png" alt=""></a></p>
+
+            </div>
+        </div>
+        <div class="sub_title">
+            Essential apps for all Android users.
+        </div>
+        <a href="#" class="btn-green" style="width: 62px;font-size: 12px;margin-top:-10px; float: right;margin:-20px 50px 0 0;">Install All</a>
+        <ul class="list">
+            <li>
+                <p>
+                    <a href="app链接" class="appinfo"><img src="app图片链接" alt=""></a>
+                </p>
+                <p class="name">app名称</p>
+                <p class="grey">app大小</p>
+                <p>
+                    <a class="btn-green" href="安装包链接">Insall</a>
+                </p>
+            </li>
+            <li>
+                <p>
+                    <a href="http://as.baidu.com/a/item?docid=425611&pre=web_am_indexhot&pos=home_2006_3&f=web_alad_6%40next%40home_2006_3" class="appinfo"><img src="http://hiphotos.baidu.com/wisegame/pic/item/6ff431adcbef76091e4d11312edda3cc7dd99ede.jpg" alt=""></a>
+                </p>
+                <p class="name">狂野飙车</p>
+                <p class="grey">44 MB</p>
+                <p>
+                    <a class="btn-green" href="http://static.nduoa.com/apk/373/373570/1090751/com.gameloft.android.GAND.GloftA7HP.apk">Insall</a>
+                </p>
+            </li>
+            <li>
+                <p>
+                    <a href="#" class="appinfo"><img src="" alt=""></a>
+                </p>
+                <p class="name">Angry Birds Star Wars</p>
+                <p class="grey">44 MB</p>
+                <p>
+                    <a class="btn-green" href="#">Insall</a>
+                </p>
+            </li>
+            <li>
+                <p>
+                    <a href="#" class="appinfo"><img src="" alt=""></a>
+                </p>
+                <p class="name">Angry Birds Star Wars</p>
+                <p class="grey">44 MB</p>
+                <p>
+                    <a class="btn-green" href="#">Insall</a>
+                </p>
+            </li>
+            <li>
+                <p>
+                    <a href="#" class="appinfo"><img src="" alt=""></a>
+                </p>
+                <p class="name">Angry Birds Star Wars</p>
+                <p class="grey">44 MB</p>
+                <p>
+                    <a class="btn-green" href="#">Insall</a>
+                </p>
+            </li>
+            <li>
+                <p>
+                    <a href="#" class="appinfo"><img src="" alt=""></a>
+                </p>
+                <p class="name">Angry Birds Star Wars</p>
+                <p class="grey">44 MB</p>
+                <p>
+                    <a class="btn-green" href="#">Insall</a>
+                </p>
+            </li>
+        </ul>
+
+    </div>
+    <script type="text/javascript">
+        $(function(){
+            $(".close").click(function(){
+                $(this).parent().hide();
+            });
+
+
+            var items = $('.appinfo'),
+                // fill in the app's id here
+                app_id = 35,
+                // fill in the app's name here
+                app_name = '1mobile';
+
+            setTimeout(function(){
+                items.click(function(e){
+                    e.preventDefault();
+                    var url = $(this).attr('href');
+                    Narya.Doraemon.openExtensionAsync(app_id, app_name, url);
+                });
+            },500);
+        });
+
+    </script>
+</body>
+</html>

@@ -34,12 +34,12 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) inset, 0 1px 2px rgba(0, 0, 0, 0.05)!important;
 }
 
-.widescreen .player,.videowrap,.g-mini-play,.videowrap .auto, .conwrap .auto{
+.widescreen .player,.videowrap,.g-mini-play,.videowrap .auto, .conwrap .auto,.extra_cont .auto{
     width:760px!important;
     overflow: hidden!important;
-    margin:0 auto;
+    margin:0 auto!important;
 }
-.videowrap,.g-mini-play,.conwrap{
+.videowrap,.g-mini-play,.conwrap,.extra_cont{
     min-width: 760px!important;
 }
 #playerObject{
@@ -126,35 +126,56 @@
     display: none!important;
 }
 .m_col{
-    width: 620px;
-    margin-left: 10px;
+    width: 620px!important;
+    margin-left: 10px!important;
 }
 .content{
-    margin-left:0px;
+    margin-left:0px!important;
 }
 .category-item, .list_item{
-    margin-left:10px;
+    margin-left:10px!important;
 }
 .category-sort{
-    width: 758px;
-    margin:18px 0;
-    clear: both;
-    overflow: hidden;
+    width: 758px!important;
+    margin:18px 0!important;
+    clear: both!important;
+    overflow: hidden!important;
 }
 .s_col{
-    width: 128px;
-    margin-right: 0px;
+    width: 128px!important;
+    margin-right: 0px!important;
+}
+.fr .s_col{
+    display: none;
 }
 .row .pack{
-    margin:0 10px;
+    margin-right: 1px;
+    padding-right: 0px;
+    width: 125px;
+}
+.m_col .b .row .pack{
+    width: 132px;
+    margin-right: 20px;
 }
 .page_content{
     margin: 15px 0px!important;
 }
 #secMcol .showcase .pack_video_card{
-    width: 100px;
-    overflow: hidden;
+    width: 100px!important;
+    overflow: hidden!important;
 }
 #secMcol .showcase .pack_video_card .txt{
-    width: 100px;
+    width: 100px!important;
+}
+#watchlaterBox{
+    display: none!important;
+}
+.mod_cate a{
+    margin-right: 10px;
+}
+.mod_cate dl{
+    padding-left:10px;
+}
+.mod_cate .vline-2{
+    width: 220px;
 }

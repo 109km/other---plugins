@@ -1,0 +1,18 @@
+#watch7-discussion,#action-panel-details.action-panel-content{
+    display: none;
+}
+.download_list{
+    clear: both;
+}
+.download_list{
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #E6E6E6;
+    border-top:none;
+}
+.download_list p{
+    margin:5px 0;
+}
+.download_list a{
+    font-size: 14px;
+}

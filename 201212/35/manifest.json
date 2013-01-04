@@ -1,6 +1,6 @@
 {
 	"name": "土豆视频",
-	"version": "1.0.0.11",
+	"version": "1.0.0.12",
 	"description": "支持土豆视频下载",
 	"content_scripts": [
 	    {

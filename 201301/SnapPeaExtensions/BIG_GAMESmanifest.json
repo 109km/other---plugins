@@ -1,0 +1,21 @@
+﻿{
+  "name": "BIG Games",
+  "version": "1.0.0.0",
+  "description": "KAI帮忙写下",
+  "content_scripts": [
+    {
+      "matches":["http://*.wandoujia.*"],
+      "run_at": "document_end",
+      "all_frames":false
+    }
+  ],
+  "icons": {
+      "16": "icon16.png",
+      "72": "icon72.png"
+  },
+  "app": {
+      "launch": {
+          "local_path": "big_games.html"
+      }
+  }
+}

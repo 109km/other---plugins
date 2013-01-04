@@ -1,0 +1,21 @@
+﻿{
+  "name": "Must Have Apps",
+  "version": "1.0.0.0",
+  "description": "KAI帮忙写下",
+  "content_scripts": [
+    {
+      "matches":["http://*.wandoujia.*"],
+      "run_at": "document_end",
+      "all_frames":false
+    }
+  ],
+  "icons": {
+      "16": "icon16.png",
+      "72": "icon72.png"
+  },
+  "app": {
+      "launch": {
+          "web_url": "http://127.0.0.1:81/201301/SnapPeaExtensions/Must_Have_Apps/must_have_apps.html"
+      }
+  }
+}

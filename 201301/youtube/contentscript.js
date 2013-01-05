@@ -22,14 +22,14 @@
 
             fmt_str[13] = '(3GP, 176 x 144, Stereo 8KHz)';    // delete ?
             fmt_str[17] = '(3GP, 176 x 144, Stereo 44KHz AAC)';
-            fmt_str[36] = '(3GP, 320 x 240, Stereo 44KHz AAC)';
+            fmt_str[36] = 'small';
 
-            fmt_str[18] = '(MP4(H.264), 640 x 360, Stereo 44KHz AAC)';
+            fmt_str[18] = 'large';
             fmt_str[22] = '(MP4(H.264), 1280 x 720, Stereo 44KHz AAC)';
             fmt_str[37] = '(MP4(H.264), 1920 x 1080, Stereo 44KHz AAC)';
             fmt_str[38] = '(MP4(H.264), 4096 x 3072, Stereo 44KHz AAC)';
             fmt_str[83] = '(MP4(H.264), 854 x 240, Stereo 44KHz AAC)';
-            fmt_str[82] = '(MP4(H.264), 640 x 360, Stereo 44KHz AAC)';
+            fmt_str[82] = 'large';
             fmt_str[85] = '(MP4(H.264), 1920 x 520, Stereo 44KHz AAC)';
             fmt_str[84] = '(MP4(H.264), 1280 x 720, Stereo 44KHz AAC)';
 
@@ -105,11 +105,13 @@
                 url:"http://www.youtube.com/get_video_info?video_id=" + vid,
                 success:function(rdata){
                     var url = getYouTubeUrl(rdata),
+                        name = document.title,
                         html = "";
-                    for (var v in url ){
-                        var now_url = url[v] + "#name=" + v + "&content-type=video";
-                        html += '<p><a href="'+now_url+'" download="">Download '+v+'</a></p>';
-                    }
+                    var large_url = url['large']+ "#name=" + name + "&content-type=video";
+                    var small_url = url['small']+ "#name=" + name + "&content-type=video";
+                    html += '<div class="download_zone"><h1>Download to phone</h1>' +
+                        '<p><a href="'+large_url+'" download="" style="margin-right:20px;"><img src="http://images.jumei.com/notice/large_btn.jpg"></a><a href="'+small_url+'" download=""><img src="http://images.jumei.com/notice/small_btn.jpg"></a></p>';
+
                     html = '<div class="download_list">' + html + '</div>';
                     $('#watch7-action-buttons').after(html);
                 }

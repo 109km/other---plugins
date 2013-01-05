@@ -1,0 +1,43 @@
+.btn-min {
+    height: 16px;
+    border: 1px solid #7BAD38;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 5px 10px;
+    box-shadow: 0 2px 0 rgba(120, 163, 51, .6);
+    text-shadow: 0 1px 0 rgba(0, 0, 0, .2);
+    background-color: #98D449;
+    border-radius: 2px;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#98D449), to(#7BBD24));
+    background-image: -moz-linear-gradient(center top, #98D449, #7BBD24);
+    filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr='#98d449',EndColorStr='#7bbd24');
+}
+
+.btn-min:hover {
+    text-decoration: none;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ADDE6B), to(#7BBD24));
+    background-image: -moz-linear-gradient(center top, #ADDE6B, #7BBD24);
+    filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr='#adde6b',EndColorStr='#7bbd24');
+}
+
+.btn-min.disabled-btn{
+    padding:0 6px;
+    color:#999;
+    background-color: #E6E6E6;
+    background-image: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+.interactArea .fn .handle,#feeInfo .pmovie,.col2_21 .right .listArea,
+#vprelationvideov5_wrap,#vpactionv5_wrap,#vpvideoinfov5_wrap{
+    display: none;
+}
+.s_body .layout_121{
+    width: auto!important;
+}
+.s_header, .s_miniHeader, .s_footer, .s_miniFooter, .s_body,.window, .screen{
+    min-width: 760px;
+}

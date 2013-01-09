@@ -14,9 +14,56 @@
     margin:5px 0;
 }
 .download_list a{
-    font-size: 14px;
+    font-size: 15px;
 }
 .download_zone h1{
     font-size: 28px;
     margin-bottom: 10px;
+}
+.btn-green {
+    background-color: #6DB800;
+    color: white;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+    border: 1px solid #2C8E00;
+    background-image: -moz-linear-gradient(50% 0% -90deg,#63C100 0%,#46A100 100%);
+    background-image: -webkit-gradient(linear,50% 0%,50% 100%,color-stop(0, #63C100),color-stop(1, #46A100));
+    background-image: -webkit-linear-gradient(-90deg,#63C100 0%,#46A100 100%);
+    background-image: -o-linear-gradient(-90deg,#63C100 0%,#46A100 100%);
+    background-image: -ms-linear-gradient(-90deg,#63C100 0%,#46A100 100%);
+    background-image: linear-gradient(-90deg,#63C100 0%,#46A100 100%);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#ff63c100,endColorstr=#ff46a100,GradientType=0)";
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ff63c100,endColorstr=#ff46a100,GradientType=0);
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    -moz-box-shadow: inset 0px 1px 0px 0px rgba(255,255,255,0.2);
+    -webkit-box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2);
+    box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2);
+}
+.btn-large {
+    display: inline-block;
+    padding: 0 18px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    min-width: 32px;
+    line-height: 38px;
+    vertical-align: middle;
+    }
+.btn-green:hover {
+    background-image: -moz-linear-gradient(50% 0% -90deg,#6BC420 0%, #52AB07 100%);
+    background-image: -webkit-gradient(linear,50% 0%,50% 100%,color-stop(0, #6BC420),color-stop(1, #52AB07));
+    background-image: -webkit-linear-gradient(-90deg,#6BC420 0%,#52AB07 100%);
+    background-image: -o-linear-gradient(-90deg,#6BC420 0%,#52AB07 100%);
+    background-image: -ms-linear-gradient(-90deg,#6BC420 0%,#52AB07 100%);
+    background-image: linear-gradient(-90deg,#6BC420 0%,#52AB07 100%);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#6bc420,endColorstr=#52ab07,GradientType=0)";
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#6bc420,endColorstr=#52ab07,GradientType=0);
+}
+.client2-btn:hover {
+    text-decoration: none;
+}
+.client2-btn b {
+    padding-left: 20px;
+    background: url(http://s.wdjimg.com/style/images/wdj/new-header-icon.png) no-repeat -108px -92px;
 }

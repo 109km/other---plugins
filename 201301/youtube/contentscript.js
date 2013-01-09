@@ -110,7 +110,7 @@
                     var large_url = url['large']+ "#name=" + name + "&content-type=video";
                     var small_url = url['small']+ "#name=" + name + "&content-type=video";
                     html += '<div class="download_zone"><h1>Download to phone</h1>' +
-                        '<p><a href="'+large_url+'" download="" style="margin-right:20px;"><img src="http://images.jumei.com/notice/large_btn.jpg"></a><a href="'+small_url+'" download=""><img src="http://images.jumei.com/notice/small_btn.jpg"></a></p>';
+                        '<p><a href="'+large_url+'" download="" style="margin-right:20px;" class="btn-green btn-large client2-btn"><b>Large</b></a><a href="'+small_url+'" download="" class="btn-green btn-large client2-btn"><b>Small</b></a></p>';
 
                     html = '<div class="download_list">' + html + '</div>';
                     $('#watch7-action-buttons').after(html);

@@ -99,7 +99,12 @@
                 return decodeURIComponent(str.replace(/\+/g, '%20'));
             }
 
+            var movie_player = $("#movie_player"),
+                movie_src = movie_player.attr("src"),
+                flashvars = movie_player.attr("flashvars");
 
+            //var movie_object = '<object type="application/x-shockwave-flash" data="'+movie_src+'"><param name="movie" value="'+movie_src+'"></object>'
+            movie_player.attr("wmode","Opaque");
 
             $.ajax({
                 url:"http://www.youtube.com/get_video_info?video_id=" + vid,

@@ -12,7 +12,15 @@
             "all_frames":false
 	    }
     ],
-
+    "app": {
+        "launch": {
+            "web_url": "http://www.youtube.com/"
+        }
+    },
+    "icons": {
+    	"16": "icon16.png",
+    	"72": "icon72.png"
+    },
     "permissions":[
         "http://*.youtube.com/"
     ]

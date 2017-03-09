@@ -1,0 +1,17 @@
+{
+    "content_scripts": [{
+        "js": [ "jquery-1.5.1.min.js","contentscript.js" ],
+        "matches": [ "http://*.douban.com/*" ,"https://*.douban.com/*"],
+        "run_at": "document_end"
+    }],
+    "description": "Douban rent",
+    "name": "Douban rent",
+    "manifest_version": 2,
+    "version":"1.0",
+    "permissions":["storage"],
+    "options_ui": {
+       "page": "options.html",
+       "chrome_style": true,
+       "open_in_tab": false
+     }
+}
